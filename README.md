@@ -12,3 +12,9 @@ Professional static website for the DemonDie organization.
 - `index.html` contains the page structure and links.
 - `style.css` contains the responsive visual design.
 - `assets/demondie-hero.png` is the generated hero image used on the homepage.
+
+## Community
+
+- [Contributing Guide](./CONTRIBUTING.md)
+- [Code of Conduct](./CODE_OF_CONDUCT.md)
+- [License](./LICENSE)
