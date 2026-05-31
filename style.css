@@ -360,6 +360,34 @@ h1 {
   color: var(--muted);
 }
 
+.step-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.step-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid rgba(96, 230, 217, 0.2);
+  border-radius: 999px;
+  color: var(--cyan);
+  background: rgba(96, 230, 217, 0.08);
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+
+.step-links a:hover,
+.step-links a:focus-visible {
+  border-color: rgba(96, 230, 217, 0.42);
+  background: rgba(96, 230, 217, 0.16);
+  transform: translateY(-1px);
+}
+
 .contribute-section {
   padding-bottom: 72px;
 }
