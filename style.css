@@ -305,7 +305,8 @@ h1 {
 .feature-card,
 .projects-empty,
 .step-card,
-.team-card {
+.team-card,
+.project-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background:
@@ -346,7 +347,8 @@ h1 {
 .feature-card h3,
 .projects-empty h3,
 .step-card h3,
-.team-card h3 {
+.team-card h3,
+.project-card h3 {
   margin: 14px 0 10px;
   font-size: 1.35rem;
   line-height: 1.2;
@@ -355,7 +357,8 @@ h1 {
 .feature-card p,
 .projects-empty p,
 .step-card p,
-.team-card p {
+.team-card p,
+.project-card p {
   margin: 0;
   color: var(--muted);
 }
@@ -367,7 +370,8 @@ h1 {
   margin-top: 18px;
 }
 
-.step-links a {
+.step-links a,
+.project-links a {
   display: inline-flex;
   align-items: center;
   min-height: 38px;
@@ -382,7 +386,9 @@ h1 {
 }
 
 .step-links a:hover,
-.step-links a:focus-visible {
+.step-links a:focus-visible,
+.project-links a:hover,
+.project-links a:focus-visible {
   border-color: rgba(96, 230, 217, 0.42);
   background: rgba(96, 230, 217, 0.16);
   transform: translateY(-1px);
@@ -458,6 +464,74 @@ h1 {
   width: 36px;
   height: 36px;
   fill: currentColor;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 18px;
+}
+
+.project-card {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-card-header h3 {
+  margin-top: 8px;
+}
+
+.project-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.project-stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.project-stat svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
 }
 
 .team-section {
@@ -605,6 +679,7 @@ h1 {
   .projects-empty,
   .step-card,
   .team-card,
+  .project-card,
   .community-section {
     padding: 24px;
   }
