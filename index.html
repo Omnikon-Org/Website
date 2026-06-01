@@ -8,8 +8,9 @@
       content="DemonDie is an open-source technology community building impactful software and helping developers grow through collaboration."
     />
     <title>DemonDie | Open Source Technology Community</title>
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
-    <link rel="apple-touch-icon" href="assets/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/favicon-32x32.webp" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,7 +18,10 @@
       <nav class="nav" aria-label="Primary navigation">
         <a class="brand" href="#top" aria-label="DemonDie home">
           <span class="brand-mark" aria-hidden="true">
-            <img src="assets/demondie-logo.png" alt="" />
+            <picture>
+              <source srcset="assets/demondie-logo.webp" type="image/webp" />
+              <img src="assets/demondie-logo.png" alt="" />
+            </picture>
           </span>
           <span>DemonDie</span>
         </a>
@@ -46,12 +50,18 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-visual" aria-hidden="true">
-          <img src="assets/demondie-hero.png" alt="" />
+          <picture>
+            <source srcset="assets/demondie-hero.webp" type="image/webp" />
+            <img src="assets/demondie-hero.png" alt="" />
+          </picture>
         </div>
         <div class="hero-overlay"></div>
 
         <div class="hero-content">
-          <img class="hero-logo" src="assets/demondie-logo.png" alt="DemonDie organization logo" />
+          <picture>
+            <source srcset="assets/demondie-logo.webp" type="image/webp" />
+            <img class="hero-logo" src="assets/demondie-logo.png" alt="DemonDie organization logo" />
+          </picture>
           <p class="eyebrow">Open source first. Community driven.</p>
           <h1 id="hero-title">DemonDie</h1>
           <p class="hero-copy">
@@ -239,7 +249,10 @@
         </div>
 
         <article class="team-card">
-          <img class="team-photo" src="assets/rishi-photo.png" alt="Rishi, founder of DemonDie" />
+          <picture>
+            <source srcset="assets/rishi-photo.webp" type="image/webp" />
+            <img class="team-photo" src="assets/rishi-photo.png" alt="Rishi, founder of DemonDie" />
+          </picture>
           <div>
             <span class="card-kicker">Founder</span>
             <h3>Rishi</h3>
@@ -274,7 +287,10 @@
     <footer class="site-footer">
       <a class="brand footer-brand" href="#top">
         <span class="brand-mark" aria-hidden="true">
-          <img src="assets/demondie-logo.png" alt="" />
+          <picture>
+            <source srcset="assets/demondie-logo.webp" type="image/webp" />
+            <img src="assets/demondie-logo.png" alt="" />
+          </picture>
         </span>
         <span>DemonDie</span>
       </a>
