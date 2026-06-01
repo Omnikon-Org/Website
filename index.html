@@ -11,6 +11,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -20,7 +23,7 @@
           <span class="brand-mark" aria-hidden="true">
             <img src="assets/demondie-logo.webp" alt="" />
           </span>
-          <span>DemonDie</span>
+          <span><span class="brand-demon">Demon</span>Die</span>
         </a>
 
         <div class="nav-links" aria-label="Page sections">
@@ -54,7 +57,7 @@
         <div class="hero-content">
           <img class="hero-logo" src="assets/demondie-logo.webp" alt="DemonDie organization logo" />
           <p class="eyebrow">Open source first. Community driven.</p>
-          <h1 id="hero-title">DemonDie</h1>
+          <h1 id="hero-title"><span class="brand-demon">Demon</span>Die</h1>
           <p class="hero-copy">
             A technology-driven organization focused on innovative software,
             practical learning, and open-source projects that create real impact.
@@ -82,7 +85,7 @@
       </section>
 
       <section class="section contribute-section" id="contribute" aria-labelledby="contribute-title">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">How to contribute</p>
           <h2 id="contribute-title">Join DemonDie in 3 steps.</h2>
           <p>
@@ -92,7 +95,7 @@
         </div>
 
         <div class="steps-grid">
-          <article class="step-card">
+          <article class="step-card reveal reveal-d1">
             <span class="step-number">01</span>
             <h3>Join Discord</h3>
             <p>Introduce yourself, ask questions, and connect with other developers.</p>
@@ -101,7 +104,7 @@
               <a href="https://github.com/Demon-Die/Website/blob/main/CODE_OF_CONDUCT.md" target="_blank" rel="noreferrer">Read the Code of Conduct</a>
             </div>
           </article>
-          <article class="step-card">
+          <article class="step-card reveal reveal-d2">
             <span class="step-number">02</span>
             <h3>Find a beginner-friendly issue</h3>
             <p>Pick a clear task that matches your skills and helps you learn by building.</p>
@@ -110,7 +113,7 @@
               <a href="https://github.com/Demon-Die/Website/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22" target="_blank" rel="noreferrer">View good first issues</a>
             </div>
           </article>
-          <article class="step-card">
+          <article class="step-card reveal reveal-d3">
             <span class="step-number">03</span>
             <h3>Submit your first pull request</h3>
             <p>Share your work, get feedback, and become part of the DemonDie contributor community.</p>
@@ -123,12 +126,12 @@
       </section>
 
       <section class="section section-intro" id="about">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">About us</p>
           <h2>Building useful technology with developers, for developers.</h2>
         </div>
         <div class="about-grid">
-          <article class="feature-card">
+            <article class="feature-card reveal reveal-d1">
             <span class="card-kicker">Mission</span>
             <h3>Create meaningful software</h3>
             <p>
@@ -136,7 +139,7 @@
               and turn strong ideas into software that solves real problems.
             </p>
           </article>
-          <article class="feature-card">
+            <article class="feature-card reveal reveal-d2">
             <span class="card-kicker">Culture</span>
             <h3>Open collaboration</h3>
             <p>
@@ -144,7 +147,7 @@
               welcoming path for new contributors entering open source.
             </p>
           </article>
-          <article class="feature-card">
+            <article class="feature-card reveal reveal-d3">
             <span class="card-kicker">Vision</span>
             <h3>Grow impact together</h3>
             <p>
@@ -156,7 +159,7 @@
       </section>
 
       <section class="section values-section" aria-labelledby="values-title">
-        <div class="section-heading compact">
+        <div class="section-heading compact reveal">
           <p class="eyebrow">What we believe</p>
           <h2 id="values-title">Practical principles for open-source work.</h2>
         </div>
@@ -181,7 +184,7 @@
       </section>
 
       <section class="section projects-section" id="projects">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">Projects</p>
           <h2>Open-source projects from DemonDie.</h2>
           <p>
@@ -191,7 +194,7 @@
         </div>
 
         <div class="projects-grid">
-          <article class="project-card">
+          <article class="project-card reveal">
             <div class="project-card-header">
               <span class="card-kicker">Flagship Project</span>
               <h3>Demon Tech Roadmap</h3>
@@ -230,7 +233,7 @@
       </section>
 
       <section class="section team-section" id="team" aria-labelledby="team-title">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">Meet the team</p>
           <h2 id="team-title">People building the DemonDie community.</h2>
           <p>
@@ -239,7 +242,7 @@
           </p>
         </div>
 
-        <article class="team-card">
+        <article class="team-card reveal">
           <img class="team-photo" src="assets/rishi-photo.webp" alt="Rishi, founder of DemonDie" />
           <div>
             <span class="card-kicker">Founder</span>
@@ -252,7 +255,7 @@
         </article>
       </section>
 
-      <section class="community-section" id="community" aria-labelledby="community-title">
+      <section class="community-section reveal" id="community" aria-labelledby="community-title">
         <div>
           <p class="eyebrow">Connect</p>
           <h2 id="community-title">Join the DemonDie community.</h2>
@@ -277,9 +280,24 @@
           <span class="brand-mark" aria-hidden="true">
             <img src="assets/demondie-logo.webp" alt="" />
           </span>
-        <span>DemonDie</span>
+        <span><span class="brand-demon">Demon</span>Die</span>
       </a>
       <p>Open-source technology community based in India.</p>
     </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      });
+    </script>
   </body>
 </html>
