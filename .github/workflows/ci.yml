@@ -1,0 +1,23 @@
+name: Website Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check HTML exists
+        run: test -f index.html
+
+      - name: Check CSS exists
+        run: test -f style.css
+
+      - name: Validation Complete
+        run: echo "Website structure looks good."
