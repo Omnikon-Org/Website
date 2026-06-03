@@ -4,7 +4,12 @@
 
 Please do not create public issues for security vulnerabilities.
 
-Contact the maintainers directly or open a private security advisory.
+To report a vulnerability privately, use one of the following methods:
+
+- **Email**: security@yourdomain.com (PGP key available upon request for encrypted reports)
+- **GitHub**: [Report a vulnerability via private security advisory](https://github.com/OWNER/REPO/security/advisories/new)
+
+We aim to respond to all security reports within 72 hours.
 
 ## Security Practices
 
