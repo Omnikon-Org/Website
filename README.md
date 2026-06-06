@@ -10,6 +10,10 @@ Professional static website for the DemonDie organization.
 
 ## Current Project
 
+## Website
+
+Designed with Google Stitch, connnected by hands.
+
 ### Demon Tech Roadmap
 
 Community-driven learning roadmaps for students and aspiring developers.
