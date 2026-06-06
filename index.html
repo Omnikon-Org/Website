@@ -129,6 +129,7 @@
                 linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
             background-size: 40px 40px;
         }
+        #home, #projects, #contributors, #community, #about { scroll-margin-top: 100px; }
     </style>
 <!-- TopNavBar -->
 <nav class="bg-background dark:bg-background docked full-width top-0 border-b border-surface-variant z-50 fixed w-full">
@@ -137,12 +138,12 @@
 <span class="material-symbols-outlined text-primary text-2xl" data-icon="hexagon" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">hexagon</span>
 <span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface text-xl">DerronDie</span>
 </div>
-<div class="hidden md:flex items-center gap-8">
+<div id="desktop-nav" class="hidden md:flex items-center gap-8">
 <a class="text-primary border-b-2 border-primary pb-1 font-label-mono text-label-mono text-xs" href="#home">Home</a>
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#projects">Projects</a>
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#contributors">Contributor</a>
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#community">Community</a>
-<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#home">About</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#about">About</a>
 </div>
 <a href="https://github.com/Demon-Die" target="_blank"><button class="hidden md:flex items-center gap-2 px-4 py-2 border border-surface-container hover:border-primary glow-hover text-on-surface font-label-mono text-xs transition-all duration-200" >
 <span class="material-symbols-outlined text-sm" data-icon="star">star</span>
@@ -317,12 +318,12 @@
 </div>
 <div class="flex items-center gap-4 mt-6">
 <div class="h-px bg-primary flex-grow"></div>
-<div class="text-primary font-code-sm text-code-sm" id="projects">Your journey. Your impact.</div>
+<div class="text-primary font-code-sm text-code-sm">Your journey. Your impact.</div>
 <div class="h-px bg-surface-container flex-grow"></div>
 </div>
 </section>
 <!-- Projects & Modules Split -->
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
+<section id="projects" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
 <!-- Projects Explorer -->
 <div class="border border-surface-container bg-surface p-6">
 <div class="flex justify-between items-center mb-6">
@@ -406,7 +407,7 @@
 <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
 <div class="flex-grow">
 <div class="text-on-surface font-label-mono text-sm">Attend-AI</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm mt-1" id="contributors">Smart attendance</div>
+<div class="text-on-surface-variant text-code-sm font-code-sm mt-1">Smart attendance</div>
 </div>
 <div class="flex items-center gap-1 text-on-surface-variant text-code-sm">
 <span class="material-symbols-outlined text-sm" data-icon="star">star</span> 48
@@ -491,7 +492,7 @@
 </div>
 </section>
 <!-- Contributor Wall -->
-<section class="mb-section-gap" >
+<section id="contributors" class="mb-section-gap">
 <div class="flex items-center gap-4 mb-8">
 <div class="flex items-center gap-2 text-primary">
 <span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
@@ -506,106 +507,63 @@
 <!-- Contributor -->
 <div class="flex flex-col items-center gap-2 group cursor-pointer">
 <div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all relative">
-                A
+                <img src="https://avatars.githubusercontent.com/u/227175134?v=4" alt="" class="rounded-full w-full h-full">
                 <div class="absolute -bottom-1 -right-1 w-4 h-4 bg-primary rounded-full border-2 border-background"></div>
 </div>
 <div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">Alina</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm">20 PRs</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">5 Modules</div>
+<div class="text-on-surface font-label-mono text-sm">Rishi</div>
+<div class="text-on-surface-variant text-code-sm font-code-sm">Founder</div>
+<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]"></div>
 </div>
 </div>
 <!-- Contributor -->
 <div class="flex flex-col items-center gap-2 group cursor-pointer">
 <div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all">
-                A
+                <img src="https://avatars.githubusercontent.com/u/216678101?v=4" alt="" class="rounded-full w-full h-full">
             </div>
 <div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">Aman</div>
+<div class="text-on-surface font-label-mono text-sm">Yuvraj</div>
 <div class="text-on-surface-variant text-code-sm font-code-sm">18 PRs</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">3 Modules</div>
+<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">Maintainer</div>
 </div>
 </div>
 <!-- Contributor -->
 <div class="flex flex-col items-center gap-2 group cursor-pointer">
 <div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all">
-                D
+                <img src="https://avatars.githubusercontent.com/u/70018622?v=4" alt="" class="rounded-full w-full h-full">
             </div>
 <div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">Dev</div>
+<div class="text-on-surface font-label-mono text-sm">Sharanyo</div>
 <div class="text-on-surface-variant text-code-sm font-code-sm">15 PRs</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">7 Modules</div>
+<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">Maintainer</div>
 </div>
 </div>
 <!-- Contributor -->
 <div class="flex flex-col items-center gap-2 group cursor-pointer">
 <div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all">
-                K
+                <img src="https://avatars.githubusercontent.com/u/222479696?s=400&u=24e1e2cd5fd2274c1db9fe59c6f5c7bbe8c73ebd&v=4" alt="" class="rounded-full w-full h-full">
             </div>
 <div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">Karan</div>
+<div class="text-on-surface font-label-mono text-sm">Pranav</div>
 <div class="text-on-surface-variant text-code-sm font-code-sm">12 PRs</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">5 Modules</div>
+<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">Maintainer</div>
 </div>
 </div>
-<!-- Contributor -->
-<div class="flex flex-col items-center gap-2 group cursor-pointer">
-<div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all">
-                S
-            </div>
-<div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">Sneha</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm">11 PRs</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">4 Modules</div>
-</div>
-</div>
-<!-- Contributor -->
-<div class="flex flex-col items-center gap-2 group cursor-pointer">
-<div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all">
-                M
-            </div>
-<div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">Maya</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm">9 PRs</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">6 Modules</div>
-</div>
-</div>
-<!-- Contributor -->
-<div class="flex flex-col items-center gap-2 group cursor-pointer">
-<div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all">
-                P
-            </div>
-<div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">Praj</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm">8 PRs</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">3 Modules</div>
-</div>
-</div>
-<!-- Contributor -->
-<div class="flex flex-col items-center gap-2 group cursor-pointer">
-<div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all">
-                T
-            </div>
-<div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">Tanya</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm">7 PRs</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">2 Modules</div>
-</div>
-</div>
+
 <!-- Join -->
-<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="flex flex-col items-center gap-2 group cursor-pointer" onclick="window.open('https://github.com/orgs/Demon-Die/people', '_blank')">
 <div class="w-16 h-16 rounded-full border border-surface-container flex items-center justify-center text-primary bg-surface group-hover:border-primary transition-all border-dashed">
 <span class="material-symbols-outlined" data-icon="add">add</span>
 </div>
 <div class="text-center">
 <div class="text-on-surface font-label-mono text-sm">You</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm max-w-[80px]" id="community">Join the contributors</div>
+<div class="text-on-surface-variant text-code-sm font-code-sm max-w-[80px]">Join the contributors</div>
 </div>
 </div>
 </div>
 </section>
 <!-- Feed & Activity Split -->
-<section class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
+<section id="community" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
 <!-- Community Feed -->
 <div class="border border-surface-container bg-surface flex flex-col h-[400px]" >
 <div class="p-6 border-b border-surface-container flex justify-between items-center">
@@ -745,6 +703,7 @@
 <path d="M 30 70 L 50 50 L 80 60" fill="none" stroke="#ff3131" stroke-opacity="0.5" stroke-width="0.2"></path>
 </svg>
 </div>
+
 <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 <div>
 <h2 class="text-headline-md font-headline-md text-on-surface mb-4">
@@ -775,7 +734,7 @@
 </main>
 <!-- Footer -->
 <footer class="bg-background dark:bg-background border-t border-surface-variant relative z-10">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto" id="about">
 <div class="space-y-4">
 <div class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-2">
 <span class="material-symbols-outlined" data-icon="hexagon" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">hexagon</span>
@@ -813,5 +772,51 @@
 <a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="./404err.html">LinkedIn (coming soon)</a>
 </div></div></div></footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section[id], footer[id]");
+  const navLinks = document.querySelectorAll("nav a");
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+
+  const setActiveLink = (hash) => {
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === hash) {
+        link.classList.add("text-primary", "border-b-2", "border-primary");
+      } else {
+        link.classList.remove("text-primary", "border-b-2", "border-primary");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActiveLink(`#${entry.target.id}`);
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      const href = link.getAttribute("href");
+      setActiveLink(href);
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < 50) {
+      setActiveLink("#home");
+    }
+  });
+});
+</script>
 
 </body></html>
