@@ -8,6 +8,8 @@
 
 Professional static website for the DemonDie organization.
 
+Designed with Google Stitch, Connected by hands, Styled with TailwindCss.
+
 ## Current Project
 
 ### Demon Tech Roadmap
@@ -19,12 +21,6 @@ Demon Tech Roadmap is an open-source platform designed to help learners navigate
 - Repository: [github.com/Demon-Die/DemonTechRoadmap](https://github.com/Demon-Die/DemonTechRoadmap)
 - Website: [demon-tech-roadmap.vercel.app](https://demon-tech-roadmap.vercel.app/)
 
-## Files
-
-- `index.html` contains the page structure and links.
-- `style.css` contains the responsive visual design.
-- `assets/demondie-hero.png` is the generated hero image used on the homepage.
-
 ## Local Development
 
 This repository is a static website, so there is no Node install or build step required.
@@ -32,12 +28,45 @@ This repository is a static website, so there is no Node install or build step r
 1. Start a local web server from the repository root:
 
 ```bash
-python3 -m http.server 8000
+# Clone the repo
+git clone https://github.com/Demon-Die/Website.git
+cd Website
+
+# No build step – open locally
+open index.html   # macOS
+# or serve with any static server
+npx -y serve .   # quick local dev server
 ```
+The site relies on the Tailwind CDN, so no npm install is required.
 
-2. Open `http://localhost:8000` in your browser to preview the site locally.
-   If port `8000` is already in use, pass a different port number to the command and open the matching localhost URL.
+---
 
-<div align="center">
-  <a href="https://github.com/Demon-Die">Made with 💓 by Demon-Die</a>
-</div>
+## ▶️ Usage
+- Open `index.html` in a browser.
+- The navigation links (`Home`, `Projects`, `Contributors`, `Community`, `About`) scroll smoothly to their sections.
+- Click the **“Join the contributors”** card to open the GitHub organization members page.
+
+---
+
+## 🤝 Contributing
+We welcome contributions! To get started:
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feat/awesome‑feature`).
+3. Make your changes – keep the existing design language consistent.
+4. Open a Pull Request describing the improvement.
+
+Please follow the existing code style (Tailwind utility classes, BEM‑like naming, and the custom color palette defined in the `<script id="tailwind-config">`).
+
+---
+
+## 📄 License
+Distributed under the **MIT License**. See the `LICENSE` file for details.
+
+---
+
+## 📧 Contact & Community
+- **Website:** https://derrondie.org (placeholder)
+- **GitHub Org:** https://github.com/Demon-Die
+- **Discord:** https://discord.gg/4waT35Hxs
+
+*Join us, build together, and make open‑source learning fun!*

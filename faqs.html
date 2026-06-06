@@ -1,0 +1,304 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>DemonDie - FAQs</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "on-primary-fixed-variant": "#93000c",
+                      "on-primary": "#690006",
+                      "surface": "#121414",
+                      "tertiary": "#c8c6c5",
+                      "on-tertiary-container": "#2a2a29",
+                      "secondary": "#c8c6c5",
+                      "surface-dim": "#121414",
+                      "primary": "#ffb4ab",
+                      "on-primary-fixed": "#410002",
+                      "outline": "#ae8883",
+                      "on-surface": "#e3e2e2",
+                      "surface-container": "#1e2020",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface-tint": "#ffb4ab",
+                      "error": "#ffb4ab",
+                      "surface-container-lowest": "#0d0e0f",
+                      "primary-fixed": "#ffdad6",
+                      "on-primary-container": "#5c0005",
+                      "surface-container-low": "#1a1c1c",
+                      "primary-fixed-dim": "#ffb4ab",
+                      "on-secondary-container": "#b7b5b4",
+                      "surface-container-high": "#292a2a",
+                      "primary-container": "#ff544b",
+                      "surface-bright": "#383939",
+                      "on-error-container": "#ffdad6",
+                      "background": "#121414",
+                      "on-surface-variant": "#e7bcb8",
+                      "tertiary-container": "#929090",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-error": "#690005",
+                      "secondary-container": "#474746",
+                      "outline-variant": "#5e3f3c",
+                      "on-secondary-fixed-variant": "#474746",
+                      "surface-variant": "#343535",
+                      "on-secondary": "#313030",
+                      "on-tertiary-fixed-variant": "#474646",
+                      "on-background": "#e3e2e2",
+                      "inverse-surface": "#e3e2e2",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "error-container": "#93000a",
+                      "on-tertiary": "#313030",
+                      "surface-container-highest": "#343535",
+                      "inverse-primary": "#c00014",
+                      "tertiary-fixed": "#e5e2e1",
+                      "inverse-on-surface": "#2f3131",
+                      "secondary-fixed": "#e5e2e1"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "unit": "4px",
+                      "section-gap": "80px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "headline-md-mobile": ["Inter"],
+                      "body-base": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "code-sm": ["JetBrains Mono"],
+                      "display-lg": ["Inter"],
+                      "label-mono": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                      "headline-md-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-base": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "code-sm": ["12px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Custom styles for terminal glow effects that can't be purely tokenized */
+        .terminal-glow {
+            box-shadow: 0 0 8px rgba(255, 180, 171, 0.3);
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(255, 180, 171, 0.5);
+        }
+        .crt-scanline {
+            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
+            background-size: 100% 4px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-base text-body-base relative">
+<!-- Optional CRT Overlay for thematic depth -->
+<div class="absolute inset-0 z-50 crt-scanline"></div>
+<!-- TopNavBar -->
+<nav class="bg-background dark:bg-background z-40 relative border-b border-surface-variant flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto flat no shadows docked full-width top-0">
+<div class="flex items-center gap-4">
+<span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface">DerronDie</span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-label-mono font-label-mono text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 px-2 py-1 rounded-DEFAULT" href="./index.html">Home</a>
+<a class="text-label-mono font-label-mono text-primary border-b-2 border-primary pb-1 transition-colors duration-200 px-2 rounded-none scale-95 duration-100" href="./faqs.html">FAQs</a>
+<a class="text-label-mono font-label-mono text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 px-2 py-1 rounded-DEFAULT" href="./guidelines.html">Guidelines</a>
+<a class="text-label-mono font-label-mono text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 px-2 py-1 rounded-DEFAULT" href="./codeOfConduct.html">Code of Conduct</a>
+<a class="text-label-mono font-label-mono text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 px-2 py-1 rounded-DEFAULT" href="./liscence.html">License</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="https://github.com/Demon-Die" target="_blank"><button class="bg-primary text-on-primary-fixed font-label-mono text-label-mono px-4 py-2 rounded-none hover:terminal-glow transition-all duration-300 border border-primary">
+                Star on GitHub
+            </button></a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 w-full max-w-container-max mx-auto px-gutter py-section-gap relative z-10 flex flex-col gap-12">
+<!-- Terminal Header -->
+<header class="flex flex-col gap-4 border-b border-surface-variant pb-8">
+<div class="flex items-center gap-2 text-primary font-code-sm text-code-sm mb-2">
+<span class="material-symbols-outlined text-sm">terminal</span>
+<span>sys/query/index.sh</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface flex items-end gap-2">
+<span class="text-primary">&gt;</span> FAQs<span class="w-4 h-12 bg-primary inline-block animate-pulse mb-2"></span>
+</h1>
+<p class="font-code-sm text-code-sm text-on-surface-variant max-w-2xl">
+                ACCESSING KNOWLEDGE BASE... ESTABLISHING SECURE CONNECTION... READY.<br>
+                Consult the documented procedures below for operational clarity within the DerronDie framework.
+            </p>
+</header>
+<!-- Bento Grid Layout for FAQs -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Context Sidebar -->
+<aside class="col-span-1 lg:col-span-3 flex flex-col gap-6">
+<div class="bg-surface-container-lowest border border-surface-variant p-6 rounded-none flex flex-col gap-4">
+<h3 class="font-label-mono text-label-mono text-primary uppercase border-b border-surface-variant pb-2 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                        Index Filter
+                    </h3>
+<ul class="flex flex-col gap-2 font-code-sm text-code-sm text-on-surface-variant">
+<li><button class="text-left w-full hover:text-primary transition-colors py-1 flex justify-between items-center group"><span class="group-hover:translate-x-1 transition-transform">Community Protocol</span> <span class="text-primary opacity-0 group-hover:opacity-100">[1]</span></button></li>
+<li><button class="text-left w-full hover:text-primary transition-colors py-1 flex justify-between items-center group"><span class="group-hover:translate-x-1 transition-transform">Contribution Logic</span> <span class="text-primary opacity-0 group-hover:opacity-100">[2]</span></button></li>
+<li><button class="text-left w-full hover:text-primary transition-colors py-1 flex justify-between items-center group"><span class="group-hover:translate-x-1 transition-transform">Module Architecture</span> <span class="text-primary opacity-0 group-hover:opacity-100">[3]</span></button></li>
+</ul>
+</div>
+<div class="bg-surface border border-surface-variant p-6 rounded-none flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-16 h-16 bg-primary/10 rounded-full blur-xl"></div>
+<span class="material-symbols-outlined text-primary text-3xl">support_agent</span>
+<h4 class="font-headline-md text-headline-md-mobile text-on-surface">Require Manual Override?</h4>
+<p class="font-body-base text-body-base text-on-surface-variant text-sm">If your query is not indexed, initialize a direct transmission to the core team via standard channels.</p>
+<button class="bg-transparent border border-surface-variant text-on-surface font-label-mono text-label-mono px-4 py-2 mt-2 hover:border-primary hover:text-primary transition-all duration-300 w-full text-center">
+                        &gt; OPEN_TICKET
+                    </button>
+</div>
+</aside>
+<!-- Accordion List -->
+<div class="col-span-1 lg:col-span-9 flex flex-col gap-unit" id="faq-container">
+<!-- FAQ Item 1 -->
+<div class="faq-item bg-surface-container-low border border-surface-variant rounded-none transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 outline-none focus:bg-surface-container-highest group" onclick="toggleFaq(this)">
+<div class="flex items-center gap-4 text-left">
+<span class="font-code-sm text-code-sm text-primary font-bold group-hover:text-glow">&gt;</span>
+<span class="font-headline-md text-headline-md-mobile text-on-surface group-hover:text-primary transition-colors">How do I authenticate with the developer community?</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 transform">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-surface-container-lowest">
+<div class="p-6 pt-0 ml-6 border-l border-primary/30 pl-6 text-on-surface-variant font-body-base text-body-base flex flex-col gap-4">
+<p>To gain write access to community channels, you must bridge your GitHub identity via the Discord portal. Navigate to the `#init` channel and execute the `/verify` command to receive your role tokens.</p>
+<div class="bg-surface border border-surface-variant p-3 font-code-sm text-code-sm rounded-none text-on-surface flex items-center gap-2">
+<span class="text-primary">$</span> discord-cli auth link --provider github
+                            </div>
+</div>
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="faq-item bg-surface-container-low border border-surface-variant rounded-none transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 outline-none focus:bg-surface-container-highest group" onclick="toggleFaq(this)">
+<div class="flex items-center gap-4 text-left">
+<span class="font-code-sm text-code-sm text-primary font-bold group-hover:text-glow">&gt;</span>
+<span class="font-headline-md text-headline-md-mobile text-on-surface group-hover:text-primary transition-colors">What is the accepted protocol for submitting a pull request?</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 transform">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-surface-container-lowest">
+<div class="p-6 pt-0 ml-6 border-l border-primary/30 pl-6 text-on-surface-variant font-body-base text-body-base flex flex-col gap-4">
+<p>All contributions must strictly adhere to the brutalist design specifications and pass automated CI/CD checks. Ensure your branch is named following the `feat/`, `fix/`, or `refactor/` convention. PRs without adequate terminal logging will be rejected by the automated sentinel.</p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="faq-item bg-surface-container-low border border-surface-variant rounded-none transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 outline-none focus:bg-surface-container-highest group" onclick="toggleFaq(this)">
+<div class="flex items-center gap-4 text-left">
+<span class="font-code-sm text-code-sm text-primary font-bold group-hover:text-glow">&gt;</span>
+<span class="font-headline-md text-headline-md-mobile text-on-surface group-hover:text-primary transition-colors">Are the core modules open for modification?</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 transform">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-surface-container-lowest">
+<div class="p-6 pt-0 ml-6 border-l border-primary/30 pl-6 text-on-surface-variant font-body-base text-body-base flex flex-col gap-4">
+<p>Core modules located under `src/core/*` are protected. Modification requires a consensus vote from the Level 3 Architects. For experimental features, utilize the `src/faculties/*` sandbox environment.</p>
+</div>
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="faq-item bg-surface-container-low border border-surface-variant rounded-none transition-all duration-300">
+<button class="w-full flex items-center justify-between p-6 outline-none focus:bg-surface-container-highest group" onclick="toggleFaq(this)">
+<div class="flex items-center gap-4 text-left">
+<span class="font-code-sm text-code-sm text-primary font-bold group-hover:text-glow">&gt;</span>
+<span class="font-headline-md text-headline-md-mobile text-on-surface group-hover:text-primary transition-colors">How is the neon glow effect structurally applied?</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform duration-300 transform">expand_more</span>
+</button>
+<div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out bg-surface-container-lowest">
+<div class="p-6 pt-0 ml-6 border-l border-primary/30 pl-6 text-on-surface-variant font-body-base text-body-base flex flex-col gap-4">
+<p>Depth is conveyed through light emission rather than standard drop shadows. We utilize a combination of semi-transparent primary color box-shadows layered over pure black surfaces to achieve the Vantablack/Neon aesthetic.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background border-t border-surface-variant grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto w-full relative z-40 flat no shadows full-width">
+<div class="flex flex-col gap-4 col-span-1 md:col-span-4 lg:col-span-1">
+<span class="text-headline-md font-headline-md font-bold text-primary">DerronDie</span>
+<p class="text-body-base font-body-base text-on-surface-variant">© 2025 DerronDie. Built with ❤️ by the community.</p>
+<div class="text-primary font-code-sm text-code-sm mt-4 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                SYSTEM.ONLINE
+            </div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-mono text-label-mono text-on-surface uppercase mb-2">&gt; Resources</span>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./guidelines.html">Guidelines</a>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./faqs.html">FAQs</a>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./codeOfConduct.html">Code of Conduct</a>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./liscence.html">License</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-mono text-label-mono text-on-surface uppercase mb-2">&gt; Network</span>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/Demon-Die" target="_blank">GitHub</a>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="https://discord.gg/4waT35Hxs" target="_blank">Discord</a>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./404err.html">Twitter</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-mono text-label-mono text-on-surface uppercase mb-2">&gt; Contact</span>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./404err.html">LinkedIn</a>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="mailto:safety@derrondie.dev">Email</a>
+</div>
+</footer>
+<script>
+        // Simple script for accordion logic and visual state updates
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.material-symbols-outlined');
+            const isActive = item.classList.contains('border-primary');
+
+            // Close all other FAQs
+            document.querySelectorAll('.faq-item').forEach(faq => {
+                if(faq !== item) {
+                    faq.classList.remove('border-primary', 'terminal-glow');
+                    faq.classList.add('border-surface-variant');
+                    faq.querySelector('.faq-content').style.maxHeight = null;
+                    faq.querySelector('.material-symbols-outlined').style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle current FAQ
+            if (!isActive) {
+                item.classList.remove('border-surface-variant');
+                item.classList.add('border-primary', 'terminal-glow');
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                item.classList.add('border-surface-variant');
+                item.classList.remove('border-primary', 'terminal-glow');
+                content.style.maxHeight = null;
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+    </script>
+</body></html>
