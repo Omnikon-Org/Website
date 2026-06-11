@@ -10,7 +10,7 @@
     await new Promise(resolve => window.addEventListener('envLoaded', resolve, { once: true }));
   }
 
-  const token = window.env?.GIT_DEMONDIE_ALL || window.env?.GITHUB_TOKEN || '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';
+  const token = window.env?.GIT_DEMONDIE_ALL || window.env?.GITHUB_TOKEN;
   
   // Clear loading/placeholder text
   container.innerHTML = '';

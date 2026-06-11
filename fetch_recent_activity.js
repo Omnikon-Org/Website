@@ -10,7 +10,7 @@
     await new Promise(resolve => window.addEventListener('envLoaded', resolve, { once: true }));
   }
 
-  const token = window.env?.GIT_DEMONDIE_ALL || window.env?.GITHUB_TOKEN || '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';
+  const token = window.env?.GIT_DEMONDIE_ALL || window.env?.GITHUB_TOKEN;
   
   let events;
   try {
@@ -53,25 +53,38 @@
 
       let iconName = 'history';
       let actionText = 'performed action';
+      let detailText = '';
       const type = event.type;
 
       if (type === 'PushEvent') {
         iconName = 'commit';
-        actionText = 'pushed to';
+        const commitMsg = event.payload?.commits?.[0]?.message || '';
+        const cleanMsg = commitMsg.split('\n')[0]; // first line of commit message
+        actionText = 'pushed';
+        detailText = cleanMsg ? ` "${cleanMsg}" to` : ' to';
       } else if (type === 'PullRequestEvent') {
         iconName = 'call_merge';
         const action = event.payload?.action || 'opened';
-        actionText = `${action} pull request in`;
+        const prTitle = event.payload?.pull_request?.title || '';
+        actionText = `${action} pull request`;
+        detailText = prTitle ? ` "${prTitle}" in` : ' in';
       } else if (type === 'IssuesEvent') {
         iconName = 'info';
         const action = event.payload?.action || 'opened';
-        actionText = `${action} issue in`;
+        const issueTitle = event.payload?.issue?.title || '';
+        actionText = `${action} issue`;
+        detailText = issueTitle ? ` "${issueTitle}" in` : ' in';
       } else if (type === 'CreateEvent') {
         iconName = 'add_circle';
-        actionText = 'created branch/tag in';
+        const refType = event.payload?.ref_type || 'branch';
+        const ref = event.payload?.ref || '';
+        actionText = `created ${refType}`;
+        detailText = ref ? ` "${ref}" in` : ' in';
       } else if (type === 'IssueCommentEvent') {
         iconName = 'comment';
-        actionText = 'commented in';
+        const issueTitle = event.payload?.issue?.title || '';
+        actionText = 'commented on';
+        detailText = issueTitle ? ` "${issueTitle}" in` : ' in';
       } else if (type === 'WatchEvent') {
         iconName = 'star';
         actionText = 'starred';
@@ -86,7 +99,7 @@
       const actor = event.actor?.login || 'Someone';
       const repoName = event.repo?.name ? event.repo.name.replace('Demon-Die/', '') : '';
       
-      p.innerHTML = `<span class="text-primary">${actor}</span> ${actionText} <span class="text-on-surface-variant font-bold">${repoName}</span>`;
+      p.innerHTML = `<span class="text-primary">${actor}</span> ${actionText}${detailText} <span class="text-on-surface-variant font-bold">${repoName}</span>`;
       content.appendChild(p);
 
       const time = document.createElement('span');
