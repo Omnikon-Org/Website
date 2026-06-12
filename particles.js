@@ -188,10 +188,10 @@ class Particle {
         const cursorStyle = document.createElement('style');
         cursorStyle.textContent = `
             html, body, a, button, select, [role="button"] {
-                cursor: url('./cursor/Cursor_64x64.png'), auto;
+                cursor: url('./cursor/Cursor_64x64.png') 16 7, auto;
             }
             a:active, button:active, select:active, [role="button"]:active, :active {
-                cursor: url('./cursor/CursorActive_64x64.png'), auto !important;
+                cursor: url('./cursor/CursorActive_64x64.png') 16 7, auto !important;
             }
         `;
         document.head.appendChild(cursorStyle);
