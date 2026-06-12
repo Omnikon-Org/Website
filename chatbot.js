@@ -1,11 +1,7 @@
-// chatbot.js
-// Handles the floating chatbot button, modal UI, and communication with HuggingFace API.
-
 (() => {
   const modal = document.getElementById('chatbot-modal');
   if (!modal) return;
 
-  // Render chatbot inner HTML
   modal.innerHTML = `
     <div id="chatbot-header">
       <span class="text-on-surface font-label-mono text-sm tracking-wider font-bold">DEMONDIE AI CORE v1.0</span>
@@ -28,7 +24,6 @@
   let isLoaded = false;
   let hasGreeted = false;
 
-  // Load organization summary context
   async function loadOrgData() {
     try {
       const res = await fetch('github_summary.json');
@@ -40,7 +35,6 @@
     }
   }
 
-  // Format simple markdown characters to HTML safely
   function formatMarkdown(text) {
     let escaped = text
       .replace(/&/g, "&amp;")
@@ -49,16 +43,10 @@
       .replace(/"/g, "&quot;")
       .replace(/'/g, "&#039;");
 
-    // Bold text (**word**)
     escaped = escaped.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-    
-    // Inline code (`code`)
     escaped = escaped.replace(/`(.*?)`/g, '<code class="bg-[#1e1e1e] border border-[#333] px-1 py-0.5 font-mono text-xs text-primary">$1</code>');
-
-    // Markdown Links ([text](url))
     escaped = escaped.replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank" class="text-primary hover:underline">$1</a>');
 
-    // Bullet points
     const lines = escaped.split('\n');
     const formattedLines = lines.map(line => {
       const trimmed = line.trim();
@@ -71,7 +59,6 @@
     return formattedLines.join('<br>');
   }
 
-  // Generate system prompt incorporating real-time org statistics
   function getSystemPrompt() {
     let context = '';
     if (orgData) {
@@ -93,8 +80,7 @@ RULES:
 1. ONLY answer questions related to DemonDie, its projects, and its community.
 2. If a query is unrelated to DemonDie (e.g. general knowledge, unrelated coding, general questions), politely refuse to answer. Say: "I am the DemonDie assistant, and I can only answer questions related to the organization."
 3. Keep answers technical, concise, clear, and direct.
-4. Respond in Markdown format where appropriate.
-`;
+4. Respond in Markdown format where appropriate.`;
   }
 
   const openModal = async () => {
@@ -164,7 +150,6 @@ RULES:
     appendMessage(userText, 'user');
     input.value = '';
 
-    // Wait for env to load if it hasn't already
     if (!window.envLoaded) {
       showTypingIndicator();
       await new Promise(resolve => window.addEventListener('envLoaded', resolve, { once: true }));
@@ -179,7 +164,6 @@ RULES:
 
     showTypingIndicator();
 
-    // Limit conversation memory to last 6 messages
     const recentHistory = chatHistory.slice(-6).map(msg => ({
       role: msg.role,
       content: msg.content
@@ -212,7 +196,6 @@ RULES:
       
       appendMessage(reply, 'bot');
 
-      // Add to local history
       chatHistory.push({ role: 'user', content: userText });
       chatHistory.push({ role: 'assistant', content: reply });
     } catch (e) {

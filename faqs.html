@@ -10,98 +10,107 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
         tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "secondary-fixed-dim": "#c8c6c5",
-                      "on-primary-fixed-variant": "#93000c",
-                      "on-primary": "#690006",
-                      "surface": "#121414",
-                      "tertiary": "#c8c6c5",
-                      "on-tertiary-container": "#2a2a29",
-                      "secondary": "#c8c6c5",
-                      "surface-dim": "#121414",
-                      "primary": "#ffb4ab",
-                      "on-primary-fixed": "#410002",
-                      "outline": "#ae8883",
-                      "on-surface": "#e3e2e2",
-                      "surface-container": "#1e2020",
-                      "on-secondary-fixed": "#1c1b1b",
-                      "surface-tint": "#ffb4ab",
-                      "error": "#ffb4ab",
-                      "surface-container-lowest": "#0d0e0f",
-                      "primary-fixed": "#ffdad6",
-                      "on-primary-container": "#5c0005",
-                      "surface-container-low": "#1a1c1c",
-                      "primary-fixed-dim": "#ffb4ab",
-                      "on-secondary-container": "#b7b5b4",
-                      "surface-container-high": "#292a2a",
-                      "primary-container": "#ff544b",
-                      "surface-bright": "#383939",
-                      "on-error-container": "#ffdad6",
-                      "background": "#121414",
-                      "on-surface-variant": "#e7bcb8",
-                      "tertiary-container": "#929090",
-                      "on-tertiary-fixed": "#1c1b1b",
-                      "on-error": "#690005",
-                      "secondary-container": "#474746",
-                      "outline-variant": "#5e3f3c",
-                      "on-secondary-fixed-variant": "#474746",
-                      "surface-variant": "#343535",
-                      "on-secondary": "#313030",
-                      "on-tertiary-fixed-variant": "#474646",
-                      "on-background": "#e3e2e2",
-                      "inverse-surface": "#e3e2e2",
-                      "tertiary-fixed-dim": "#c8c6c5",
-                      "error-container": "#93000a",
-                      "on-tertiary": "#313030",
-                      "surface-container-highest": "#343535",
-                      "inverse-primary": "#c00014",
-                      "tertiary-fixed": "#e5e2e1",
-                      "inverse-on-surface": "#2f3131",
-                      "secondary-fixed": "#e5e2e1"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.125rem",
-                      "lg": "0.25rem",
-                      "xl": "0.5rem",
-                      "full": "0.75rem"
-              },
-              "spacing": {
-                      "margin-mobile": "16px",
-                      "gutter": "24px",
-                      "unit": "4px",
-                      "section-gap": "80px",
-                      "container-max": "1280px"
-              },
-              "fontFamily": {
-                      "headline-md-mobile": ["Inter"],
-                      "body-base": ["Inter"],
-                      "headline-md": ["Inter"],
-                      "code-sm": ["JetBrains Mono"],
-                      "display-lg": ["Inter"],
-                      "label-mono": ["JetBrains Mono"]
-              },
-              "fontSize": {
-                      "headline-md-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                      "body-base": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                      "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                      "code-sm": ["12px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                      "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                      "label-mono": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}]
-              }
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#313030",
+                        "surface-container-high": "#292a2a",
+                        "surface-variant": "#343535",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "inverse-surface": "#e3e2e2",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "secondary": "#c8c6c5",
+                        "surface-container-lowest": "#0d0e0f",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-container": "#ff544b",
+                        "tertiary": "#c8c6c5",
+                        "on-surface-variant": "#e7bcb8",
+                        "surface": "#0f0f0f",
+                        "on-primary-fixed-variant": "#93000c",
+                        "surface-dim": "#121414",
+                        "primary": "#ff3131",
+                        "on-primary-container": "#5c0005",
+                        "error-container": "#93000a",
+                        "secondary-container": "#474746",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#383939",
+                        "tertiary-container": "#929090",
+                        "on-error": "#690005",
+                        "background": "#000000",
+                        "on-secondary": "#313030",
+                        "on-surface": "#e3e2e2",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-primary-fixed": "#410002",
+                        "primary-fixed": "#ffdad6",
+                        "tertiary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "inverse-primary": "#c00014",
+                        "surface-tint": "#ffb4ab",
+                        "surface-container-highest": "#343535",
+                        "surface-container": "#1a1a1a",
+                        "on-primary": "#000000",
+                        "on-background": "#e3e2e2",
+                        "outline-variant": "#1a1a1a",
+                        "inverse-on-surface": "#2f3131",
+                        "outline": "#1a1a1a",
+                        "surface-container-low": "#1a1c1c",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-secondary-container": "#b7b5b4",
+                        "on-tertiary-container": "#2a2a29"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "code-sm": ["JetBrains Mono", "monospace"],
+                        "label-mono": ["JetBrains Mono", "monospace"],
+                        "headline-md-mobile": ["Inter", "sans-serif"],
+                        "body-base": ["JetBrains Mono", "monospace"],
+                        "display-lg": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "code-sm": ["12px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "label-mono": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-base": ["14px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
             }
-          }
         }
     </script>
 <style>
+        /* Cyber-Terminal Grid Background */
+        body {
+            background-color: #000000;
+            background-image: 
+                linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+                linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        
         /* Custom styles for terminal glow effects that can't be purely tokenized */
         .terminal-glow {
-            box-shadow: 0 0 8px rgba(255, 180, 171, 0.3);
+            box-shadow: 0 0 8px rgba(255, 49, 49, 0.3);
         }
         .text-glow {
-            text-shadow: 0 0 8px rgba(255, 180, 171, 0.5);
+            text-shadow: 0 0 8px rgba(255, 49, 49, 0.5);
         }
         .crt-scanline {
             background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1));
@@ -112,12 +121,14 @@
 </head>
 <body class="bg-background text-on-background min-h-screen flex flex-col font-body-base text-body-base relative">
 <!-- Optional CRT Overlay for thematic depth -->
-<div class="absolute inset-0 z-50 crt-scanline"></div>
+<div class="fixed inset-0 z-50 crt-scanline pointer-events-none mix-blend-overlay opacity-30"></div>
 <!-- TopNavBar -->
 <nav class="bg-background dark:bg-background z-40 relative border-b border-surface-variant flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto flat no shadows docked full-width top-0">
-<div class="flex items-center gap-4">
-<span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface">DemonDie</span>
-</div>
+<!-- Brand Logo -->
+<a class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight hover:text-primary transition-colors flex items-center gap-2" href="./index.html">
+<span class="text-primary font-code-sm text-code-sm">&gt;_</span>
+    DemonDie
+</a>
 <div class="hidden md:flex items-center gap-6">
 <a class="text-label-mono font-label-mono text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 px-2 py-1 rounded-DEFAULT" href="./index.html">Home</a>
 <a class="text-label-mono font-label-mono text-primary border-b-2 border-primary pb-1 transition-colors duration-200 px-2 rounded-none scale-95 duration-100" href="./faqs.html">FAQs</a>
@@ -257,7 +268,7 @@
 <a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./faqs.html">FAQs</a>
 <a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./codeOfConduct.html">Code of Conduct</a>
 <a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./blogs.html">Blogs</a>
-<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./liscence.html">License</a>
+<a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors" href="./licence.html">License</a>
 </div>
 <div class="flex flex-col gap-2">
 <span class="font-label-mono text-label-mono text-on-surface uppercase mb-2">&gt; Network</span>
@@ -302,5 +313,6 @@
                 icon.style.transform = 'rotate(0deg)';
             }
         }
-    </script>
+        </script>
+<script src="./particles.js" defer></script>
 </body></html>
