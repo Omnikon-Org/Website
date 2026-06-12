@@ -700,6 +700,36 @@ h1 {
   }
 }
 
+/* ── Large desktop hero polish (1440px and above) ── */
+/*
+ * On wide displays the hero's two-column layout can suffer from:
+ *  - Excessive vertical height caused by an unconstrained hero image
+ *  - The hardcoded min-h-[716px] Tailwind class inflating empty space
+ *  - The pt-24 (96px) main padding creating a large gap below the nav
+ *  - The gap-12 (48px) column gap feeling stretched across a 1280px container
+ * These rules are strictly additive overrides; no existing breakpoint is touched.
+ */
+@media (min-width: 1440px) {
+  /* Constrain the hero image so it can't drive up section height */
+  .hero-img {
+    max-height: 520px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* Override Tailwind's min-h-[716px] and tighten column gap */
+  #hero-section {
+    min-height: 600px;
+    column-gap: 40px;
+  }
+
+  /* Close the excess gap between the fixed nav (~64px) and hero content */
+  main#home {
+    padding-top: 80px;
+  }
+}
+
 @media (max-width: 620px) {
   .nav,
   .section,
