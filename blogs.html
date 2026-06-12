@@ -1,0 +1,787 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Blogs & Articles - DemonDie</title>
+<meta name="description" content="Insights, tutorials, project updates, and developer stories from the DemonDie community.">
+
+<!-- Open Graph Tags -->
+<meta property="og:title" content="Blogs & Articles - DemonDie">
+<meta property="og:description" content="Insights, tutorials, project updates, and developer stories from the DemonDie community.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed-variant": "#93000c",
+                        "on-primary": "#690006",
+                        "surface": "#121414",
+                        "tertiary": "#c8c6c5",
+                        "on-tertiary-container": "#2a2a29",
+                        "secondary": "#c8c6c5",
+                        "surface-dim": "#121414",
+                        "primary": "#ffb4ab",
+                        "on-primary-fixed": "#410002",
+                        "outline": "#ae8883",
+                        "on-surface": "#e3e2e2",
+                        "surface-container": "#1e2020",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-tint": "#ffb4ab",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#0d0e0f",
+                        "primary-fixed": "#ffdad6",
+                        "on-primary-container": "#5c0005",
+                        "surface-container-low": "#1a1c1c",
+                        "primary-fixed-dim": "#ffb4ab",
+                        "on-secondary-container": "#b7b5b4",
+                        "surface-container-high": "#292a2a",
+                        "primary-container": "#ff544b",
+                        "surface-bright": "#383939",
+                        "on-error-container": "#ffdad6",
+                        "background": "#121414",
+                        "on-surface-variant": "#e7bcb8",
+                        "tertiary-container": "#929090",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-error": "#690005",
+                        "secondary-container": "#474746",
+                        "outline-variant": "#5e3f3c",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-variant": "#343535",
+                        "on-secondary": "#313030",
+                        "on-tertiary-fixed-variant": "#474646",
+                        "on-background": "#e3e2e2",
+                        "inverse-surface": "#e3e2e2",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "error-container": "#93000a",
+                        "on-tertiary": "#313030",
+                        "surface-container-highest": "#343535",
+                        "inverse-primary": "#c00014",
+                        "tertiary-fixed": "#e5e2e1",
+                        "inverse-on-surface": "#2f3131",
+                        "secondary-fixed": "#e5e2e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "section-gap": "80px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "headline-md-mobile": ["Inter"],
+                        "body-base": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "code-sm": ["JetBrains Mono"],
+                        "display-lg": ["Inter"],
+                        "label-mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-md-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "body-base": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "code-sm": ["12px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-mono": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Cyber-Terminal Grid Background */
+        body {
+            background-color: #121414;
+            background-image: 
+                linear-gradient(rgba(255, 180, 171, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 180, 171, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        
+        /* Pulse Animation for live states */
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 1; filter: drop-shadow(0 0 4px rgba(255, 180, 171, 0.5)); }
+            50% { opacity: 0.5; filter: drop-shadow(0 0 1px rgba(255, 180, 171, 0.2)); }
+        }
+        .animate-pulse-glow {
+            animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        /* Terminal Cursor */
+        .terminal-cursor::after {
+            content: '_';
+            animation: blink 1s step-end infinite;
+            color: theme('colors.primary');
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(255, 180, 171, 0.15);
+            border-color: rgba(255, 180, 171, 0.4);
+        }
+    </style>
+<!-- Supabase JS Client -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body class="text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary selection:text-background">
+
+<!-- TopNavBar -->
+<header class="bg-background dark:bg-background border-b border-surface-variant sticky top-0 z-50 w-full shadow-[0_4px_24px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+    <!-- Brand Logo -->
+    <a class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface tracking-tight hover:text-primary transition-colors flex items-center gap-2" href="./index.html">
+        <span class="text-primary font-code-sm text-code-sm">&gt;_</span>
+        DemonDie
+    </a>
+    <!-- Navigation Links -->
+    <nav class="hidden md:flex items-center gap-6">
+        <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 text-label-mono font-label-mono px-3 py-2 rounded-DEFAULT" href="./index.html">Home</a>
+        <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 text-label-mono font-label-mono px-3 py-2 rounded-DEFAULT" href="./faqs.html">FAQs</a>
+        <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 text-label-mono font-label-mono px-3 py-2 rounded-DEFAULT" href="./guidelines.html">Guidelines</a>
+        <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 text-label-mono font-label-mono px-3 py-2 rounded-DEFAULT" href="./codeOfConduct.html">Code of Conduct</a>
+        <!-- Active link -->
+        <a class="text-primary border-b-2 border-primary pb-1 scale-95 duration-100 text-label-mono font-label-mono px-3 py-2" href="./blogs.html">Blogs</a>
+        <a class="text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors duration-200 text-label-mono font-label-mono px-3 py-2 rounded-DEFAULT" href="./licence.html">License</a>
+    </nav>
+    <div class="hidden md:flex">
+        <a class="bg-primary text-background font-label-mono text-label-mono px-4 py-2 hover:shadow-[0_0_12px_rgba(255,180,171,0.4)] transition-all flex items-center gap-2 group" href="https://github.com/Demon-Die" target="_blank">
+            <span class="material-symbols-outlined text-[18px] group-hover:scale-110 transition-transform" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+            Star on GitHub
+        </a>
+    </div>
+    <button class="md:hidden text-primary p-2 border border-surface-variant rounded-DEFAULT">
+        <span class="material-symbols-outlined" data-icon="menu">menu</span>
+    </button>
+</div>
+</header>
+
+<!-- Main Content Area -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap flex flex-col gap-10">
+    
+    <!-- Hero Header -->
+    <header class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-surface-variant pb-8 relative">
+        <div class="absolute -left-4 top-0 h-full w-[2px] bg-surface-variant"></div>
+        <div class="absolute -left-4 top-0 h-8 w-[2px] bg-primary animate-pulse-glow"></div>
+        <div class="space-y-4">
+            <div class="flex items-center gap-3">
+                <div class="h-2 w-2 rounded-full bg-primary animate-pulse-glow"></div>
+                <span class="text-primary font-code-sm text-code-sm uppercase tracking-widest opacity-80">SYS.BLOG.INIT</span>
+            </div>
+            <h1 class="text-display-lg font-display-lg text-on-surface font-bold terminal-cursor">Blogs & Articles</h1>
+            <p class="font-body-base text-body-base text-on-surface-variant max-w-2xl">
+                Insights, tutorials, project updates, and developer stories from the DemonDie community.
+            </p>
+        </div>
+        
+        <!-- Authorized actions -->
+        <button id="add-blog-btn" class="bg-primary text-background font-label-mono text-label-mono px-6 py-3 hover:shadow-[0_0_15px_rgba(255,180,171,0.5)] transition-all flex items-center gap-2 border border-primary font-bold">
+            <span class="material-symbols-outlined text-sm">add</span>
+            Add Blog
+        </button>
+    </header>
+
+    <!-- Stats Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-6 border border-surface-variant bg-surface-container-low p-6">
+        <div class="flex items-center gap-4 p-4 border-r border-surface-variant/30 last:border-none">
+            <div class="w-12 h-12 border border-primary/30 flex items-center justify-center text-primary bg-primary/5 rounded-full">
+                <span class="material-symbols-outlined">description</span>
+            </div>
+            <div>
+                <div id="stat-articles" class="text-headline-md font-bold text-on-surface">0</div>
+                <div class="text-code-sm font-code-sm text-on-surface-variant uppercase tracking-wider">Total Articles</div>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 p-4 border-r border-surface-variant/30 last:border-none">
+            <div class="w-12 h-12 border border-primary/30 flex items-center justify-center text-primary bg-primary/5 rounded-full">
+                <span class="material-symbols-outlined">person</span>
+            </div>
+            <div>
+                <div id="stat-authors" class="text-headline-md font-bold text-on-surface">0</div>
+                <div class="text-code-sm font-code-sm text-on-surface-variant uppercase tracking-wider">Total Authors</div>
+            </div>
+        </div>
+        <div class="flex items-center gap-4 p-4 last:border-none">
+            <div class="w-12 h-12 border border-primary/30 flex items-center justify-center text-primary bg-primary/5 rounded-full">
+                <span class="material-symbols-outlined">rss_feed</span>
+            </div>
+            <div>
+                <div id="stat-platforms" class="text-headline-md font-bold text-on-surface">0</div>
+                <div class="text-code-sm font-code-sm text-on-surface-variant uppercase tracking-wider">Platforms</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters and Search -->
+    <section class="flex flex-col md:flex-row justify-between items-center gap-4 bg-surface-container-lowest border border-surface-variant p-4">
+        <!-- Search bar -->
+        <div class="flex items-center gap-2 border border-surface-variant px-3 py-2 w-full md:max-w-md focus-within:border-primary/70 transition-colors">
+            <span class="material-symbols-outlined text-on-surface-variant text-sm">search</span>
+            <input id="search-input" type="text" placeholder="Search by title, description, or author..." class="bg-transparent text-on-surface outline-none border-none p-0 text-sm w-full focus:ring-0">
+        </div>
+        <!-- Dropdowns -->
+        <div class="flex gap-4 w-full md:w-auto">
+            <select id="platform-filter" class="bg-surface-container border border-surface-variant text-on-surface px-4 py-2 text-sm focus:border-primary outline-none cursor-pointer flex-1 md:flex-none">
+                <option value="all">All Platforms</option>
+                <option value="Dev.to">Dev.to</option>
+                <option value="Hashnode">Hashnode</option>
+                <option value="Medium">Medium</option>
+                <option value="Substack">Substack</option>
+                <option value="GitHub Pages">GitHub Pages</option>
+                <option value="Personal Blog">Personal Blog</option>
+            </select>
+            <select id="date-sort" class="bg-surface-container border border-surface-variant text-on-surface px-4 py-2 text-sm focus:border-primary outline-none cursor-pointer flex-1 md:flex-none">
+                <option value="desc">Newest First</option>
+                <option value="asc">Oldest First</option>
+            </select>
+        </div>
+    </section>
+
+    <!-- Loading State -->
+    <section id="loading-state" class="flex flex-col items-center justify-center py-20 gap-4">
+        <div class="h-10 w-10 border-2 border-t-primary border-surface-variant rounded-full animate-spin"></div>
+        <p class="font-code-sm text-code-sm text-on-surface-variant">Loading article indexes...</p>
+    </section>
+
+    <!-- Empty State -->
+    <section id="empty-state" class="hidden flex flex-col items-center justify-center py-20 text-center border border-dashed border-surface-variant p-10">
+        <span class="material-symbols-outlined text-primary text-5xl mb-4">post_add</span>
+        <h3 class="text-headline-md font-bold text-on-surface mb-2">No Articles Listed</h3>
+        <p class="text-on-surface-variant font-body-base text-sm max-w-sm mb-6">
+            Be the first to share knowledge with the DemonDie community.
+        </p>
+        <button onclick="openModal()" class="bg-primary text-background font-label-mono text-label-mono px-4 py-2 border border-primary hover:shadow-[0_0_12px_rgba(255,180,171,0.4)] transition-all">
+            Share an Article
+        </button>
+    </section>
+
+    <!-- Articles Grid -->
+    <section id="articles-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></section>
+</main>
+
+<!-- Modal Overlay for Adding Blog -->
+<div id="add-modal" class="fixed inset-0 bg-background/80 backdrop-blur-md z-[100] hidden items-center justify-center p-4">
+    <div class="bg-surface border border-surface-variant w-full max-w-lg p-6 flex flex-col gap-6 relative shadow-[0_12px_40px_rgba(0,0,0,0.8)]">
+        
+        <!-- Header -->
+        <div class="flex justify-between items-center border-b border-surface-variant pb-4">
+            <span class="text-on-surface font-label-mono text-sm tracking-widest font-bold">ADD NEW ARTICLE</span>
+            <button onclick="closeModal()" class="text-on-surface-variant hover:text-primary transition-colors">
+                <span class="material-symbols-outlined text-sm">close</span>
+            </button>
+        </div>
+
+        <!-- Scraping phase -->
+        <div id="modal-scrape-phase" class="flex flex-col gap-4">
+            <div class="space-y-2">
+                <label class="text-code-sm font-code-sm text-on-surface-variant block">ARTICLE URL</label>
+                <input id="input-url" type="url" placeholder="https://dev.to/username/my-awesome-article" class="w-full bg-surface-container-low border border-surface-variant p-3 text-on-surface text-sm outline-none focus:border-primary">
+            </div>
+            
+            <div class="space-y-2">
+                <label class="text-code-sm font-code-sm text-on-surface-variant block">ADMIN SECRET</label>
+                <input id="input-secret" type="password" placeholder="Enter admin key to authorize insert" class="w-full bg-surface-container-low border border-surface-variant p-3 text-on-surface text-sm outline-none focus:border-primary">
+            </div>
+
+            <button id="modal-btn-next" onclick="scrapeMetadata()" class="bg-primary text-background font-label-mono text-label-mono py-3 font-bold flex items-center justify-center gap-2 hover:shadow-[0_0_12px_rgba(255,180,171,0.4)] transition-all">
+                <span class="material-symbols-outlined text-sm">troubleshoot</span>
+                Scrape Metadata
+            </button>
+        </div>
+
+        <!-- Scrape Loading Phase -->
+        <div id="modal-loading-phase" class="hidden flex flex-col items-center justify-center py-10 gap-4">
+            <div class="h-8 w-8 border-2 border-t-primary border-surface-variant rounded-full animate-spin"></div>
+            <p class="font-code-sm text-code-sm text-on-surface-variant">Parsing metadata server-side...</p>
+        </div>
+
+        <!-- Preview & Edit phase -->
+        <div id="modal-preview-phase" class="hidden flex flex-col gap-4 max-h-[60vh] overflow-y-auto pr-1">
+            <div class="border border-surface-variant p-3 bg-surface-container-lowest text-xs text-primary font-code-sm flex items-center gap-2 mb-2">
+                <span class="material-symbols-outlined text-sm">info</span>
+                Please review extracted metadata before saving.
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-code-sm font-code-sm text-on-surface-variant block">TITLE</label>
+                <input id="preview-title" type="text" class="w-full bg-surface-container-low border border-surface-variant p-2.5 text-on-surface text-sm outline-none focus:border-primary">
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-code-sm font-code-sm text-on-surface-variant block">DESCRIPTION</label>
+                <textarea id="preview-desc" rows="3" class="w-full bg-surface-container-low border border-surface-variant p-2.5 text-on-surface text-sm outline-none focus:border-primary resize-none"></textarea>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-2">
+                    <label class="text-code-sm font-code-sm text-on-surface-variant block">AUTHOR</label>
+                    <input id="preview-author" type="text" class="w-full bg-surface-container-low border border-surface-variant p-2.5 text-on-surface text-sm outline-none focus:border-primary">
+                </div>
+                <div class="space-y-2">
+                    <label class="text-code-sm font-code-sm text-on-surface-variant block">PLATFORM</label>
+                    <select id="preview-platform" class="w-full bg-surface-container-low border border-surface-variant p-2.5 text-on-surface text-sm outline-none focus:border-primary">
+                        <option value="Dev.to">Dev.to</option>
+                        <option value="Hashnode">Hashnode</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Substack">Substack</option>
+                        <option value="GitHub Pages">GitHub Pages</option>
+                        <option value="Personal Blog">Personal Blog</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label class="text-code-sm font-code-sm text-on-surface-variant block">FEATURED IMAGE URL</label>
+                <input id="preview-image" type="text" class="w-full bg-surface-container-low border border-surface-variant p-2.5 text-on-surface text-sm outline-none focus:border-primary">
+            </div>
+
+            <button id="modal-btn-save" onclick="saveBlog()" class="bg-primary text-background font-label-mono text-label-mono py-3 font-bold mt-2 hover:shadow-[0_0_15px_rgba(255,180,171,0.5)] transition-all">
+                Publish Article
+            </button>
+        </div>
+
+        <!-- Error notification area -->
+        <div id="modal-error" class="hidden text-xs text-error bg-error/10 border border-error/20 p-3 flex items-center gap-2">
+            <span class="material-symbols-outlined text-sm">warning</span>
+            <span id="modal-error-text">Failed to perform action</span>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-background dark:bg-background border-t border-surface-variant mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto w-full">
+    <!-- Brand Column -->
+    <div class="col-span-1 md:col-span-1 flex flex-col justify-between h-full space-y-6">
+        <div>
+            <a class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-2 mb-4" href="./index.html">
+                <span class="material-symbols-outlined text-[32px]" data-icon="terminal">terminal</span>
+                DemonDie
+            </a>
+            <p class="text-body-base font-body-base text-on-surface-variant opacity-80">
+                Building elite open systems for the modern web. Hack the planet.
+            </p>
+        </div>
+        <div class="text-label-mono font-label-mono text-on-surface-variant opacity-60">
+            © 2025 DemonDie. Built with ❤️ by the community.
+        </div>
+    </div>
+    <!-- Links Column 1 -->
+    <div class="col-span-1 md:col-start-3">
+        <h3 class="text-label-mono font-label-mono text-on-surface uppercase tracking-widest mb-6 border-b border-surface-variant pb-2 inline-block">Resources</h3>
+        <ul class="space-y-4">
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="./guidelines.html"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> Guidelines</a></li>
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="./faqs.html"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> FAQs</a></li>
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="./codeOfConduct.html"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> Code of Conduct</a></li>
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="./liscence.html"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> License</a></li>
+        </ul>
+    </div>
+    <!-- Links Column 2 -->
+    <div class="col-span-1">
+        <h3 class="text-label-mono font-label-mono text-on-surface uppercase tracking-widest mb-6 border-b border-surface-variant pb-2 inline-block">Network</h3>
+        <ul class="space-y-4">
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="https://github.com/Demon-Die" target="_blank"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> GitHub</a></li>
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="https://discord.gg/4waT35Hxs" target="_blank"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> Discord</a></li>
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="https://x.com/DemonDieOrg" target="_blank"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> Twitter</a></li>
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="https://www.linkedin.com/in/demondie-org/" target="_blank"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> LinkedIn</a></li>
+            <li><a class="text-body-base font-body-base text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 group" href="mailto:safety@demondie.dev"><span class="text-primary opacity-0 group-hover:opacity-100 transition-opacity font-label-mono">&gt;</span> Email</a></li>
+        </ul>
+    </div>
+</div>
+</footer>
+
+<!-- Env Loader Script -->
+<script>
+    window.env = {};
+    (async function() {
+      try {
+        const responseJson = await fetch('env.json');
+        if (responseJson.ok) {
+          window.env = await responseJson.json();
+        } else {
+          const responseEnv = await fetch('.env');
+          if (responseEnv.ok) {
+            const text = await responseEnv.text();
+            text.split('\n').forEach(line => {
+              const parts = line.split('=');
+              if (parts.length >= 2) {
+                const key = parts[0].trim();
+                const val = parts.slice(1).join('=').trim().replace(/^["']|["']$/g, '');
+                window.env[key] = val;
+              }
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('Environment loading error:', e);
+      } finally {
+        window.envLoaded = true;
+        window.dispatchEvent(new CustomEvent('envLoaded'));
+      }
+    })();
+</script>
+
+<!-- Main Blogs Controller -->
+<script>
+    let supabaseClient = null;
+    let allBlogs = [];
+    let currentScrapedBlog = null;
+
+    // Load admin secret from localStorage if exists
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedSecret = localStorage.getItem('demondie_admin_secret');
+        if (savedSecret) {
+            document.getElementById('input-secret').value = savedSecret;
+        }
+    });
+
+    // Listen to Env Loaded Event to initialize Supabase
+    window.addEventListener('envLoaded', () => {
+        const supabaseUrl = window.env?.SUPABASE_URL || window.env?.NEXT_PUBLIC_SUPABASE_URL;
+        const supabaseAnonKey = window.env?.SUPABASE_ANON_KEY || window.env?.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+        if (!supabaseUrl || !supabaseAnonKey) {
+            console.error('Supabase credentials missing.');
+            showErrorState('Supabase client credentials are not configured in your environments.');
+            document.getElementById('loading-state').classList.add('hidden');
+            return;
+        }
+
+        try {
+            let normalizedUrl = supabaseUrl.trim();
+            if (normalizedUrl.endsWith('/rest/v1/')) {
+                normalizedUrl = normalizedUrl.slice(0, -9);
+            } else if (normalizedUrl.endsWith('/rest/v1')) {
+                normalizedUrl = normalizedUrl.slice(0, -8);
+            }
+            supabaseClient = supabase.createClient(normalizedUrl, supabaseAnonKey);
+            fetchBlogs();
+        } catch (e) {
+            console.error('Supabase initialization failed:', e);
+            showErrorState('Failed to initialize connection to Supabase.');
+        }
+    });
+
+    // Fetch blogs from Supabase
+    async function fetchBlogs() {
+        if (!supabaseClient) return;
+        
+        try {
+            const { data, error } = await supabaseClient
+                .from('blogs')
+                .select('*')
+                .order('published_at', { ascending: false });
+
+            if (error) throw error;
+            allBlogs = data || [];
+            renderBlogs();
+        } catch (e) {
+            console.error('Failed to retrieve blogs:', e);
+            showErrorState('Could not retrieve articles from database index.');
+        }
+    }
+
+    // Render articles & statistics
+    function renderBlogs() {
+        document.getElementById('loading-state').classList.add('hidden');
+        
+        // Update stats
+        const articlesCount = allBlogs.length;
+        const authors = new Set(allBlogs.map(b => b.author.trim()));
+        const platforms = new Set(allBlogs.map(b => b.platform.trim()));
+
+        animateCounter('stat-articles', articlesCount);
+        animateCounter('stat-authors', authors.size);
+        animateCounter('stat-platforms', platforms.size);
+
+        if (articlesCount === 0) {
+            document.getElementById('empty-state').classList.remove('hidden');
+            document.getElementById('articles-grid').classList.add('hidden');
+            return;
+        }
+
+        document.getElementById('empty-state').classList.add('hidden');
+        document.getElementById('articles-grid').classList.remove('hidden');
+
+        // Apply filters & search
+        const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+        const platformFilter = document.getElementById('platform-filter').value;
+        const dateSort = document.getElementById('date-sort').value;
+
+        let filtered = [...allBlogs];
+
+        if (searchQuery) {
+            filtered = filtered.filter(b => 
+                b.title.toLowerCase().includes(searchQuery) ||
+                (b.description && b.description.toLowerCase().includes(searchQuery)) ||
+                b.author.toLowerCase().includes(searchQuery)
+            );
+        }
+
+        if (platformFilter !== 'all') {
+            filtered = filtered.filter(b => b.platform === platformFilter);
+        }
+
+        filtered.sort((a, b) => {
+            const dateA = new Date(a.published_at || a.created_at).getTime();
+            const dateB = new Date(b.published_at || b.created_at).getTime();
+            return dateSort === 'desc' ? dateB - dateA : dateA - dateB;
+        });
+
+        // Generate Cards Grid
+        const grid = document.getElementById('articles-grid');
+        grid.innerHTML = '';
+
+        if (filtered.length === 0) {
+            grid.innerHTML = `<div class="col-span-full py-10 text-center font-code-sm text-code-sm text-on-surface-variant">No matching articles found.</div>`;
+            return;
+        }
+
+        filtered.forEach(blog => {
+            const card = document.createElement('article');
+            card.className = 'border border-surface-variant bg-surface-container p-4 flex flex-col gap-4 glow-hover transition-all';
+            
+            // Image template fallback
+            const imgUrl = blog.image || 'https://raw.githubusercontent.com/Demon-Die/Website/refs/heads/main/assets/demondie-logo.webp';
+            
+            // Platform badge styling
+            let badgeBg = 'bg-primary/10 border-primary/20 text-primary';
+            if (blog.platform === 'Dev.to') badgeBg = 'bg-neutral-800 border-neutral-700 text-neutral-200';
+            else if (blog.platform === 'Medium') badgeBg = 'bg-white/10 border-white/20 text-white';
+            else if (blog.platform === 'Hashnode') badgeBg = 'bg-blue-600/10 border-blue-500/20 text-blue-400';
+            else if (blog.platform === 'Substack') badgeBg = 'bg-orange-500/10 border-orange-500/20 text-orange-400';
+
+            const publishedDate = new Date(blog.published_at).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            });
+
+            card.innerHTML = `
+                <div class="h-44 w-full bg-surface-container-lowest overflow-hidden border border-surface-variant relative">
+                    <img src="${imgUrl}" alt="${blog.title}" loading="lazy" class="w-full h-full object-cover">
+                    <span class="absolute top-2 right-2 border px-2 py-0.5 text-[10px] font-label-mono uppercase tracking-wider ${badgeBg}">
+                        ${blog.platform}
+                    </span>
+                </div>
+                <div class="flex flex-col gap-2 flex-grow">
+                    <div class="flex justify-between items-center text-xs font-code-sm text-on-surface-variant">
+                        <span>By: ${blog.author}</span>
+                        <span>${publishedDate}</span>
+                    </div>
+                    <h3 class="text-on-surface font-label-mono font-bold text-sm line-clamp-2 hover:text-primary transition-colors cursor-pointer" onclick="window.open('${blog.url}', '_blank')">
+                        ${blog.title}
+                    </h3>
+                    <p class="text-on-surface-variant font-body-base text-xs line-clamp-3 leading-relaxed">
+                        ${blog.description || 'No description available.'}
+                    </p>
+                </div>
+                <div class="flex items-center justify-between border-t border-surface-variant/30 pt-3">
+                    <a href="${blog.url}" target="_blank" class="text-primary hover:underline text-xs font-label-mono flex items-center gap-1.5 uppercase font-bold">
+                        Read Article
+                        <span class="material-symbols-outlined text-xs">open_in_new</span>
+                    </a>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+    }
+
+    // Modal Control
+    const modal = document.getElementById('add-modal');
+    
+    function openModal() {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.getElementById('input-url').focus();
+    }
+
+    function closeModal() {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        resetModal();
+    }
+
+    function resetModal() {
+        document.getElementById('modal-scrape-phase').classList.remove('hidden');
+        document.getElementById('modal-loading-phase').classList.add('hidden');
+        document.getElementById('modal-preview-phase').classList.add('hidden');
+        document.getElementById('modal-error').classList.add('hidden');
+        document.getElementById('input-url').value = '';
+        currentScrapedBlog = null;
+    }
+
+    // Trigger scraping server-side
+    async function scrapeMetadata() {
+        const url = document.getElementById('input-url').value.trim();
+        const secret = document.getElementById('input-secret').value.trim();
+        
+        if (!url) {
+            showModalError('Please enter a valid URL');
+            return;
+        }
+
+        // Validate secret exists
+        const adminSecret = window.env?.ADMIN_SECRET;
+        if (adminSecret && secret !== adminSecret) {
+            showModalError('Invalid admin authorization key.');
+            return;
+        }
+
+        // Save secret to localStorage for convenience
+        if (secret) {
+            localStorage.setItem('demondie_admin_secret', secret);
+        }
+
+        document.getElementById('modal-scrape-phase').classList.add('hidden');
+        document.getElementById('modal-loading-phase').classList.remove('hidden');
+        document.getElementById('modal-error').classList.add('hidden');
+
+        try {
+            const scrapeUrl = `/api/scrape?url=${encodeURIComponent(url)}`;
+            const response = await fetch(scrapeUrl);
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Metadata extraction failed');
+            }
+
+            currentScrapedBlog = data;
+            populatePreview(data);
+        } catch (e) {
+            console.warn('Scraping error:', e);
+            // On scraping failure, fallback to manual inputs
+            showModalError('Automatic metadata extraction failed. Please fill details manually.');
+            currentScrapedBlog = { url, title: '', description: '', image: '', author: '', platform: 'Personal Blog', published_at: new Date().toISOString() };
+            populatePreview(currentScrapedBlog);
+        }
+    }
+
+    function populatePreview(blog) {
+        document.getElementById('modal-loading-phase').classList.add('hidden');
+        document.getElementById('modal-preview-phase').classList.remove('hidden');
+
+        document.getElementById('preview-title').value = blog.title || '';
+        document.getElementById('preview-desc').value = blog.description || '';
+        document.getElementById('preview-author').value = blog.author || '';
+        document.getElementById('preview-platform').value = blog.platform || 'Personal Blog';
+        document.getElementById('preview-image').value = blog.image || '';
+    }
+
+    // Insert blog into Supabase
+    async function saveBlog() {
+        if (!supabaseClient) return;
+
+        const url = currentScrapedBlog.url;
+        const secret = document.getElementById('input-secret').value.trim();
+
+        // Server validation/double check
+        const adminSecret = window.env?.ADMIN_SECRET;
+        if (adminSecret && secret !== adminSecret) {
+            showModalError('Unauthorized transaction.');
+            return;
+        }
+
+        const title = document.getElementById('preview-title').value.trim();
+        const description = document.getElementById('preview-desc').value.trim();
+        const author = document.getElementById('preview-author').value.trim();
+        const platform = document.getElementById('preview-platform').value;
+        const image = document.getElementById('preview-image').value.trim();
+
+        if (!title || !author) {
+            showModalError('Title and Author fields are required.');
+            return;
+        }
+
+        const payload = {
+            url,
+            title,
+            description,
+            author,
+            platform,
+            image,
+            published_at: currentScrapedBlog.published_at || new Date().toISOString()
+        };
+
+        try {
+            const { data, error } = await supabaseClient
+                .from('blogs')
+                .insert([payload]);
+
+            if (error) {
+                if (error.code === '23505') {
+                    throw new Error('This article has already been added to the database.');
+                }
+                throw error;
+            }
+
+            closeModal();
+            fetchBlogs();
+        } catch (e) {
+            showModalError(e.message || 'Failed to save the article to database.');
+        }
+    }
+
+    // Modal error reporting
+    function showModalError(msg) {
+        document.getElementById('modal-scrape-phase').classList.remove('hidden');
+        document.getElementById('modal-loading-phase').classList.add('hidden');
+        const errArea = document.getElementById('modal-error');
+        errArea.classList.remove('hidden');
+        document.getElementById('modal-error-text').textContent = msg;
+    }
+
+    function showErrorState(msg) {
+        document.getElementById('loading-state').innerHTML = `<p class="text-error font-code-sm text-code-sm flex items-center gap-2"><span class="material-symbols-outlined text-sm">error</span> ${msg}</p>`;
+    }
+
+    // Animate stats counter
+    function animateCounter(id, targetValue) {
+        const el = document.getElementById(id);
+        if (!el) return;
+        
+        let start = 0;
+        const duration = 800; // ms
+        const stepTime = Math.abs(Math.floor(duration / targetValue)) || 20;
+
+        if (targetValue === 0) {
+            el.textContent = '0';
+            return;
+        }
+
+        const timer = setInterval(() => {
+            start += 1;
+            el.textContent = start;
+            if (start >= targetValue) {
+                el.textContent = targetValue;
+                clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    // Hook listeners for filters
+    document.getElementById('search-input').addEventListener('input', renderBlogs);
+    document.getElementById('platform-filter').addEventListener('change', renderBlogs);
+    document.getElementById('date-sort').addEventListener('change', renderBlogs);
+    document.getElementById('add-blog-btn').addEventListener('click', openModal);
+
+</script>
+</body></html>
