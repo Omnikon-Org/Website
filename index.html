@@ -288,7 +288,6 @@
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#contributors">Contributor</a>
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#community">Community</a>
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="./blogs.html">Blogs</a>
-<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#about">About</a>
 </div>
 <a href="https://github.com/Demon-Die" target="_blank"><button class="hidden md:flex items-center gap-2 px-4 py-2 border border-surface-container hover:border-primary glow-hover text-on-surface font-label-mono text-xs transition-all duration-200" >
 <span class="material-symbols-outlined text-sm" data-icon="star">star</span>
@@ -643,35 +642,25 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(res => res.json())
     .then(data => {
       const container = document.getElementById('contributors-list');
-      data.members.forEach(member => {
-        const div = document.createElement('div');
-        div.className = 'flex flex-col items-center gap-2 group cursor-pointer';
-        div.innerHTML = `
-          <div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all relative">
-            <img src="${member.avatar_url}" alt="${member.login}" class="rounded-full w-full h-full">
-          </div>
-          <div class="text-center">
-            <div class="text-on-surface font-label-mono text-sm">${member.login}</div>
-          </div>
-        `;
-        container.appendChild(div);
-      });
+      data.members
+        .filter(member => member.type !== 'Bot' && !member.login.toLowerCase().includes('bot'))
+        .forEach(member => {
+          const div = document.createElement('div');
+          div.className = 'flex flex-col items-center gap-2 group cursor-pointer';
+          div.innerHTML = `
+            <div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all relative">
+              <img src="${member.avatar_url}" alt="${member.login}" class="rounded-full w-full h-full">
+            </div>
+            <div class="text-center">
+              <div class="text-on-surface font-label-mono text-sm">${member.login}</div>
+            </div>
+          `;
+          container.appendChild(div);
+        });
     })
     .catch(err => console.error('Failed to load contributors:', err));
 });
 </script>
-
-<!-- Join -->
-<div class="flex flex-col items-center gap-2 group cursor-pointer" onclick="window.open('https://github.com/orgs/Demon-Die/people', '_blank')">
-<div class="w-16 h-16 rounded-full border border-surface-container flex items-center justify-center text-primary bg-surface group-hover:border-primary transition-all border-dashed">
-<span class="material-symbols-outlined" data-icon="add">add</span>
-</div>
-<div class="text-center">
-<div class="text-on-surface font-label-mono text-sm">You</div>
-<div class="text-on-surface-variant text-code-sm font-code-sm max-w-[80px]">Join the contributors</div>
-</div>
-</div>
-</div>
 </section>
 <!-- Feed & Activity Split -->
 <section id="community" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
@@ -961,5 +950,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+<script src="auth.js" defer></script>
 <script src="./particles.js" defer></script>
 </body></html>
