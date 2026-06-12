@@ -162,9 +162,26 @@
         const displayName = (user.displayName || '').toLowerCase().replace(/\\s+/g, '');
         const emailPrefix = (user.email || '').split('@')[0].toLowerCase();
         const screenName = (user.reloadUserInfo && user.reloadUserInfo.screenName) ? user.reloadUserInfo.screenName.toLowerCase() : '';
-        const allowedAdmins = ['rishibyte', 'pranav00076', 'sharanyobanerjee', 'yuvraj', 'yuvraj-sarathe'];
+        const allowedAdmins = ['rishibyte', 'pranav00076', 'pranavthawait', 'sharanyobanerjee', 'yuvraj', 'yuvraj-sarathe'];
         
-        const isAdmin = allowedAdmins.includes(displayName) || allowedAdmins.includes(emailPrefix) || allowedAdmins.includes(screenName);
+        let isAdmin = allowedAdmins.includes(displayName) || allowedAdmins.includes(emailPrefix) || allowedAdmins.includes(screenName);
+        
+        // Also check providerData for github username if available
+        if (!isAdmin && user.providerData) {
+          for (const provider of user.providerData) {
+            if (provider.providerId === 'github.com') {
+              // Sometimes github email is username@users.noreply.github.com
+              const providerEmailPrefix = (provider.email || '').split('@')[0].toLowerCase();
+              const providerName = (provider.displayName || '').toLowerCase().replace(/\\s+/g, '');
+              const providerUid = provider.uid; // e.g. "108343166" for Pranav00076
+              if (allowedAdmins.includes(providerEmailPrefix) || allowedAdmins.includes(providerName) || providerUid === "108343166" || providerUid === "140939527" || providerUid === "140889218" || providerUid === "96338573") {
+                isAdmin = true;
+                break;
+              }
+            }
+          }
+        }
+
         if (isAdmin) {
           addBlogBtn.classList.remove('hidden');
           addBlogBtn.classList.add('flex');
