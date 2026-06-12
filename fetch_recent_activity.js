@@ -1,49 +1,38 @@
-// fetch_recent_activity.js
-// Loads recent organization events from GitHub and renders them into #recent-activity
-
 (async () => {
   const container = document.getElementById('recent-activity');
   if (!container) return;
 
-  // Wait for env to load if it hasn't already
-  if (!window.envLoaded) {
-    await new Promise(resolve => window.addEventListener('envLoaded', resolve, { once: true }));
-  }
-
-  const token = window.env?.GIT_DEMONDIE_ALL || window.env?.GITHUB_TOKEN;
-  
-  let events;
   try {
-    const headers = token ? { Authorization: `token ${token}` } : {};
-    let resp = await fetch('https://api.github.com/orgs/Demon-Die/events', { headers });
-    if (!resp.ok && resp.status === 401 && token) {
-      console.warn('GitHub events request returned 401 with token, retrying anonymously...');
-      resp = await fetch('https://api.github.com/orgs/Demon-Die/events');
+    if (!window.envLoaded) {
+      await new Promise(resolve => window.addEventListener('envLoaded', resolve, { once: true }));
     }
-    if (!resp.ok) throw new Error('GitHub events request failed');
-    events = await resp.json();
-  } catch (e) {
+
+    const token = window.env?.GIT_DEMONDIE_ALL || window.env?.GITHUB_TOKEN;
+    let events;
+
     try {
+      const headers = token ? { Authorization: `token ${token}` } : {};
+      let resp = await fetch('https://api.github.com/orgs/Demon-Die/events', { headers });
+      if (!resp.ok && resp.status === 401 && token) {
+        console.warn('GitHub events request returned 401 with token, retrying anonymously...');
+        resp = await fetch('https://api.github.com/orgs/Demon-Die/events');
+      }
+      if (!resp.ok) throw new Error('GitHub events request failed');
+      events = await resp.json();
+    } catch (e) {
       console.warn('Authenticated fetch failed, trying final anonymous request...', e);
       const resp = await fetch('https://api.github.com/orgs/Demon-Die/events');
       if (!resp.ok) throw new Error('Anonymous backup request failed');
       events = await resp.json();
-    } catch (err) {
-      console.error('Failed to load recent activity:', err);
-      container.innerHTML = '<p class="text-on-surface-variant text-code-sm">Unable to load recent activity.</p>';
-      return;
     }
-  }
 
-  // Clear static placeholders/loading text
-  container.innerHTML = '';
+    container.innerHTML = '';
 
     if (!events || events.length === 0) {
       container.innerHTML = '<p class="text-on-surface-variant text-code-sm">No recent activity found.</p>';
       return;
     }
 
-    // Limit to most recent 8 events
     events.slice(0, 8).forEach(event => {
       const div = document.createElement('div');
       div.className = 'flex items-start gap-4';
@@ -59,7 +48,7 @@
       if (type === 'PushEvent') {
         iconName = 'commit';
         const commitMsg = event.payload?.commits?.[0]?.message || '';
-        const cleanMsg = commitMsg.split('\n')[0]; // first line of commit message
+        const cleanMsg = commitMsg.split('\n')[0];
         actionText = 'pushed';
         detailText = cleanMsg ? ` "${cleanMsg}" to` : ' to';
       } else if (type === 'PullRequestEvent') {
