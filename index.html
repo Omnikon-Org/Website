@@ -28,18 +28,18 @@
                         "primary-container": "#ff544b",
                         "tertiary": "#c8c6c5",
                         "on-surface-variant": "#e7bcb8",
-                        "surface": "#0f0f0f", /* Adjusted to match style guidance Level 1 */
+                        "surface": "#0a0a0c",
                         "on-primary-fixed-variant": "#93000c",
-                        "surface-dim": "#121414",
-                        "primary": "#ff3131", /* Adjusted to match style guidance */
+                        "surface-dim": "#050505",
+                        "primary": "#ff2a4b",
                         "on-primary-container": "#5c0005",
                         "error-container": "#93000a",
-                        "secondary-container": "#474746",
+                        "secondary-container": "#2a2a2c",
                         "on-error-container": "#ffdad6",
-                        "surface-bright": "#383939",
-                        "tertiary-container": "#929090",
+                        "surface-bright": "#1a1a1c",
+                        "tertiary-container": "#4a4a4c",
                         "on-error": "#690005",
-                        "background": "#000000",
+                        "background": "#050505",
                         "on-secondary": "#313030",
                         "on-surface": "#e3e2e2",
                         "error": "#ffb4ab",
@@ -64,10 +64,11 @@
                         "on-tertiary-container": "#2a2a29"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0rem", /* Brutalism/Sharp */
-                        "lg": "0rem",
-                        "xl": "0rem",
-                        "full": "9999px" /* Only for specific circular elements */
+                        "DEFAULT": "0.75rem",
+                        "md": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
                     },
                     "spacing": {
                         "gutter": "24px",
@@ -96,85 +97,113 @@
             }
         }
     </script>
-<style>
+    <style>
         html {
             scroll-behavior: smooth;
         }
-        .glow-active {
-            box-shadow: 0 0 8px rgba(255, 49, 49, 0.3);
-            border-color: #ff3131;
+        body {
+            background-color: #050505;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(255, 42, 75, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(10, 10, 12, 1) 0px, transparent 50%);
+            background-attachment: fixed;
         }
-        .glow-hover:hover {
-            box-shadow: inset 0 0 8px rgba(255, 49, 49, 0.2);
-            border-color: #ff3131;
+        .glass-panel {
+            background: rgba(20, 20, 22, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .pulse-dot {
-            animation: pulse 2s infinite;
+        .glass-panel:hover {
+            border-color: rgba(255, 42, 75, 0.3);
+            box-shadow: 0 8px 32px rgba(255, 42, 75, 0.15);
+            transform: translateY(-2px);
         }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(255, 49, 49, 0.7); }
-            70% { box-shadow: 0 0 0 6px rgba(255, 49, 49, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 49, 49, 0); }
+        .glass-button {
+            background: linear-gradient(135deg, rgba(255, 42, 75, 0.8), rgba(200, 20, 50, 0.8));
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+        .glass-button:hover {
+            box-shadow: 0 0 20px rgba(255, 42, 75, 0.5);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(255, 42, 75, 0.5);
         }
         .terminal-text::before {
             content: "> ";
-            color: #ff3131;
+            color: #ff2a4b;
         }
-        .radial-bg {
-            background: radial-gradient(circle at center, rgba(255,49,49,0.1) 0%, transparent 60%);
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: 0;
+            opacity: 0.5;
+            animation: float 10s infinite ease-in-out alternate;
+            border-radius: 50%;
         }
-        .grid-bg {
-            background-image: 
-                linear-gradient(to right, #1a1a1a 1px, transparent 1px),
-                linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
-            background-size: 40px 40px;
+        @keyframes float {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, -50px) scale(1.1); }
         }
         #home, #projects, #contributors, #community, #about { scroll-margin-top: 100px; }
 
         /* Chatbot floating button styling */
         #chatbot-toggle {
-            backdrop-filter: blur(8px);
-            background: rgba(255, 49, 49, 0.15);
-            border: 1px solid rgba(255, 49, 49, 0.4);
-            color: #ff3131;
-            box-shadow: 0 4px 12px rgba(255, 49, 49, 0.2);
-            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
+            background: linear-gradient(135deg, rgba(255, 42, 75, 0.2), rgba(255, 42, 75, 0.05));
+            border: 1px solid rgba(255, 42, 75, 0.3);
+            color: #ff2a4b;
+            box-shadow: 0 0 20px rgba(255, 42, 75, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 50%;
         }
         #chatbot-toggle:hover {
-            background: rgba(255, 49, 49, 0.25);
-            box-shadow: 0 0 15px rgba(255, 49, 49, 0.4);
+            background: linear-gradient(135deg, rgba(255, 42, 75, 0.4), rgba(255, 42, 75, 0.1));
+            box-shadow: 0 0 30px rgba(255, 42, 75, 0.4);
+            transform: scale(1.05);
         }
         /* Chatbot modal container styling */
         #chatbot-modal {
             position: fixed;
-            bottom: 80px;
+            bottom: 90px;
             right: 20px;
             width: 380px;
             max-width: calc(100vw - 40px);
-            height: 500px;
+            height: 520px;
             max-height: calc(100vh - 120px);
-            background: rgba(15, 15, 15, 0.95);
-            border: 1px solid #1a1a1a;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 49, 49, 0.1);
+            background: rgba(10, 10, 12, 0.7);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
             display: flex;
             flex-direction: column;
             z-index: 10000;
             opacity: 0;
             visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            backdrop-filter: blur(20px);
+            transform: translateY(20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: hidden;
         }
         #chatbot-modal.open {
             opacity: 1;
             visibility: visible;
-            transform: translateY(0);
+            transform: translateY(0) scale(1);
         }
         /* Chatbot Header styling */
         #chatbot-header {
-            padding: 16px;
-            border-b: 1px solid #1a1a1a;
-            background: rgba(255, 49, 49, 0.05);
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: linear-gradient(180deg, rgba(255, 42, 75, 0.1) 0%, transparent 100%);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -183,13 +212,12 @@
         #chatbot-messages {
             flex: 1;
             overflow-y: auto;
-            padding: 16px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 16px;
             scroll-behavior: smooth;
         }
-        /* Chatbot Scrollbar styling */
         #chatbot-messages::-webkit-scrollbar {
             width: 4px;
         }
@@ -197,73 +225,85 @@
             background: transparent;
         }
         #chatbot-messages::-webkit-scrollbar-thumb {
-            background: #ff3131;
+            background: rgba(255, 42, 75, 0.3);
+            border-radius: 4px;
         }
         /* Message styling */
         .chatbot-msg {
-            max-width: 80%;
-            padding: 10px 14px;
+            max-width: 85%;
+            padding: 12px 16px;
             font-size: 13px;
-            line-height: 1.5;
-            border: 1px solid #1a1a1a;
+            line-height: 1.6;
+            border-radius: 1rem;
+            animation: slideIn 0.3s ease-out;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .chatbot-msg.user {
             align-self: flex-end;
-            background: rgba(255, 49, 49, 0.1);
-            border-color: rgba(255, 49, 49, 0.3);
-            color: #ffb4ab;
+            background: linear-gradient(135deg, rgba(255, 42, 75, 0.2), rgba(255, 42, 75, 0.05));
+            border: 1px solid rgba(255, 42, 75, 0.2);
+            border-bottom-right-radius: 0.25rem;
+            color: #fff;
         }
         .chatbot-msg.bot {
             align-self: flex-start;
-            background: rgba(26, 26, 26, 0.8);
-            border-color: #1a1a1a;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom-left-radius: 0.25rem;
             color: #e3e2e2;
         }
         /* Input container styling */
         #chatbot-input {
-            padding: 12px;
-            border-top: 1px solid #1a1a1a;
+            padding: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
             display: flex;
-            gap: 8px;
-            background: rgba(15, 15, 15, 0.95);
+            gap: 12px;
+            background: rgba(0, 0, 0, 0.2);
         }
         #chatbot-input input {
             flex: 1;
-            background: transparent;
-            border: 1px solid #1a1a1a;
-            padding: 8px 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 2rem;
+            padding: 10px 16px;
             color: #e3e2e2;
             font-size: 13px;
             outline: none;
+            transition: all 0.3s ease;
         }
         #chatbot-input input:focus {
-            border-color: rgba(255, 49, 49, 0.5);
+            border-color: rgba(255, 42, 75, 0.5);
+            background: rgba(255, 255, 255, 0.08);
         }
         #chatbot-input button {
-            background: #ff3131;
-            color: #000000;
-            padding: 8px 16px;
-            font-weight: bold;
+            background: #ff2a4b;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 2rem;
+            font-weight: 600;
             font-size: 13px;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: all 0.3s ease;
+            border: none;
         }
         #chatbot-input button:hover {
-            box-shadow: 0 0 10px rgba(255, 49, 49, 0.5);
-            background: #ff544b;
+            box-shadow: 0 0 15px rgba(255, 42, 75, 0.6);
+            transform: translateY(-1px);
         }
-        /* Typing indicator dots styling */
         .typing-indicator {
             display: flex;
             align-items: center;
             gap: 4px;
-            padding: 10px 14px;
+            padding: 12px 16px;
             width: fit-content;
         }
         .typing-indicator .dot {
             width: 6px;
             height: 6px;
-            background: #ff3131;
+            background: #ff2a4b;
             border-radius: 50%;
             display: inline-block;
             animation: bounce 1.4s infinite ease-in-out both;
@@ -271,12 +311,12 @@
         .typing-indicator .dot:nth-child(1) { animation-delay: -0.32s; }
         .typing-indicator .dot:nth-child(2) { animation-delay: -0.16s; }
         @keyframes bounce {
-            0%, 80%, 100% { transform: scale(0.2); }
-            40% { transform: scale(1.0); }
+            0%, 80%, 100% { transform: scale(0.2); opacity: 0.3; }
+            40% { transform: scale(1.0); opacity: 1; }
         }
     </style>
 <!-- TopNavBar -->
-<nav class="bg-background dark:bg-background docked full-width top-0 border-b border-surface-variant z-50 fixed w-full">
+<nav class="bg-[#050505]/80 backdrop-blur-md dark:bg-[#050505]/80 docked full-width top-0 border-b border-surface-variant/30 z-50 fixed w-full transition-all">
 <div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
 <div class="flex items-center gap-2">
 <img src="https://raw.githubusercontent.com/Demon-Die/Website/refs/heads/main/assets/demondie-logo.webp" alt="DemonDie Logo" class="h-8 w-8 mr-2" />
@@ -303,6 +343,10 @@
 <main class="pt-24 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter grid-bg relative" id="home">
 <!-- Hero Section -->
 <section id="hero-section" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[716px] mb-section-gap relative">
+<!-- Animated Background Blobs -->
+<div class="blob bg-[#ff2a4b] w-96 h-96 top-0 left-[-100px]"></div>
+<div class="blob bg-[#3b0005] w-80 h-80 bottom-[-50px] right-[-50px]" style="animation-delay: -5s; animation-duration: 12s;"></div>
+
 <div class="space-y-8 z-10">
 <div class="text-on-surface-variant font-code-sm text-code-sm terminal-text">Building DemonDie OS...</div>
 <h1 class="text-display-lg font-display-lg leading-tight">
@@ -313,27 +357,31 @@
 <p class="text-on-surface-variant font-body-base text-body-base max-w-md">
                     We build developer centric open learning, and student developers to create real impact.
                 </p>
-<div class="border border-surface-container p-6 bg-surface max-w-md">
-<div class="text-primary font-code-sm text-code-sm mb-4 uppercase">DemonDie Highlights :</div>
-<ul class="space-y-2 text-on-surface-variant font-code-sm text-code-sm">
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> AI-Learning Hub</li>
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> Real-world impact</li>
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> Open contribution</li>
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> Student-first</li>
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> GitHub-native</li>
+<div class="glass-panel p-6 max-w-md relative overflow-hidden">
+<div class="text-primary font-code-sm text-code-sm mb-4 uppercase flex items-center gap-2">
+    <span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span> DemonDie Highlights
+</div>
+<ul class="space-y-2 text-on-surface-variant font-code-sm text-code-sm relative z-10">
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> AI-Learning Hub</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Real-world impact</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Open contribution</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Student-first</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> GitHub-native</li>
 </ul>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-50"></div>
+</div>
 <div class="w-2 h-4 bg-primary mt-4 animate-pulse"></div>
 </div>
 <div class="flex flex-wrap gap-4 pt-4">
     <a href="https://github.com/orgs/Demon-Die/projects?query=is%3Aopen" target="_blank">
-        <button class="bg-primary text-on-primary font-label-mono text-label-mono px-6 py-3 flex items-center gap-2 hover:shadow-[0_0_15px_rgba(255,49,49,0.5)] transition-all">
+        <button class="glass-button text-[#ffffff] font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
 <span class="material-symbols-outlined text-sm" data-icon="rocket_launch">rocket_launch</span>
                         Explore Projects
                     </button>
     </a>
 
     <a href="https://discord.gg/4waT35Hxs" target="_blank">
-        <button class="border border-surface-container hover:border-primary glow-hover text-on-surface font-label-mono text-label-mono px-6 py-3 flex items-center gap-2 transition-all">
+        <button class="glass-panel hover:bg-white/5 text-on-surface font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
 <span class="material-symbols-outlined text-sm" data-icon="group">group</span>
                         Join Community
                     </button>
@@ -345,9 +393,9 @@
     <img src="./Image.png" alt="DemonDie community hero graphic" class="hero-img">
 </section>
 <!-- Stats Row -->
-<section class="border border-surface-container bg-surface mb-section-gap relative overflow-hidden glow-active">
-<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-<div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-surface-container">
+<section class="glass-panel mb-section-gap relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70"></div>
+<div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-surface-variant/30">
 <div class="p-8 flex items-center gap-6">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="deployed_code">deployed_code</span>
@@ -402,7 +450,7 @@
 <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-surface-container -z-10 transform -translate-y-1/2"></div>
 <div class="hidden md:block absolute top-1/2 left-0 w-1/2 h-px bg-primary -z-10 transform -translate-y-1/2"></div>
 <!-- Journey Steps -->
-<div class="bg-surface border border-surface-container p-6 flex flex-col items-center text-center gap-4 glow-hover transition-all">
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all">
 <div class="w-16 h-16 border border-primary rounded-full flex items-center justify-center text-primary bg-surface z-10 glow-active">
 <span class="material-symbols-outlined text-3xl" data-icon="school">school</span>
 </div>
@@ -411,7 +459,7 @@
 <p class="text-on-surface-variant text-code-sm font-code-sm">Start your<br>learning journey</p>
 </div>
 </div>
-<div class="bg-surface border border-surface-container p-6 flex flex-col items-center text-center gap-4 glow-hover transition-all relative">
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all relative">
 <div class="hidden md:flex absolute top-1/2 -left-3 w-6 h-6 items-center justify-center text-primary transform -translate-y-1/2 bg-background">
 <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
 </div>
@@ -423,7 +471,7 @@
 <p class="text-on-surface-variant text-code-sm font-code-sm">Learn, practice<br>and build</p>
 </div>
 </div>
-<div class="bg-surface border border-surface-container p-6 flex flex-col items-center text-center gap-4 glow-hover transition-all relative">
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all relative">
 <div class="hidden md:flex absolute top-1/2 -left-3 w-6 h-6 items-center justify-center text-primary transform -translate-y-1/2 bg-background">
 <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
 </div>
@@ -469,7 +517,7 @@
 <!-- Projects Split -->
 <section id="projects" class="grid grid-cols-1 lg:grid-cols-1 gap-6 mb-section-gap">
 <!-- Projects Explorer -->
-<div class="border border-surface-container bg-surface p-6">
+<div class="glass-panel p-6">
 <div class="flex justify-between items-center mb-6">
 <div class="flex items-center gap-2 text-primary">
 <span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
@@ -591,7 +639,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <!-- Feed & Activity Split -->
 <section id="community" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
 <!-- Community Feed -->
-<div class="border border-surface-container bg-surface flex flex-col h-[400px]" >
+<div class="glass-panel flex flex-col h-[400px]" >
 <div class="p-6 border-b border-surface-container flex justify-between items-center">
 <div class="flex items-center gap-2 text-primary">
 <span class="material-symbols-outlined" data-icon="forum">forum</span>
@@ -649,7 +697,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 <!-- Recent Activity -->
-<div class="border border-surface-container bg-surface flex flex-col h-[400px]">
+<div class="glass-panel flex flex-col h-[400px]">
 <div class="p-6 border-b border-surface-container">
 <div class="flex items-center gap-2 text-primary">
 <span class="material-symbols-outlined" data-icon="history">history</span>
@@ -701,7 +749,7 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </section>
 <!-- Call to Action -->
-<section class="border border-surface-container bg-surface relative overflow-hidden mb-section-gap p-12">
+<section class="glass-panel relative overflow-hidden mb-section-gap p-12">
 <div class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-20 pointer-events-none w-96 h-96">
 <!-- Abstract wireframe globe representation -->
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -732,14 +780,14 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 <div class="flex flex-col gap-4">
     <a href="https://github.com/Demon-Die" target="_blank">
-        <button class="bg-[#c00014] text-white font-label-mono text-label-mono px-6 py-4 flex items-center justify-center gap-2 hover:bg-primary transition-all w-full max-w-sm border border-[#ff3131]/30">
+        <button class="glass-button w-full px-6 py-4 flex items-center justify-center gap-2 text-white font-label-mono text-label-mono">
 <span class="material-symbols-outlined text-sm" data-icon="code">code</span>
                 Join on GitHub
             </button>
     </a>
 
     <a href="https://discord.gg/4waT35Hxs" target="_blank">
-        <button class="border border-surface-container bg-surface hover:border-primary glow-hover text-on-surface font-label-mono text-label-mono px-6 py-4 flex items-center justify-center gap-2 transition-all w-full max-w-sm">
+        <button class="glass-panel w-full px-6 py-4 flex items-center justify-center gap-2 hover:bg-white/5 text-on-surface font-label-mono text-label-mono">
 <span class="material-symbols-outlined text-sm" data-icon="forum">forum</span>
                 Join our Discord
             </button>

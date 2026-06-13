@@ -8,7 +8,7 @@ class Particle {
         this.baseY = y;
         this.size = Math.random() * 2 + 1;
         this.density = (Math.random() * 30) + 15;
-        this.color = 'rgba(255, 49, 49, 0.5)';
+        this.color = 'rgba(255, 42, 75, 0.4)';
         this.angle = Math.random() * Math.PI * 2;
         this.speed = Math.random() * 1.2 + 0.4;
     }
@@ -104,7 +104,7 @@ class Particle {
 
                 if (distance < 75) {
                     let opacity = 1 - (distance / 75);
-                    ctx.strokeStyle = `rgba(255, 49, 49, ${opacity * 0.12})`;
+                    ctx.strokeStyle = `rgba(255, 42, 75, ${opacity * 0.15})`;
                     ctx.lineWidth = 0.7;
                     ctx.beginPath();
                     ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
