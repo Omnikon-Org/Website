@@ -176,22 +176,23 @@ class Particle {
         const preloadActive = document.createElement('link');
         preloadActive.rel = 'preload';
         preloadActive.as = 'image';
-        preloadActive.href = './cursor/CursorActive_64x64.png';
+        preloadActive.href = './cursor/CursorActiveNew.png?v=2';
         document.head.appendChild(preloadActive);
 
         // Backup JS preloading
         const imgNormal = new Image();
         imgNormal.src = './cursor/Cursor_64x64.png';
         const imgActive = new Image();
-        imgActive.src = './cursor/CursorActive_64x64.png';
+        imgActive.src = './cursor/CursorActiveNew.png?v=2';
 
         const cursorStyle = document.createElement('style');
         cursorStyle.textContent = `
             html, body, a, button, select, [role="button"] {
-                cursor: url('./cursor/Cursor_64x64.png') 16 7, auto;
+                cursor: url('./cursor/Cursor_64x64.png') 16 7, auto !important;
             }
+            a:hover, button:hover, select:hover, [role="button"]:hover, .cursor-pointer, .cursor-pointer:hover,
             a:active, button:active, select:active, [role="button"]:active, :active {
-                cursor: url('./cursor/CursorActive_64x64.png') 16 7, auto !important;
+                cursor: url('./cursor/CursorActiveNew.png?v=2') 16 7, auto !important;
             }
         `;
         document.head.appendChild(cursorStyle);
