@@ -1,12 +1,12 @@
 {
-  "project_count": 7,
-  "total_stars": 9,
-  "contributor_count": 16,
+  "project_count": 9,
+  "total_stars": 16,
+  "contributor_count": 24,
   "repos": [
   {
     "name": "CNTRL",
     "description": "An AI-powered desktop browser built with Tauri, Rust, and TypeScript — featuring hybrid local/cloud AI routing, smart navigation, and webview rendering.",
-    "stars": 0,
+    "stars": 1,
     "html_url": "https://github.com/Demon-Die/CNTRL"
   },
   {
@@ -24,13 +24,13 @@
   {
     "name": "DemonTechRoadmap",
     "description": "Community-driven roadmaps for students and aspiring developers.",
-    "stars": 5,
+    "stars": 7,
     "html_url": "https://github.com/Demon-Die/DemonTechRoadmap"
   },
   {
     "name": "UnVibe",
     "description": "UnVibe trains developers to truly understand code, not just generate it. AI writes the hardest solution — you decode it, rebuild it simpler, then defend your understanding in interviews. Your \"Irreplaceability Score\" tracks your depth. The goal: be skilled enough that no company can replace you with a prompt.",
-    "stars": 1,
+    "stars": 2,
     "html_url": "https://github.com/Demon-Die/UnVibe"
   },
   {
@@ -42,8 +42,20 @@
   {
     "name": "SyncCanvas",
     "description": "SyncCanvas is an AI-powered collaborative whiteboard for real-time brainstorming, diagramming, and team collaboration on an infinite canvas. 🚀",
-    "stars": 1,
+    "stars": 3,
     "html_url": "https://github.com/Demon-Die/SyncCanvas"
+  },
+  {
+    "name": "PackVault",
+    "description": "Offline-first package caching and distribution CLI for JavaScript developers. Cache npm packages once, install anywhere without internet.",
+    "stars": 1,
+    "html_url": "https://github.com/Demon-Die/PackVault"
+  },
+  {
+    "name": "schema-cast",
+    "description": "Define your data once. schema-forge generates TypeScript, Zod, Mongoose, and PostgreSQL from a single schema file.",
+    "stars": 0,
+    "html_url": "https://github.com/Demon-Die/schema-cast"
   }
 ],
   "members": [
@@ -89,7 +101,7 @@
     "type": "User",
     "user_view_type": "public",
     "site_admin": false,
-    "contributions": 9
+    "contributions": 2
   },
   {
     "login": "SharanyoBanerjee",
@@ -111,7 +123,7 @@
     "type": "User",
     "user_view_type": "public",
     "site_admin": false,
-    "contributions": 20
+    "contributions": 23
   },
   {
     "login": "Yuvraj-Sarathe",
@@ -158,6 +170,28 @@
     "contributions": 2
   },
   {
+    "login": "Chirantan112",
+    "id": 211558197,
+    "node_id": "U_kgDODJwfNQ",
+    "avatar_url": "https://avatars.githubusercontent.com/u/211558197?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Chirantan112",
+    "html_url": "https://github.com/Chirantan112",
+    "followers_url": "https://api.github.com/users/Chirantan112/followers",
+    "following_url": "https://api.github.com/users/Chirantan112/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Chirantan112/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Chirantan112/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Chirantan112/subscriptions",
+    "organizations_url": "https://api.github.com/users/Chirantan112/orgs",
+    "repos_url": "https://api.github.com/users/Chirantan112/repos",
+    "events_url": "https://api.github.com/users/Chirantan112/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Chirantan112/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "contributions": 3
+  },
+  {
     "login": "Dhrubajyoti930",
     "id": 149499573,
     "node_id": "U_kgDOCOkutQ",
@@ -174,6 +208,72 @@
     "repos_url": "https://api.github.com/users/Dhrubajyoti930/repos",
     "events_url": "https://api.github.com/users/Dhrubajyoti930/events{/privacy}",
     "received_events_url": "https://api.github.com/users/Dhrubajyoti930/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "contributions": 2
+  },
+  {
+    "login": "TejaswaniMishra",
+    "id": 191905008,
+    "node_id": "U_kgDOC3A88A",
+    "avatar_url": "https://avatars.githubusercontent.com/u/191905008?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/TejaswaniMishra",
+    "html_url": "https://github.com/TejaswaniMishra",
+    "followers_url": "https://api.github.com/users/TejaswaniMishra/followers",
+    "following_url": "https://api.github.com/users/TejaswaniMishra/following{/other_user}",
+    "gists_url": "https://api.github.com/users/TejaswaniMishra/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/TejaswaniMishra/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/TejaswaniMishra/subscriptions",
+    "organizations_url": "https://api.github.com/users/TejaswaniMishra/orgs",
+    "repos_url": "https://api.github.com/users/TejaswaniMishra/repos",
+    "events_url": "https://api.github.com/users/TejaswaniMishra/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/TejaswaniMishra/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "contributions": 1
+  },
+  {
+    "login": "Wombatfreak6",
+    "id": 163987103,
+    "node_id": "U_kgDOCcY-nw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/163987103?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/Wombatfreak6",
+    "html_url": "https://github.com/Wombatfreak6",
+    "followers_url": "https://api.github.com/users/Wombatfreak6/followers",
+    "following_url": "https://api.github.com/users/Wombatfreak6/following{/other_user}",
+    "gists_url": "https://api.github.com/users/Wombatfreak6/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/Wombatfreak6/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/Wombatfreak6/subscriptions",
+    "organizations_url": "https://api.github.com/users/Wombatfreak6/orgs",
+    "repos_url": "https://api.github.com/users/Wombatfreak6/repos",
+    "events_url": "https://api.github.com/users/Wombatfreak6/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/Wombatfreak6/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "contributions": 2
+  },
+  {
+    "login": "aishteviolet",
+    "id": 274579060,
+    "node_id": "U_kgDOEF2-dA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/274579060?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/aishteviolet",
+    "html_url": "https://github.com/aishteviolet",
+    "followers_url": "https://api.github.com/users/aishteviolet/followers",
+    "following_url": "https://api.github.com/users/aishteviolet/following{/other_user}",
+    "gists_url": "https://api.github.com/users/aishteviolet/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/aishteviolet/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/aishteviolet/subscriptions",
+    "organizations_url": "https://api.github.com/users/aishteviolet/orgs",
+    "repos_url": "https://api.github.com/users/aishteviolet/repos",
+    "events_url": "https://api.github.com/users/aishteviolet/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/aishteviolet/received_events",
     "type": "User",
     "user_view_type": "public",
     "site_admin": false,
@@ -268,6 +368,72 @@
     "contributions": 2
   },
   {
+    "login": "fire-ux1",
+    "id": 235557639,
+    "node_id": "U_kgDODgpTBw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/235557639?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/fire-ux1",
+    "html_url": "https://github.com/fire-ux1",
+    "followers_url": "https://api.github.com/users/fire-ux1/followers",
+    "following_url": "https://api.github.com/users/fire-ux1/following{/other_user}",
+    "gists_url": "https://api.github.com/users/fire-ux1/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/fire-ux1/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/fire-ux1/subscriptions",
+    "organizations_url": "https://api.github.com/users/fire-ux1/orgs",
+    "repos_url": "https://api.github.com/users/fire-ux1/repos",
+    "events_url": "https://api.github.com/users/fire-ux1/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/fire-ux1/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "contributions": 1
+  },
+  {
+    "login": "flopez0294",
+    "id": 112422608,
+    "node_id": "U_kgDOBrNu0A",
+    "avatar_url": "https://avatars.githubusercontent.com/u/112422608?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/flopez0294",
+    "html_url": "https://github.com/flopez0294",
+    "followers_url": "https://api.github.com/users/flopez0294/followers",
+    "following_url": "https://api.github.com/users/flopez0294/following{/other_user}",
+    "gists_url": "https://api.github.com/users/flopez0294/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/flopez0294/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/flopez0294/subscriptions",
+    "organizations_url": "https://api.github.com/users/flopez0294/orgs",
+    "repos_url": "https://api.github.com/users/flopez0294/repos",
+    "events_url": "https://api.github.com/users/flopez0294/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/flopez0294/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "contributions": 4
+  },
+  {
+    "login": "gitguildoss-rgb",
+    "id": 292772479,
+    "node_id": "U_kgDOEXNafw",
+    "avatar_url": "https://avatars.githubusercontent.com/u/292772479?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/gitguildoss-rgb",
+    "html_url": "https://github.com/gitguildoss-rgb",
+    "followers_url": "https://api.github.com/users/gitguildoss-rgb/followers",
+    "following_url": "https://api.github.com/users/gitguildoss-rgb/following{/other_user}",
+    "gists_url": "https://api.github.com/users/gitguildoss-rgb/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/gitguildoss-rgb/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/gitguildoss-rgb/subscriptions",
+    "organizations_url": "https://api.github.com/users/gitguildoss-rgb/orgs",
+    "repos_url": "https://api.github.com/users/gitguildoss-rgb/repos",
+    "events_url": "https://api.github.com/users/gitguildoss-rgb/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/gitguildoss-rgb/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "contributions": 1
+  },
+  {
     "login": "github-actions[bot]",
     "id": 41898282,
     "node_id": "MDM6Qm90NDE4OTgyODI=",
@@ -287,7 +453,29 @@
     "type": "Bot",
     "user_view_type": "public",
     "site_admin": false,
-    "contributions": 9
+    "contributions": 11
+  },
+  {
+    "login": "kanika021105",
+    "id": 181403648,
+    "node_id": "U_kgDOCtAAAA",
+    "avatar_url": "https://avatars.githubusercontent.com/u/181403648?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/kanika021105",
+    "html_url": "https://github.com/kanika021105",
+    "followers_url": "https://api.github.com/users/kanika021105/followers",
+    "following_url": "https://api.github.com/users/kanika021105/following{/other_user}",
+    "gists_url": "https://api.github.com/users/kanika021105/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/kanika021105/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/kanika021105/subscriptions",
+    "organizations_url": "https://api.github.com/users/kanika021105/orgs",
+    "repos_url": "https://api.github.com/users/kanika021105/repos",
+    "events_url": "https://api.github.com/users/kanika021105/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/kanika021105/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false,
+    "contributions": 2
   },
   {
     "login": "maitriupadhyay03-cell",
@@ -353,7 +541,7 @@
     "type": "User",
     "user_view_type": "public",
     "site_admin": false,
-    "contributions": 5
+    "contributions": 22
   },
   {
     "login": "rue-eru",

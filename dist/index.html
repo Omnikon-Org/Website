@@ -1,0 +1,625 @@
+<!DOCTYPE html><html class="dark" lang="en">
+<script type="module" crossorigin src="/assets/main-3FE3zAFy.js"></script>
+<link rel="modulepreload" crossorigin href="/assets/particles-DP11kde5.js">
+<link rel="stylesheet" crossorigin href="/assets/particles-Dt0ieCME.css">
+
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>DemonDie - Open Source Community</title>
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-lRlllJpM.png?v=1">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32-BPNr1IHQ.png?v=1">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16-Cl3Mg8m7.png?v=1">
+<link rel="manifest" href="/assets/site-BwHFeIBa.webmanifest?v=1">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+<nav class="bg-[#050505]/80 backdrop-blur-md dark:bg-[#050505]/80 docked full-width top-0 border-b border-surface-variant/30 z-50 fixed w-full transition-all">
+<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img src="https://raw.githubusercontent.com/Demon-Die/Website/refs/heads/main/assets/demondie-logo.webp" alt="DemonDie Logo" class="h-8 w-8 mr-2" />
+<span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface text-xl">DemonDie</span>
+</div>
+<div id="desktop-nav" class="hidden md:flex items-center gap-8">
+<a class="text-primary border-b-2 border-primary pb-1 font-label-mono text-label-mono text-xs" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#contributors">Contributor</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#community">Community</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="./blogs.html">Blogs</a>
+</div>
+<a href="https://github.com/Demon-Die" target="_blank"><button class="hidden md:flex items-center gap-2 px-4 py-2 border border-surface-container hover:border-primary glow-hover text-on-surface font-label-mono text-xs transition-all duration-200" >
+<span class="material-symbols-outlined text-sm" data-icon="star">star</span>
+                Star on GitHub
+            </button></a>
+
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+
+<main class="pt-24 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter grid-bg relative" id="home">
+
+<section id="hero-section" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[716px] mb-section-gap relative">
+
+<div class="blob bg-[#ff2a4b] w-96 h-96 top-0 left-[-100px]"></div>
+<div class="blob bg-[#3b0005] w-80 h-80 bottom-[-50px] right-[-50px]" style="animation-delay: -5s; animation-duration: 12s;"></div>
+
+<div class="space-y-8 z-10">
+<div class="text-on-surface-variant font-code-sm text-code-sm terminal-text">Building DemonDie OS...</div>
+<h1 class="text-display-lg font-display-lg leading-tight">
+<span class="text-on-surface block">Open Source.</span>
+<span class="text-primary block">Community Driven.</span>
+<span class="text-on-surface block">Student Powered.</span>
+</h1>
+<p class="text-on-surface-variant font-body-base text-body-base max-w-md">
+                    We build developer centric open learning, and student developers to create real impact.
+                </p>
+<div class="glass-panel p-6 max-w-md relative overflow-hidden">
+<div class="text-primary font-code-sm text-code-sm mb-4 uppercase flex items-center gap-2">
+    <span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span> DemonDie Highlights
+</div>
+<ul class="space-y-2 text-on-surface-variant font-code-sm text-code-sm relative z-10">
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> AI-Learning Hub</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Real-world impact</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Open contribution</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Student-first</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> GitHub-native</li>
+</ul>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-50"></div>
+<div class="w-2 h-4 bg-primary mt-4 animate-pulse relative z-10"></div>
+</div>
+<div class="flex flex-wrap gap-4 pt-4">
+    <a href="https://github.com/orgs/Demon-Die/projects?query=is%3Aopen" target="_blank">
+        <button class="glass-button text-[#ffffff] font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="rocket_launch">rocket_launch</span>
+                        Explore Projects
+                    </button>
+    </a>
+
+    <a href="https://discord.gg/4waT35Hxs" target="_blank">
+        <button class="glass-panel hover:bg-white/5 text-on-surface font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+                        Join Community
+                    </button>
+    </a>
+</div>
+</div>
+
+<div class="flex items-center justify-center relative z-10 w-full h-full">
+    <img src="/assets/Image-Dl748VWk.png" alt="DemonDie community hero graphic" class="hero-img max-h-[500px] w-auto object-contain drop-shadow-2xl">
+</div>
+</section>
+
+<section class="glass-panel mb-section-gap relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70"></div>
+<div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-surface-variant/30">
+<div class="p-8 flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
+<span class="material-symbols-outlined" data-icon="deployed_code">deployed_code</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface">7</div>
+<div class="text-code-sm font-code-sm text-on-surface-variant">Active Projects</div>
+</div>
+</div>
+<div class="p-8 flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface">63</div>
+<div class="text-code-sm font-code-sm text-on-surface-variant">Students Engaged</div>
+</div>
+</div>
+<div class="p-8 flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
+<span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface">2</div>
+<div class="text-code-sm font-code-sm text-on-surface-variant">Contributors</div>
+</div>
+</div>
+<div class="p-8 flex items-center gap-6">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
+<span class="material-symbols-outlined" data-icon="visibility">visibility</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface">9</div>
+<div class="text-code-sm font-code-sm text-on-surface-variant">Repository Stars</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="mb-section-gap">
+<div class="flex justify-between items-center mb-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+<h2 class="text-on-surface font-label-mono text-label-mono">Developer Journey</h2>
+</div>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-code-sm font-code-sm flex items-center gap-1" href="https://github.com/orgs/Demon-Die/people" target="_blank">
+                Explore roles &amp; modules <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-surface-container -z-10 transform -translate-y-1/2"></div>
+<div class="hidden md:block absolute top-1/2 left-0 w-1/2 h-px bg-primary -z-10 transform -translate-y-1/2"></div>
+
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all">
+<div class="w-16 h-16 border border-primary rounded-full flex items-center justify-center text-primary bg-surface z-10 glow-active">
+<span class="material-symbols-outlined text-3xl" data-icon="school">school</span>
+</div>
+<div>
+<h3 class="text-on-surface font-label-mono font-bold mb-1">Student</h3>
+<p class="text-on-surface-variant text-code-sm font-code-sm">Start your<br>learning journey</p>
+</div>
+</div>
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all relative">
+<div class="hidden md:flex absolute top-1/2 -left-3 w-6 h-6 items-center justify-center text-primary transform -translate-y-1/2 bg-background">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="w-16 h-16 border border-primary rounded-full flex items-center justify-center text-primary bg-surface z-10 glow-active">
+<span class="material-symbols-outlined text-3xl" data-icon="menu_book">menu_book</span>
+</div>
+<div>
+<h3 class="text-on-surface font-label-mono font-bold mb-1">Learner</h3>
+<p class="text-on-surface-variant text-code-sm font-code-sm">Learn, practice<br>and build</p>
+</div>
+</div>
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all relative">
+<div class="hidden md:flex absolute top-1/2 -left-3 w-6 h-6 items-center justify-center text-primary transform -translate-y-1/2 bg-background">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="w-16 h-16 border border-primary rounded-full flex items-center justify-center text-primary bg-surface z-10 glow-active">
+<span class="material-symbols-outlined text-3xl" data-icon="code">code</span>
+</div>
+<div>
+<h3 class="text-on-surface font-label-mono font-bold mb-1">Builder</h3>
+<p class="text-on-surface-variant text-code-sm font-code-sm">Build projects and<br>solve real problems</p>
+</div>
+</div>
+<div class="bg-surface border border-surface-container p-6 flex flex-col items-center text-center gap-4 glow-hover transition-all relative">
+<div class="hidden md:flex absolute top-1/2 -left-3 w-6 h-6 items-center justify-center text-primary transform -translate-y-1/2 bg-background">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="w-16 h-16 border border-surface-container rounded-full flex items-center justify-center text-on-surface-variant bg-surface z-10">
+<span class="material-symbols-outlined text-3xl" data-icon="groups">groups</span>
+</div>
+<div>
+<h3 class="text-on-surface font-label-mono font-bold mb-1">Contributor</h3>
+<p class="text-on-surface-variant text-code-sm font-code-sm">Contribute to open<br>source</p>
+</div>
+</div>
+<div class="bg-surface border border-surface-container p-6 flex flex-col items-center text-center gap-4 glow-hover transition-all relative">
+<div class="hidden md:flex absolute top-1/2 -left-3 w-6 h-6 items-center justify-center text-primary transform -translate-y-1/2 bg-background">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="w-16 h-16 border border-surface-container rounded-full flex items-center justify-center text-on-surface-variant bg-surface z-10">
+<span class="material-symbols-outlined text-3xl" data-icon="military_tech">military_tech</span>
+</div>
+<div>
+<h3 class="text-on-surface font-label-mono font-bold mb-1">Maintainer</h3>
+<p class="text-on-surface-variant text-code-sm font-code-sm">Lead projects and<br>mentor others</p>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 mt-6">
+<div class="h-px bg-primary flex-grow"></div>
+<div class="text-primary font-code-sm text-code-sm">Your journey. Your impact.</div>
+<div class="h-px bg-surface-container flex-grow"></div>
+</div>
+</section>
+
+<section id="projects" class="grid grid-cols-1 lg:grid-cols-1 gap-6 mb-section-gap">
+
+<div class="glass-panel p-6">
+<div class="flex justify-between items-center mb-6">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
+<h2 class="text-on-surface font-label-mono text-label-mono">Projects Explorer</h2>
+</div>
+<a class="text-primary hover:text-primary-container transition-colors text-code-sm font-code-sm flex items-center gap-1" href="https://github.com/orgs/Demon-Die/projects?query=is%3Aopen" target="_blank">
+                    View all <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="space-y-4">
+  
+  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
+    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+    <div class="flex-grow">
+      <div class="text-on-surface font-label-mono text-sm">CNTRL</div>
+      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">An AI-powered desktop browser built with Tauri, Rust, and TypeScript — featuring hybrid local/cloud AI routing, smart navigation, and webview rendering.</div>
+    </div>
+    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
+  </div>
+  
+  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
+    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+    <div class="flex-grow">
+      <div class="text-on-surface font-label-mono text-sm">.github</div>
+      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1"></div>
+    </div>
+    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
+  </div>
+  
+  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
+    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+    <div class="flex-grow">
+      <div class="text-on-surface font-label-mono text-sm">Website</div>
+      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">DemonDie is an open-source technology community building impactful software and helping developers grow through collaboration.</div>
+    </div>
+    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 2</div>
+  </div>
+  
+  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
+    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+    <div class="flex-grow">
+      <div class="text-on-surface font-label-mono text-sm">DemonTechRoadmap</div>
+      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">Community-driven roadmaps for students and aspiring developers.</div>
+    </div>
+    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 5</div>
+  </div>
+  
+  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
+    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+    <div class="flex-grow">
+      <div class="text-on-surface font-label-mono text-sm">UnVibe</div>
+      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">UnVibe trains developers to truly understand code, not just generate it. AI writes the hardest solution — you decode it, rebuild it simpler, then defend your understanding in interviews. Your \"Irreplaceability Score\" tracks your depth. Goal: be skilled enough that no company can replace you with a prompt.</div>
+    </div>
+    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 1</div>
+  </div>
+  
+  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
+    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+    <div class="flex-grow">
+      <div class="text-on-surface font-label-mono text-sm">Certifier</div>
+      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">Auto issuing badges for Contributors</div>
+    </div>
+    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
+  </div>
+  
+  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
+    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+    <div class="flex-grow">
+      <div class="text-on-surface font-label-mono text-sm">SyncCanvas</div>
+      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">SyncCanvas is an AI-powered collaborative whiteboard for real-time brainstorming, diagramming, and team collaboration on an infinite canvas. 🚀</div>
+    </div>
+    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 1</div>
+  </div>
+</div>
+</div>
+
+</section>
+
+<section id="contributors" class="mb-section-gap">
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<h2 class="text-on-surface font-label-mono text-label-mono whitespace-nowrap">Contributor Wall</h2>
+</div>
+<div class="h-px bg-surface-container flex-grow"></div>
+<a class="text-primary hover:text-primary-container transition-colors text-code-sm font-code-sm flex items-center gap-1 whitespace-nowrap" href="https://github.com/orgs/Demon-Die/people" target="_blank">
+                View all contributors <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+
+<div class="flex flex-wrap justify-center gap-6 md:gap-8" id="contributors-list"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('github_summary.json')
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('contributors-list');
+      data.members
+        .filter(member => member.type !== 'Bot' && !member.login.toLowerCase().includes('bot'))
+        .forEach(member => {
+          const div = document.createElement('div');
+          div.className = 'flex flex-col items-center gap-2 group cursor-pointer';
+          div.innerHTML = `
+            <div class="w-16 h-16 rounded-full border border-primary flex items-center justify-center text-xl font-display-lg text-on-surface bg-surface group-hover:glow-active transition-all relative">
+              <img src="${member.avatar_url}" alt="${member.login}" class="rounded-full w-full h-full">
+            </div>
+            <div class="text-center">
+              <div class="text-on-surface font-label-mono text-sm">${member.login}</div>
+            </div>
+          `;
+          container.appendChild(div);
+        });
+    })
+    .catch(err => console.error('Failed to load contributors:', err));
+});
+</script>
+</section>
+
+<section id="community" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
+
+<div class="glass-panel flex flex-col h-[400px]" >
+<div class="p-6 border-b border-surface-container flex justify-between items-center">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<h2 class="text-on-surface font-label-mono text-label-mono">Community Feed</h2>
+</div>
+<div class="flex items-center gap-2 text-code-sm font-code-sm text-on-surface">
+<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div> Live
+                </div>
+</div>
+<div id="community-feed" class="p-6 flex-grow overflow-y-auto space-y-6">
+
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">S</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<span class="text-on-surface font-label-mono text-sm">Sonu</span>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">3m ago</span>
+</div>
+<p class="text-on-surface-variant text-code-sm font-code-sm">Fixed a bug in user progress system. Function optimized!</p>
+</div>
+</div>
+
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">A</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<span class="text-on-surface font-label-mono text-sm">Alina</span>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">5m ago</span>
+</div>
+<p class="text-on-surface-variant text-code-sm font-code-sm">Added dark mode to the React microlearn</p>
+</div>
+</div>
+
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">D</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<span class="text-on-surface font-label-mono text-sm">Dev</span>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">8m ago</span>
+</div>
+<p class="text-on-surface-variant text-code-sm font-code-sm">New component for chart.js integration</p>
+</div>
+</div>
+
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">M</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<span class="text-on-surface font-label-mono text-sm">Mayank</span>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">12m ago</span>
+</div>
+<p class="text-on-surface-variant text-code-sm font-code-sm">Setup CI for the backend repo</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="glass-panel flex flex-col h-[400px]">
+<div class="p-6 border-b border-surface-container">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<h2 class="text-on-surface font-label-mono text-label-mono">Recent Activity</h2>
+</div>
+</div>
+<div id="recent-activity" class="p-6 flex-grow overflow-y-auto space-y-6">
+
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
+<div class="flex-grow">
+<p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Dev</span> PR merged in <span class="text-on-surface-variant">demon-structureize</span></p>
+</div>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">2m ago</span>
+</div>
+
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="upload">upload</span>
+<div class="flex-grow">
+<p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Alina</span> Push Layout &amp; module progress</p>
+</div>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">5m ago</span>
+</div>
+
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="person_add">person_add</span>
+<div class="flex-grow">
+<p class="text-on-surface font-code-sm text-code-sm">New contributor joined: <span class="text-primary">Aman</span></p>
+</div>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">10m ago</span>
+</div>
+
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="edit_document">edit_document</span>
+<div class="flex-grow">
+<p class="text-on-surface font-code-sm text-code-sm">Documentation updated in <span class="text-on-surface-variant">#docs</span></p>
+</div>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">15m ago</span>
+</div>
+
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="security">security</span>
+<div class="flex-grow">
+<p class="text-on-surface font-code-sm text-code-sm">New security patch in <span class="text-on-surface-variant">attend-warden</span></p>
+</div>
+<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">20m ago</span>
+</div>
+</div>
+</div>
+</section>
+
+<section class="glass-panel relative overflow-hidden mb-section-gap p-12">
+<div class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-20 pointer-events-none w-96 h-96">
+
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" fill="none" r="45" stroke="#ff3131" stroke-width="0.5"></circle>
+<ellipse cx="50" cy="50" fill="none" rx="45" ry="15" stroke="#ff3131" stroke-width="0.5"></ellipse>
+<ellipse cx="50" cy="50" fill="none" rx="15" ry="45" stroke="#ff3131" stroke-width="0.5"></ellipse>
+<path d="M 15 25 Q 50 10 85 25" fill="none" stroke="#ff3131" stroke-width="0.5"></path>
+<path d="M 15 75 Q 50 90 85 75" fill="none" stroke="#ff3131" stroke-width="0.5"></path>
+<circle cx="20" cy="30" fill="#ff3131" r="1"></circle>
+<circle cx="70" cy="20" fill="#ff3131" r="1.5"></circle>
+<circle cx="80" cy="60" fill="#ff3131" r="1"></circle>
+<circle cx="30" cy="70" fill="#ff3131" r="1.5"></circle>
+<circle cx="50" cy="50" fill="#ff3131" r="2"></circle>
+
+<path d="M 20 30 L 50 50 L 70 20" fill="none" stroke="#ff3131" stroke-opacity="0.5" stroke-width="0.2"></path>
+<path d="M 30 70 L 50 50 L 80 60" fill="none" stroke="#ff3131" stroke-opacity="0.5" stroke-width="0.2"></path>
+</svg>
+</div>
+
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-4">
+                Ready to build<br>the future together?
+            </h2>
+<p class="text-on-surface-variant font-code-sm text-code-sm max-w-sm">
+                Join thousands of developers &amp; students open source and creating impact.
+            </p>
+</div>
+<div class="flex flex-col gap-4">
+    <a href="https://github.com/Demon-Die" target="_blank">
+        <button class="glass-button w-full px-6 py-4 flex items-center justify-center gap-2 text-white font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-sm" data-icon="code">code</span>
+                Join on GitHub
+            </button>
+    </a>
+
+    <a href="https://discord.gg/4waT35Hxs" target="_blank">
+        <button class="glass-panel w-full px-6 py-4 flex items-center justify-center gap-2 hover:bg-white/5 text-on-surface font-label-mono text-label-mono">
+<span class="material-symbols-outlined text-sm" data-icon="forum">forum</span>
+                Join our Discord
+            </button>
+    </a>
+
+</div>
+</div>
+</section>
+</main>
+  
+  <button id="chatbot-toggle" class="fixed bottom-4 right-4 rounded-full shadow-lg bg-primary/20 backdrop-blur-md border border-primary p-3 hover:bg-primary/30 transition">
+    <span class="material-symbols-outlined text-2xl text-primary">hub</span>
+  </button>
+  
+  <div id="chatbot-modal" class="hidden"></div>
+  
+  <script>
+    window.env = {};
+    (async function() {
+      try {
+        const responseJson = await fetch('env.json');
+        if (responseJson.ok) {
+          window.env = await responseJson.json();
+        } else {
+          const responseEnv = await fetch('.env');
+          if (responseEnv.ok) {
+            const text = await responseEnv.text();
+            text.split('\n').forEach(line => {
+              const parts = line.split('=');
+              if (parts.length >= 2) {
+                const key = parts[0].trim();
+                const val = parts.slice(1).join('=').trim().replace(/^["']|["']$/g, '');
+                window.env[key] = val;
+              }
+            });
+          }
+        }
+      } catch (e) {
+        console.warn('Environment loading error:', e);
+      } finally {
+        window.envLoaded = true;
+        window.dispatchEvent(new CustomEvent('envLoaded'));
+      }
+    })();
+  </script>
+  
+
+<footer class="bg-background dark:bg-background border-t border-surface-variant relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto" id="about">
+<div class="space-y-4">
+<div class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="hexagon" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">hexagon</span>
+                    DemonDie
+                </div>
+<p class="text-body-base font-body-base text-on-surface-variant text-sm max-w-xs">
+                    Open source, open learning, devloped on learning, built by students, scaled by contributors around the globe.
+                </p>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-label-mono text-label-mono font-bold mb-4">Navigation</h4>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="#home">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="#projects">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="#contributors">Contributor</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="./blogs.html">Blogs</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="#home">About</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-label-mono text-label-mono font-bold mb-4">Resources</h4>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="./guidelines.html">Guidelines</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="./faqs.html">FAQs</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="./codeOfConduct.html">Code of Conduct</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="./licence.html">License</a>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-on-surface font-label-mono text-label-mono font-bold mb-4">Connect</h4>
+<div class="flex flex-col gap-2">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://github.com/Demon-Die" target="_blank">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://discord.gg/4waT35Hxs" target="_blank">Discord</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://x.com/DemonDieOrg" target="_blank">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://www.linkedin.com/in/demondie-org/" target="_blank">LinkedIn</a>
+</div></div></div></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section[id], footer[id]");
+  const navLinks = document.querySelectorAll("nav a");
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5,
+  };
+
+  const setActiveLink = (hash) => {
+    navLinks.forEach(link => {
+      const href = link.getAttribute("href");
+      if (href === hash) {
+        link.classList.add("text-primary", "border-b-2", "border-primary");
+      } else {
+        link.classList.remove("text-primary", "border-b-2", "border-primary");
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setActiveLink(`#${entry.target.id}`);
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => observer.observe(section));
+
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      const href = link.getAttribute("href");
+      setActiveLink(href);
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY < 50) {
+      setActiveLink("#home");
+    }
+  });
+});
+</script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+</body></html>
