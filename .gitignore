@@ -4,3 +4,6 @@ docs/
 env.json
 
 .vercel
+node_modules/
+dist/
+.DS_Store
