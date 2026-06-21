@@ -191,7 +191,7 @@
         }
       }
 
-      const avatarUrl = user.photoURL || 'https://raw.githubusercontent.com/Demon-Die/Website/refs/heads/main/assets/demondie-logo.webp';
+      const avatarUrl = user.photoURL || '/LogoDemonDie.jpeg';
       authWidget.innerHTML = `
         <div class="flex items-center gap-3">
           <img class="w-8 h-8 rounded-full border border-primary object-cover" src="${avatarUrl}" alt="Profile">
