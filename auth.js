@@ -191,10 +191,10 @@
         }
       }
 
-      const avatarUrl = user.photoURL || '/LogoDemonDie.jpeg';
+      const avatarUrl = user.photoURL || './public/LogoDemonDie.jpeg';
       authWidget.innerHTML = `
         <div class="flex items-center gap-3">
-          <img class="w-8 h-8 rounded-full border border-primary object-cover" src="${avatarUrl}" alt="Profile">
+          <img class="w-[72px] h-[72px] rounded-full border border-primary object-cover" src="${avatarUrl}" alt="Profile">
           <button id="auth-logout-btn" class="text-on-surface-variant hover:text-primary transition-colors text-[10px] sm:text-xs font-label-mono tracking-wider cursor-pointer">
             [ LOGOUT ]
           </button>
