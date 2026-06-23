@@ -15,9 +15,10 @@ body.radial-bg, body:not(.grid-bg) {
 body.grid-bg {
     background-color: #000000;
     background-image: 
-        linear-gradient(to right, #1a1a1a 1px, transparent 1px),
-        linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+        linear-gradient(to right, #222222 1px, transparent 1px),
+        linear-gradient(to bottom, #222222 1px, transparent 1px);
     background-size: 40px 40px;
+    background-attachment: fixed;
 }
 
 .glass-panel {

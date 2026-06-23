@@ -298,10 +298,12 @@
     window.env = {};
     (async function() {
       try {
-        const responseJson = await fetch('env.json');
+        const responseJson = await fetch('env-public.json');
         if (responseJson.ok) {
           window.env = await responseJson.json();
-        } else {
+        }
+        
+        try {
           const responseEnv = await fetch('.env');
           if (responseEnv.ok) {
             const text = await responseEnv.text();
@@ -314,7 +316,7 @@
               }
             });
           }
-        }
+        } catch(err) { /* .env missing on prod */ }
       } catch (e) {
         console.warn('Environment loading error:', e);
       } finally {
