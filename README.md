@@ -1,10 +1,10 @@
-# DemonDie Website
+# Omnikon Website
 
-[![GitHub](https://img.shields.io/badge/GitHub-Demon--Die-181717?style=for-the-badge&logo=github)](https://github.com/Demon-Die)
+[![GitHub](https://img.shields.io/badge/GitHub-Demon--Die-181717?style=for-the-badge&logo=github)](https://github.com/Omnikon-Org)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/4waT35Hxs)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/Demon-Die/Website?tab=MIT-1-ov-file)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/Omnikon-Org/Website?tab=MIT-1-ov-file)
 
-Professional static website for the DemonDie organization.
+Professional static website for the Omnikon organization.
 
 Designed with Google Stitch, Connected by hands, Styled with TailwindCss.
 
@@ -12,16 +12,16 @@ Designed with Google Stitch, Connected by hands, Styled with TailwindCss.
 
 ### Demon Tech Roadmap
 Community-driven learning roadmaps for students and aspiring developers. Designed to help learners navigate technology careers through structured, beginner-friendly roadmaps, curated resources, and practical project recommendations.
-- Repository: [github.com/Demon-Die/DemonTechRoadmap](https://github.com/Demon-Die/DemonTechRoadmap)
+- Repository: [github.com/Omnikon-Org/DemonTechRoadmap](https://github.com/Omnikon-Org/DemonTechRoadmap)
 - Website: [demon-tech-roadmap.vercel.app](https://demon-tech-roadmap.vercel.app/)
 
 ### UnVibe
 UnVibe trains developers to truly understand code, not just generate it.
-- Repository: [github.com/Demon-Die/unvibe](https://github.com/Demon-Die/unvibe)
+- Repository: [github.com/Omnikon-Org/unvibe](https://github.com/Omnikon-Org/unvibe)
 
 ### SyncCanvas
 An AI-powered collaborative whiteboard for real-time brainstorming, diagramming, and team collaboration on an infinite canvas.
-- Repository: [github.com/Demon-Die/SyncCanvas](https://github.com/Demon-Die/SyncCanvas)
+- Repository: [github.com/Omnikon-Org/SyncCanvas](https://github.com/Omnikon-Org/SyncCanvas)
 
 ---
 
@@ -41,7 +41,7 @@ Copy the provided `.env.example` or create a new `env.json` and `.env` file in t
   "FIREBASE_STORAGE_BUCKET": "YOUR_STORAGE_BUCKET",
   "FIREBASE_MESSAGING_SENDER_ID": "YOUR_MESSAGING_SENDER_ID",
   "FIREBASE_APP_ID": "YOUR_APP_ID",
-  "GIT_DEMONDIE_ALL": "YOUR_GITHUB_TOKEN",
+  "GIT_OMNIKON_ALL": "YOUR_GITHUB_TOKEN",
   "SUPABASE_URL": "YOUR_SUPABASE_URL",
   "SUPABASE_ANON_KEY": "YOUR_SUPABASE_KEY"
 }
@@ -52,7 +52,7 @@ Because the website fetches local JSON and module files, you must serve it over 
 
 ```bash
 # Clone the repo
-git clone https://github.com/Demon-Die/Website.git
+git clone https://github.com/Omnikon-Org/Website.git
 cd Website
 
 # Start a local web server (e.g. using npx)
@@ -86,9 +86,9 @@ Distributed under the **MIT License**. See the `LICENSE` file for details.
 ---
 
 ## 📧 Contact & Community
-- **GitHub Org:** https://github.com/Demon-Die
+- **GitHub Org:** https://github.com/Omnikon-Org
 - **Discord:** https://discord.gg/4waT35Hxs
-- **Twitter:** https://x.com/DemonDieOrg
-- **LinkedIn:** https://www.linkedin.com/in/demondie-org/
+- **Twitter:** https://x.com/OmnikonOrg
+- **LinkedIn:** https://www.linkedin.com/in/omnikon-org/
 
 *Join us, build together, and make open-source learning fun!*

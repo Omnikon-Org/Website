@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# fetch_github_data.sh - Retrieves live data for the Demon-Die GitHub organization
+# fetch_github_data.sh - Retrieves live data for the Omnikon GitHub organization
 # Requires jq to be installed.
 
 # Load the PAT from .env (strip spaces around =)
@@ -9,12 +9,12 @@ if [[ ! -f "$ENV_FILE" ]]; then
   exit 1
 fi
 # Extract token value (supports spaces around =)
-TOKEN=$(grep -E "^GIT_DEMONDIE_ALL" "$ENV_FILE" | cut -d'=' -f2- | tr -d ' \"')
+TOKEN=$(grep -E "^GIT_OMNIKON_ALL" "$ENV_FILE" | cut -d'=' -f2- | tr -d ' \"')
 if [[ -z "$TOKEN" ]]; then
   echo "Error: GitHub token not found in .env"
   exit 1
 fi
-ORG="Demon-Die"
+ORG="Omnikon"
 
 # ------------------------------------------------------------
 # Fetch organization repositories (first 100, pagination if needed)
