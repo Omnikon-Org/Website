@@ -4,7 +4,7 @@
 
   modal.innerHTML = `
     <div id="chatbot-header">
-      <span class="text-on-surface font-label-mono text-sm tracking-wider font-bold">DEMONDIE AI CORE v1.0</span>
+      <span class="text-on-surface font-label-mono text-sm tracking-wider font-bold">OMNIKON AI CORE v1.0</span>
       <button id="chatbot-close" class="text-on-surface-variant hover:text-primary transition-colors text-sm">✖</button>
     </div>
     <div id="chatbot-messages"></div>
@@ -68,17 +68,17 @@
       const members = orgData.members 
         ? orgData.members.map(m => `- ${m.login} (${m.html_url})`).join('\n') 
         : '';
-      context = `Here is the current real-time data about the DemonDie organization:\n\nActive Projects:\n${projects}\n\nKey Members/Contributors:\n${members}`;
+      context = `Here is the current real-time data about the Omnikon organization:\n\nActive Projects:\n${projects}\n\nKey Members/Contributors:\n${members}`;
     }
 
-    return `You are the official AI Assistant for the DemonDie Open Source Organization.
-Your sole purpose is to help users learn about the DemonDie community, its active projects, repositories, code of conduct, guidelines, and contributors.
+    return `You are the official AI Assistant for the Omnikon Open Source Organization.
+Your sole purpose is to help users learn about the Omnikon community, its active projects, repositories, code of conduct, guidelines, and contributors.
 
 ${context}
 
 RULES:
-1. ONLY answer questions related to DemonDie, its projects, and its community.
-2. If a query is unrelated to DemonDie (e.g. general knowledge, unrelated coding, general questions), politely refuse to answer. Say: "I am the DemonDie assistant, and I can only answer questions related to the organization."
+1. ONLY answer questions related to Omnikon, its projects, and its community.
+2. If a query is unrelated to Omnikon (e.g. general knowledge, unrelated coding, general questions), politely refuse to answer. Say: "I am the Omnikon assistant, and I can only answer questions related to the organization."
 3. Keep answers technical, concise, clear, and direct.
 4. Respond in Markdown format where appropriate.`;
   }
@@ -94,7 +94,7 @@ RULES:
     }
 
     if (!hasGreeted) {
-      appendMessage('Hello! I am the DemonDie AI Assistant. I can help you with questions about our active projects, guidelines, contributors, or how to get started in our community. What would you like to know?', 'bot');
+      appendMessage('Hello! I am the Omnikon AI Assistant. I can help you with questions about our active projects, guidelines, contributors, or how to get started in our community. What would you like to know?', 'bot');
       hasGreeted = true;
     }
   };

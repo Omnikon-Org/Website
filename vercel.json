@@ -1,5 +1,5 @@
 {
-  "name": "demondie-website",
+  "name": "omnikon-website",
   "routes": [
     { "handle": "filesystem" },
     { "src": "/(.*)", "status": 404, "dest": "/404err.html" }
