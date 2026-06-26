@@ -1,7 +1,7 @@
 # Omnikon Website
 
 [![GitHub](https://img.shields.io/badge/GitHub-Demon--Die-181717?style=for-the-badge&logo=github)](https://github.com/Omnikon-Org)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/4waT35Hxs)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yWtjK2Tb8T)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/Omnikon-Org/Website?tab=MIT-1-ov-file)
 
 Professional static website for the Omnikon organization.
@@ -87,7 +87,7 @@ Distributed under the **MIT License**. See the `LICENSE` file for details.
 
 ## 📧 Contact & Community
 - **GitHub Org:** https://github.com/Omnikon-Org
-- **Discord:** https://discord.gg/4waT35Hxs
+- **Discord:** https://discord.gg/yWtjK2Tb8T
 - **Twitter:** https://x.com/OmnikonOrg
 - **LinkedIn:** https://www.linkedin.com/in/omnikon-org/
 
