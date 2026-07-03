@@ -240,3 +240,22 @@ body.grid-bg {
     box-shadow: 0 0 15px rgba(255, 49, 49, 0.15);
     border-color: rgba(255, 49, 49, 0.4);
 }
+
+
+/* Achievements Feed Styles */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+

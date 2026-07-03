@@ -43,8 +43,6 @@
 
 <section id="hero-section" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[716px] mb-section-gap relative">
 
-<div class="blob bg-[#ff2a4b] w-96 h-96 top-0 left-[-100px]"></div>
-<div class="blob bg-[#3b0005] w-80 h-80 bottom-[-50px] right-[-50px]" style="animation-delay: -5s; animation-duration: 12s;"></div>
 
 <div class="space-y-8 z-10">
 <div class="text-on-surface-variant font-code-sm text-code-sm terminal-text">Building Omnikon OS...</div>
@@ -87,15 +85,39 @@
 </div>
 </div>
 
-<div class="flex items-center justify-center relative z-10 w-full h-full">
-    <img src="./image.png" alt="Omnikon community hero graphic" class="hero-img max-h-[500px] w-auto object-contain drop-shadow-2xl">
+<div class="flex items-center justify-center relative z-10 w-full h-full min-h-[600px]">
+    <!-- Base: Soft radial red glow -->
+    <div class="absolute top-[52%] left-[46%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+    
+    <!-- Middle: Animated concentric rings -->
+    <div class="absolute top-[52%] left-[46%] -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center z-0 pointer-events-none">
+        <div class="absolute w-[350px] h-[350px] border border-primary/30 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+        <div class="absolute w-[500px] h-[500px] border border-primary/20 rounded-full animate-[ping_4s_cubic-bezier(0,0,0.2,1)_infinite]" style="animation-delay: 1s;"></div>
+        <div class="absolute w-[650px] h-[650px] border border-primary/10 rounded-full animate-[ping_5s_cubic-bezier(0,0,0.2,1)_infinite]" style="animation-delay: 2s;"></div>
+        <!-- dashed rings -->
+        <div class="absolute w-[400px] h-[400px] border border-dashed border-primary/40 rounded-full animate-[spin_20s_linear_infinite]"></div>
+        <div class="absolute w-[550px] h-[550px] border border-dashed border-primary/30 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[20%] left-[10%] w-2 h-2 bg-primary rounded-full animate-pulse-glow shadow-[0_0_10px_#ff2a4b] opacity-70" style="animation: float 8s ease-in-out infinite;"></div>
+        <div class="absolute top-[30%] right-[15%] w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow shadow-[0_0_10px_#ff2a4b] opacity-50" style="animation: float 10s ease-in-out infinite reverse; animation-delay: 2s;"></div>
+        <div class="absolute bottom-[25%] left-[15%] w-3 h-3 bg-primary rounded-full animate-pulse-glow shadow-[0_0_15px_#ff2a4b] opacity-60" style="animation: float 9s ease-in-out infinite; animation-delay: 1s;"></div>
+        <div class="absolute bottom-[20%] right-[10%] w-2 h-2 bg-primary rounded-full animate-pulse-glow shadow-[0_0_10px_#ff2a4b] opacity-80" style="animation: float 11s ease-in-out infinite reverse; animation-delay: 3s;"></div>
+        <div class="absolute top-[10%] right-[30%] w-1 h-1 bg-primary rounded-full animate-pulse-glow shadow-[0_0_8px_#ff2a4b] opacity-40" style="animation: float 12s ease-in-out infinite; animation-delay: 4s;"></div>
+        <div class="absolute bottom-[10%] left-[30%] w-2.5 h-2.5 bg-primary rounded-full animate-pulse-glow shadow-[0_0_12px_#ff2a4b] opacity-50" style="animation: float 7s ease-in-out infinite reverse; animation-delay: 1.5s;"></div>
+    </div>
+
+    <!-- Top: The graphic -->
+    <img src="./image.png" alt="Omnikon community hero graphic" class="hero-img max-h-[650px] scale-125 md:scale-125 w-auto object-contain drop-shadow-2xl relative z-10 hover:scale-[1.3] transition-transform duration-700 ease-out">
 </div>
 </section>
 
 <section class="glass-panel mb-section-gap relative overflow-hidden">
 <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70"></div>
-<div class="grid grid-cols-2 md:grid-cols-5 divide-x divide-y md:divide-y-0 divide-surface-variant/30">
-<div class="p-8 flex items-center gap-6">
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 divide-surface-variant/30 border-y border-surface-variant/30 [&>*:not(:last-child)]:border-b md:[&>*:not(:last-child)]:border-b-0 lg:[&>*:not(:last-child)]:border-r md:[&>:nth-child(1)]:border-b md:[&>:nth-child(2)]:border-b md:[&>:nth-child(3)]:border-b">
+<div class="p-8 flex items-center gap-6 border-r md:border-r-0 lg:border-r border-surface-variant/30">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="deployed_code">deployed_code</span>
 </div>
@@ -104,7 +126,7 @@
 <div class="text-code-sm font-code-sm text-on-surface-variant">Active Projects</div>
 </div>
 </div>
-<div class="p-8 flex items-center gap-6">
+<div class="p-8 flex items-center gap-6 lg:border-r border-surface-variant/30 md:border-r">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="group">group</span>
 </div>
@@ -113,7 +135,7 @@
 <div class="text-code-sm font-code-sm text-on-surface-variant">Students Engaged</div>
 </div>
 </div>
-<div class="p-8 flex items-center gap-6">
+<div class="p-8 flex items-center gap-6 border-r md:border-r-0 lg:border-r border-surface-variant/30">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
 </div>
@@ -122,7 +144,7 @@
 <div class="text-code-sm font-code-sm text-on-surface-variant">Contributors</div>
 </div>
 </div>
-<div class="p-8 flex items-center gap-6">
+<div class="p-8 flex items-center gap-6 lg:border-r border-surface-variant/30 md:border-r">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="visibility">visibility</span>
 </div>
@@ -131,16 +153,59 @@
 <div class="text-code-sm font-code-sm text-on-surface-variant">Repository Stars</div>
 </div>
 </div>
-<div class="p-8 flex items-center gap-6">
+<div class="p-8 flex items-center gap-6 border-r md:border-r-0 lg:border-r border-surface-variant/30">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="article">article</span>
 </div>
 <div>
-<div class="text-headline-md font-headline-md text-on-surface">12+</div>
+<div id="blog-count" class="text-headline-md font-headline-md text-on-surface">...</div>
 <div class="text-code-sm font-code-sm text-on-surface-variant">Articles Published</div>
 </div>
 </div>
+<a href="#community" class="p-8 flex items-center gap-6 hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
 </div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface group-hover:text-primary transition-colors">1.6K+</div>
+<div class="text-code-sm font-code-sm text-on-surface-variant">Quiz Registrations</div>
+</div>
+</a>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        try {
+            const envResp = await fetch('env-public.json');
+            const env = await envResp.json();
+            const supabaseUrl = env.SUPABASE_URL;
+            const supabaseKey = env.SUPABASE_ANON_KEY;
+            if(!supabaseUrl || !supabaseKey) return;
+            
+            let normalizedUrl = supabaseUrl.trim();
+            if (normalizedUrl.endsWith('/rest/v1/')) {
+                normalizedUrl = normalizedUrl.slice(0, -9);
+            } else if (normalizedUrl.endsWith('/rest/v1')) {
+                normalizedUrl = normalizedUrl.slice(0, -8);
+            }
+            
+            const resp = await fetch(`${normalizedUrl}/rest/v1/blogs?select=id`, {
+                method: 'HEAD',
+                headers: {
+                    'apikey': supabaseKey,
+                    'Authorization': `Bearer ${supabaseKey}`,
+                    'Prefer': 'count=exact'
+                }
+            });
+            const range = resp.headers.get('content-range');
+            if(range) {
+                const count = range.split('/')[1];
+                document.getElementById('blog-count').innerText = count;
+            }
+        } catch(e) {
+            console.error("Failed to fetch blog count", e);
+        }
+    });
+</script>
 </section>
 
 <section class="mb-section-gap">
@@ -223,6 +288,207 @@
 </div>
 </section>
 
+<section id="community" class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-section-gap items-center">
+    <!-- Left Column: Feed & Info -->
+    <div class="flex flex-col gap-8">
+        <div>
+            <h2 class="text-display-lg font-headline-md text-on-surface mb-2">
+                Omnikon <span class="text-primary">Achievements</span>
+            </h2>
+            <p class="text-on-surface-variant font-code-sm text-code-sm mb-6">
+                Real impact. Real numbers. Join the growing community of innovators.
+            </p>
+            <div class="overflow-hidden w-full bg-surface-container/50 border border-surface-variant/30 py-2 rounded-md mb-6">
+                <div class="whitespace-nowrap animate-[marquee_20s_linear_infinite] inline-flex gap-4 text-primary font-label-mono text-xs w-max">
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="glass-button text-white font-label-mono text-xs px-6 py-3">Explore Events</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-6 relative before:absolute before:left-[19px] before:top-4 before:bottom-4 before:w-[2px] before:bg-gradient-to-b before:from-primary/50 before:to-transparent">
+            
+            <!-- LIVE: AI/ML Quiz -->
+            <div class="relative pl-12 scroll-reveal">
+                <div class="absolute left-0 top-6 w-10 h-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface border-2 border-primary flex items-center justify-center z-10 animate-pulse-glow">
+                    <div class="w-3 h-3 bg-primary rounded-full"></div>
+                </div>
+                <div class="glass-panel p-1 rounded-xl group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden border-primary/40 hover:border-primary/80 shadow-[0_0_20px_rgba(255,42,75,0.1)] hover:shadow-[0_0_30px_rgba(255,42,75,0.2)]">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary animate-pulse"></div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded uppercase tracking-wider border border-primary/30 flex items-center gap-1">
+                                <div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div> LIVE
+                            </span>
+                            <span class="text-primary text-xs font-code-sm border border-primary/30 px-2 py-1 rounded">Featured</span>
+                        </div>
+                        <h3 class="text-on-surface font-headline-md text-xl mb-2">AI/ML Quiz Challenge 2026</h3>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">quiz</span> 50 Questions</div>
+                            <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">timer</span> 60 Minutes</div>
+                            <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">emoji_events</span> ₹1000 Prize Pool</div>
+                            <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">local_activity</span> ₹30 Entry</div>
+                        </div>
+                        <img src="./public/AI_ML_Poster.png" alt="AI/ML Quiz Poster" class="w-full h-auto rounded-lg border border-surface-variant/30 mb-4 object-cover" onerror="this.style.display='none'">
+                        <button class="w-full py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 rounded-md font-label-mono text-xs transition-colors">Register Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPLETED: Quiz Arena -->
+            <div class="relative pl-12 scroll-reveal" style="transition-delay: 100ms;">
+                <div class="absolute left-0 top-6 w-6 h-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface border-2 border-surface-variant flex items-center justify-center z-10">
+                    <div class="w-2 h-2 bg-surface-variant rounded-full"></div>
+                </div>
+                <div class="glass-panel p-5 rounded-xl group hover:scale-[1.02] transition-transform duration-300 relative border-surface-variant/50 hover:border-surface-variant">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-1 bg-surface-variant/50 text-on-surface-variant text-[10px] font-bold rounded uppercase tracking-wider border border-surface-variant">COMPLETED</span>
+                        <span class="text-on-surface-variant text-xs font-code-sm">Legacy</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="./public/QuizArenaLogo.png" alt="Quiz Arena Logo" class="w-20 h-20 object-contain">
+                        <h3 class="text-on-surface font-headline-md text-lg">Omnikon Quiz Arena</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div class="bg-surface/50 p-3 rounded border border-surface-variant/30">
+                            <div class="text-primary font-bold text-lg"><span class="counter" data-target="1600">0</span>+</div>
+                            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider">Registrations</div>
+                        </div>
+                        <div class="bg-surface/50 p-3 rounded border border-surface-variant/30">
+                            <div class="text-primary font-bold text-lg"><span class="counter" data-target="168.9">0</span>K</div>
+                            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider">Impressions</div>
+                        </div>
+                        <div class="bg-surface/50 p-3 rounded border border-surface-variant/30">
+                            <div class="text-on-surface font-bold text-lg counter" data-target="264">0</div>
+                            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider">Reviews</div>
+                        </div>
+                        <div class="bg-surface/50 p-3 rounded border border-surface-variant/30">
+                            <div class="text-on-surface font-bold text-lg"><span class="counter" data-target="71.4">0</span>%</div>
+                            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider">Engineering</div>
+                        </div>
+                    </div>
+                    <p class="text-on-surface-variant text-xs font-code-sm border-t border-surface-variant/30 pt-3">
+                        Massive student engagement across domains.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Right Column: Recent Activity -->
+    <div class="glass-panel flex flex-col h-full min-h-[500px]">
+        <div class="p-6 border-b border-surface-container">
+            <div class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined" data-icon="history">history</span>
+                <h2 class="text-on-surface font-label-mono text-label-mono">Recent Activity</h2>
+            </div>
+        </div>
+        <div id="recent-activity" class="p-6 flex-grow overflow-y-auto space-y-6">
+            
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
+                <div class="flex-grow">
+                    <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Dev</span> PR merged in <span class="text-on-surface-variant">demon-structureize</span></p>
+                </div>
+                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">2m ago</span>
+            </div>
+            
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="upload">upload</span>
+                <div class="flex-grow">
+                    <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Alina</span> Push Layout &amp; module progress</p>
+                </div>
+                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">5m ago</span>
+            </div>
+            
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="person_add">person_add</span>
+                <div class="flex-grow">
+                    <p class="text-on-surface font-code-sm text-code-sm">New contributor joined: <span class="text-primary">Aman</span></p>
+                </div>
+                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">10m ago</span>
+            </div>
+            
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="edit_document">edit_document</span>
+                <div class="flex-grow">
+                    <p class="text-on-surface font-code-sm text-code-sm">Documentation updated in <span class="text-on-surface-variant">#docs</span></p>
+                </div>
+                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">15m ago</span>
+            </div>
+            
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="security">security</span>
+                <div class="flex-grow">
+                    <p class="text-on-surface font-code-sm text-code-sm">New security patch in <span class="text-on-surface-variant">attend-warden</span></p>
+                </div>
+                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">20m ago</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Microinteractions Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Scroll Reveal
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Trigger Counters when visible
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            const target = parseFloat(counter.getAttribute('data-target'));
+                            const duration = 2000;
+                            const stepTime = Math.abs(Math.floor(duration / 60));
+                            let current = 0;
+                            const increment = target / (duration / stepTime);
+                            
+                            const isDecimal = target % 1 !== 0;
+
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    counter.innerText = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.innerText = isDecimal ? current.toFixed(1) : Math.ceil(current);
+                                }
+                            }, stepTime);
+                            
+                            // Remove class to prevent re-triggering
+                            counter.classList.remove('counter');
+                        });
+
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</section>
+
 <section id="projects" class="grid grid-cols-1 lg:grid-cols-1 gap-6 mb-section-gap">
 
 <div class="glass-panel p-6">
@@ -235,71 +501,8 @@
                     View all <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
-<div class="space-y-4">
-  
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">CNTRL</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">An AI-powered desktop browser built with Tauri, Rust, and TypeScript — featuring hybrid local/cloud AI routing, smart navigation, and webview rendering.</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
-  </div>
-  
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">.github</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1"></div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
-  </div>
-  
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">Website</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">Omnikon is an open-source technology community building impactful software and helping developers grow through collaboration.</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 2</div>
-  </div>
-  
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">DemonTechRoadmap</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">Community-driven roadmaps for students and aspiring developers.</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 5</div>
-  </div>
-  
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">UnVibe</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">UnVibe trains developers to truly understand code, not just generate it. AI writes the hardest solution — you decode it, rebuild it simpler, then defend your understanding in interviews. Your \"Irreplaceability Score\" tracks your depth. Goal: be skilled enough that no company can replace you with a prompt.</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 1</div>
-  </div>
-  
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">Certifier</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">Auto issuing badges for Contributors</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
-  </div>
-  
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">SyncCanvas</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">SyncCanvas is an AI-powered collaborative whiteboard for real-time brainstorming, diagramming, and team collaboration on an infinite canvas. 🚀</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 1</div>
-  </div>
-</div>
+<div class="space-y-4" id="projects-container">
+    <div class="text-center text-on-surface-variant text-code-sm font-code-sm py-8">Loading projects...</div>
 </div>
 
 </section>
@@ -323,7 +526,8 @@ document.addEventListener('DOMContentLoaded', () => {
   fetch('github_summary.json')
     .then(res => res.json())
     .then(data => {
-      const container = document.getElementById('contributors-list');
+      // Render Contributors
+      const contribContainer = document.getElementById('contributors-list');
       data.members
         .filter(member => member.type !== 'Bot' && !member.login.toLowerCase().includes('bot'))
         .forEach(member => {
@@ -337,125 +541,42 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="text-on-surface font-label-mono text-sm">${member.login}</div>
             </div>
           `;
-          container.appendChild(div);
+          contribContainer.appendChild(div);
         });
+
+      // Render Projects
+      const projContainer = document.getElementById('projects-container');
+      if (projContainer && data.repos) {
+        projContainer.innerHTML = '';
+        data.repos.forEach(repo => {
+          const repoHtml = `
+            <a href="${repo.html_url}" target="_blank" class="flex items-start gap-4 p-4 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary block group">
+              <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+              <div class="flex-grow">
+                <div class="flex items-center gap-2">
+                  <div class="text-on-surface font-label-mono text-sm group-hover:text-primary transition-colors">${repo.name}</div>
+                  ${repo.homepage ? `<button onclick="window.open('${repo.homepage}', '_blank'); event.preventDefault();" class="px-3 py-1 bg-primary/20 hover:bg-primary border border-primary text-white hover:text-background text-[10px] uppercase font-bold rounded ml-3 z-10 relative cursor-pointer transition-all shadow-[0_0_10px_rgba(255,42,75,0.2)]">Live Website</button>` : ''}
+                </div>
+                <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">${repo.description || ''}</div>
+              </div>
+              <div class="flex items-center gap-1 text-on-surface-variant text-code-sm">
+                <span class="material-symbols-outlined text-sm" data-icon="star">star</span> ${repo.stars}
+              </div>
+            </a>
+          `;
+          projContainer.insertAdjacentHTML('beforeend', repoHtml);
+        });
+      }
     })
-    .catch(err => console.error('Failed to load contributors:', err));
+    .catch(err => {
+      console.error('Failed to load GitHub summary:', err);
+      const projContainer = document.getElementById('projects-container');
+      if (projContainer) projContainer.innerHTML = '<div class="text-center text-primary text-code-sm">Failed to load projects.</div>';
+    });
 });
 </script>
 </section>
 
-<section id="community" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
-
-<div class="glass-panel flex flex-col h-[400px]" >
-<div class="p-6 border-b border-surface-container flex justify-between items-center">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined" data-icon="forum">forum</span>
-<h2 class="text-on-surface font-label-mono text-label-mono">Community Feed</h2>
-</div>
-<div class="flex items-center gap-2 text-code-sm font-code-sm text-on-surface">
-<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div> Live
-                </div>
-</div>
-<div id="community-feed" class="p-6 flex-grow overflow-y-auto space-y-6">
-
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">S</div>
-<div class="flex-grow">
-<div class="flex justify-between items-baseline mb-1">
-<span class="text-on-surface font-label-mono text-sm">Sonu</span>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">3m ago</span>
-</div>
-<p class="text-on-surface-variant text-code-sm font-code-sm">Fixed a bug in user progress system. Function optimized!</p>
-</div>
-</div>
-
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">A</div>
-<div class="flex-grow">
-<div class="flex justify-between items-baseline mb-1">
-<span class="text-on-surface font-label-mono text-sm">Alina</span>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">5m ago</span>
-</div>
-<p class="text-on-surface-variant text-code-sm font-code-sm">Added dark mode to the React microlearn</p>
-</div>
-</div>
-
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">D</div>
-<div class="flex-grow">
-<div class="flex justify-between items-baseline mb-1">
-<span class="text-on-surface font-label-mono text-sm">Dev</span>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">8m ago</span>
-</div>
-<p class="text-on-surface-variant text-code-sm font-code-sm">New component for chart.js integration</p>
-</div>
-</div>
-
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">M</div>
-<div class="flex-grow">
-<div class="flex justify-between items-baseline mb-1">
-<span class="text-on-surface font-label-mono text-sm">Mayank</span>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">12m ago</span>
-</div>
-<p class="text-on-surface-variant text-code-sm font-code-sm">Setup CI for the backend repo</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="glass-panel flex flex-col h-[400px]">
-<div class="p-6 border-b border-surface-container">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined" data-icon="history">history</span>
-<h2 class="text-on-surface font-label-mono text-label-mono">Recent Activity</h2>
-</div>
-</div>
-<div id="recent-activity" class="p-6 flex-grow overflow-y-auto space-y-6">
-
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Dev</span> PR merged in <span class="text-on-surface-variant">demon-structureize</span></p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">2m ago</span>
-</div>
-
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="upload">upload</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Alina</span> Push Layout &amp; module progress</p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">5m ago</span>
-</div>
-
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="person_add">person_add</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm">New contributor joined: <span class="text-primary">Aman</span></p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">10m ago</span>
-</div>
-
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="edit_document">edit_document</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm">Documentation updated in <span class="text-on-surface-variant">#docs</span></p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">15m ago</span>
-</div>
-
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="security">security</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm">New security patch in <span class="text-on-surface-variant">attend-warden</span></p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">20m ago</span>
-</div>
-</div>
-</div>
-</section>
 
 <section class="glass-panel relative overflow-hidden mb-section-gap p-12">
 <div class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-20 pointer-events-none w-96 h-96">
