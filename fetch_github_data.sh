@@ -22,7 +22,7 @@ REPOS=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/orgs/$O
 PROJECT_COUNT=$(echo "$REPOS" | jq length)
 TOTAL_STARS=$(echo "$REPOS" | jq '[.[] .stargazers_count] | add')
 # Build repos array with needed fields
-REPOS_DATA=$(echo "$REPOS" | jq '[.[] | {name: .name, description: .description, stars: .stargazers_count, html_url: .html_url}]')
+REPOS_DATA=$(echo "$REPOS" | jq '[.[] | {name: .name, description: .description, stars: .stargazers_count, html_url: .html_url, homepage: .homepage}]')
 
 # ------------------------------------------------------------
 # Aggregate all unique contributors across all repositories using JSON array merging
@@ -36,8 +36,7 @@ for REPO_NAME in $(echo "$REPOS" | jq -r '.[].name'); do
       break
     fi
     # Merge this page's contributors into the accumulator (ensure array)
-    ALL_CONTRIBS=$(printf '%s
-%s' "$ALL_CONTRIBS" "$ContribResp" | jq -s 'add')
+    ALL_CONTRIBS=$(printf '%s\n%s' "$ALL_CONTRIBS" "$ContribResp" | jq -s 'add')
     ((PAGE++))
   done
 done
@@ -48,8 +47,7 @@ UNIQUE_CONTRIBS=$(echo "$ALL_CONTRIBS" | jq 'unique_by(.login)')
 ORG_MEMBERS_RAW=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/orgs/$ORG/members?per_page=100")
 ORG_MEMBERS=$(echo "$ORG_MEMBERS_RAW" | jq 'if type=="array" then . else [. ] end')
 # Merge contributors and org members, deduplicate again
-ALL_USERS=$(printf '%s
-%s' "$UNIQUE_CONTRIBS" "$ORG_MEMBERS" | jq -s 'add | unique_by(.login)')
+ALL_USERS=$(printf '%s\n%s' "$UNIQUE_CONTRIBS" "$ORG_MEMBERS" | jq -s 'add | unique_by(.login)')
 PRIORITY_LOGINS=("RishiByte" "Pranav00076" "SharanyoBanerjee" "Yuvraj-Sarathe")
 MEMBERS_DATA="[]"
 # Add priority members first
@@ -69,7 +67,8 @@ CONTRIBUTOR_COUNT=$(echo "$MEMBERS_DATA" | jq length)
 
 # ------------------------------------------------------------
 # Output summary JSON
-cat > "$(dirname "$0")/github_summary.json" <<EOF
+mkdir -p "$(dirname "$0")/public"
+cat > "$(dirname "$0")/public/github_summary.json" <<EOF
 {
   "project_count": $PROJECT_COUNT,
   "total_stars": $TOTAL_STARS,
@@ -79,4 +78,4 @@ cat > "$(dirname "$0")/github_summary.json" <<EOF
 }
 EOF
 
-echo "GitHub summary written to github_summary.json"
+echo "GitHub summary written to public/github_summary.json"
