@@ -96,19 +96,28 @@
 <div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-50"></div>
 <div class="w-2 h-4 bg-primary mt-4 animate-pulse relative z-10"></div>
 </div>
-<div class="flex flex-wrap gap-4 pt-4">
-    <a href="https://github.com/orgs/Omnikon-Org/projects?query=is%3Aopen" target="_blank">
-        <button class="glass-button text-[#ffffff] font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
+<div class="flex flex-col gap-4 pt-4 items-start w-fit">
+    <div class="flex flex-wrap gap-4">
+        <a href="https://github.com/orgs/Omnikon-Org/projects?query=is%3Aopen" target="_blank">
+            <button class="glass-button text-[#ffffff] font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
 <span class="material-symbols-outlined text-sm" data-icon="rocket_launch">rocket_launch</span>
                         Explore Projects
                     </button>
-    </a>
+        </a>
 
-    <a href="https://discord.gg/yWtjK2Tb8T" target="_blank">
-        <button class="glass-panel hover:bg-white/5 text-on-surface font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
+        <a href="https://discord.gg/yWtjK2Tb8T" target="_blank">
+            <button class="glass-panel hover:bg-white/5 text-on-surface font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
 <span class="material-symbols-outlined text-sm" data-icon="group">group</span>
                         Join Community
                     </button>
+        </a>
+    </div>
+
+    <a href="https://unstop.com/p/omnikon-aiml-quiz-challenge-2026-omnikon-1709614" target="_blank" class="w-full">
+        <button class="w-full justify-center bg-primary/20 hover:bg-primary/30 border border-primary text-primary font-label-mono text-label-mono px-6 py-3 flex items-center gap-2 rounded-md transition-all shadow-[0_0_15px_rgba(255,42,75,0.2)]">
+            <span class="material-symbols-outlined text-sm" data-icon="emoji_events">emoji_events</span>
+            Register for AI/ML Quiz
+        </button>
     </a>
 </div>
 </div>
@@ -373,7 +382,9 @@
                             <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">local_activity</span> ₹30 Entry</div>
                         </div>
                         <img src="./public/AI_ML_Poster.png" alt="AI/ML Quiz Poster" class="w-full h-auto rounded-lg border border-surface-variant/30 mb-4 object-cover" onerror="this.style.display='none'">
-                        <button class="w-full py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 rounded-md font-label-mono text-xs transition-colors">Register Now</button>
+                        <a href="https://unstop.com/p/omnikon-aiml-quiz-challenge-2026-omnikon-1709614" target="_blank" class="block w-full">
+                            <button class="w-full py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 rounded-md font-label-mono text-xs transition-colors">Register Now</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -420,54 +431,205 @@
         </div>
     </div>
 
-    <!-- Right Column: Recent Activity -->
-    <div class="glass-panel flex flex-col h-full min-h-[500px]">
-        <div class="p-6 border-b border-surface-container">
-            <div class="flex items-center gap-2 text-primary">
-                <span class="material-symbols-outlined" data-icon="history">history</span>
-                <h2 class="text-on-surface font-label-mono text-label-mono">Recent Activity</h2>
+    <!-- Right Column: Recent Activity & Featured Project -->
+    <div class="flex flex-col gap-6 h-full">
+        <!-- Recent Activity (Height reduced by ~35%) -->
+        <div class="glass-panel flex flex-col h-[325px]">
+            <div class="p-6 border-b border-surface-container shrink-0">
+                <div class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined" data-icon="history">history</span>
+                    <h2 class="text-on-surface font-label-mono text-label-mono">Recent Activity</h2>
+                </div>
+            </div>
+            <div id="recent-activity" class="p-6 flex-grow overflow-y-auto space-y-6 scroll-smooth custom-scrollbar">
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Dev</span> PR merged in <span class="text-on-surface-variant">demon-structureize</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">2m ago</span>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="upload">upload</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Alina</span> Push Layout &amp; module progress</p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">5m ago</span>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="person_add">person_add</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm">New contributor joined: <span class="text-primary">Aman</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">10m ago</span>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="edit_document">edit_document</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm">Documentation updated in <span class="text-on-surface-variant">#docs</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">15m ago</span>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="security">security</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm">New security patch in <span class="text-on-surface-variant">attend-warden</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">20m ago</span>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">John</span> fixed an issue in <span class="text-on-surface-variant">ui-components</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">25m ago</span>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Sarah</span> completed review for <span class="text-on-surface-variant">IssueSwipe</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">30m ago</span>
+                </div>
             </div>
         </div>
-        <div id="recent-activity" class="p-6 flex-grow overflow-y-auto space-y-6">
-            
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
-                <div class="flex-grow">
-                    <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Dev</span> PR merged in <span class="text-on-surface-variant">demon-structureize</span></p>
-                </div>
-                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">2m ago</span>
+
+        <!-- Featured Project -->
+        <style>
+            .featured-project-card {
+                opacity: 0;
+                transform: translateY(25px);
+                transition: opacity 0.8s cubic-bezier(0.19, 1, 0.22, 1), transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+            }
+            .featured-project-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            @keyframes float-premium {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-4px); }
+            }
+            .animate-float-premium {
+                animation: float-premium 6s ease-in-out infinite;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 6px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+            .bg-grid-pattern {
+                background-image: 
+                    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+                background-size: 20px 20px;
+            }
+            .bg-grid-pattern-moving {
+                animation: move-grid 20s linear infinite;
+            }
+            @keyframes move-grid {
+                0% { background-position: 0 0; }
+                100% { background-position: 20px 20px; }
+            }
+        </style>
+        
+        <div class="scroll-reveal featured-project-card relative overflow-hidden flex flex-col flex-grow bg-[#090909] rounded-[18px] border border-[#B56DFF]/20 hover:border-[#B56DFF]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(181,109,255,0.15)] group hover:-translate-y-1">
+            <!-- Background effects -->
+            <div class="absolute inset-0 z-0 overflow-hidden rounded-[18px]">
+                <!-- Radial glow -->
+                <div class="absolute top-[40%] right-[10%] -translate-y-1/2 w-[350px] h-[350px] bg-[#B56DFF]/15 rounded-full blur-[90px] group-hover:bg-[#B56DFF]/25 transition-all duration-700 pointer-events-none"></div>
+                <div class="absolute bottom-[-10%] left-[-10%] w-[200px] h-[200px] bg-[#B56DFF]/10 rounded-full blur-[70px] pointer-events-none"></div>
+                <!-- Grid -->
+                <div class="absolute inset-0 bg-grid-pattern bg-grid-pattern-moving opacity-40 group-hover:opacity-70 transition-opacity duration-1000 pointer-events-none"></div>
             </div>
             
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="upload">upload</span>
-                <div class="flex-grow">
-                    <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Alina</span> Push Layout &amp; module progress</p>
+            <div class="relative z-10 flex flex-col md:flex-row h-full">
+                <!-- Left Side (Text & Chips) -->
+                <div class="p-6 sm:p-8 flex flex-col justify-between w-full md:w-1/2 relative shrink-0">
+                    <!-- Decorative Elements -->
+                    <div class="absolute top-6 left-6 text-[#B56DFF]/30 font-mono text-[12px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                        &lt; /&gt;
+                    </div>
+                    <div class="absolute bottom-12 right-12 text-[#B56DFF]/40 font-mono text-xl animate-pulse pointer-events-none">
+                        +
+                    </div>
+                    <div class="absolute top-1/2 right-4 w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B56DFF]/20 pointer-events-none"></div>
+                    
+                    <div>
+                        <div class="mb-5 inline-flex">
+                            <span class="px-2.5 py-1.5 bg-[#1a1a1a] border border-[#333] text-[#B56DFF] text-[10px] font-bold rounded uppercase tracking-wider flex items-center gap-2 shadow-[0_0_10px_rgba(181,109,255,0.1)]">
+                                <div class="w-1.5 h-1.5 rounded-full bg-[#B56DFF] animate-pulse"></div> Open Source Project
+                            </span>
+                        </div>
+                        <h3 class="text-[48px] font-bold mb-2 bg-gradient-to-r from-[#FFFFFF] to-[#B56DFF] text-transparent bg-clip-text leading-tight">
+                            IssueSwipe
+                        </h3>
+                        <p class="text-[16px] text-[#BFBFBF] leading-relaxed mb-6 font-code-sm">
+                            Swipe through GitHub issues like Tinder.<br>
+                            Find beginner-friendly issues.<br>
+                            Contribute faster.<br>
+                            Build your OSS profile.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2.5 mb-8">
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">Good First Issues</span>
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">Smart Matching</span>
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">GitHub Sync</span>
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">Open Source</span>
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">Fast Review</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-auto">
+                        <a href="https://github.com/Omnikon-Org/IssuesSwipe" target="_blank" class="flex-1 flex">
+                            <button class="w-full h-full flex items-center justify-center gap-2 px-5 py-3.5 bg-transparent border border-surface-variant rounded-lg text-white font-semibold text-[15px] hover:border-[#B56DFF] hover:shadow-[0_0_15px_rgba(181,109,255,0.3)] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
+                                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>View Repository</span>
+                            </button>
+                        </a>
+                        <a href="https://issues-swipe-eta.vercel.app/" target="_blank" class="flex-1 flex">
+                            <button class="w-full h-full flex items-center justify-center gap-2 px-5 py-3.5 bg-gradient-to-r from-[#9333ea] to-[#B56DFF] rounded-lg text-white font-semibold text-[15px] hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(181,109,255,0.5)] transition-all duration-300 whitespace-nowrap">
+                                <span class="material-symbols-outlined text-[18px] shrink-0">open_in_new</span>
+                                <span>Launch Live Demo</span>
+                            </button>
+                        </a>
+                    </div>
                 </div>
-                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">5m ago</span>
-            </div>
-            
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="person_add">person_add</span>
-                <div class="flex-grow">
-                    <p class="text-on-surface font-code-sm text-code-sm">New contributor joined: <span class="text-primary">Aman</span></p>
+                
+                <!-- Right Side (Logo & Art) -->
+                <div class="hidden md:flex w-full md:w-1/2 relative items-center justify-center min-h-[300px] p-6 shrink-0">
+                    <!-- Decorative blurred blobs -->
+                    <div class="absolute top-[10%] left-[20%] w-[100px] h-[100px] bg-[#B56DFF]/20 rounded-full blur-[40px] pointer-events-none"></div>
+                    <div class="absolute bottom-[20%] right-[10%] w-[150px] h-[150px] bg-[#9333ea]/20 rounded-full blur-[50px] pointer-events-none"></div>
+                    
+                    <!-- Faint orbital rings -->
+                    <div class="absolute w-[220px] h-[220px] border border-[#B56DFF]/15 rounded-full animate-[spin_40s_linear_infinite] pointer-events-none group-hover:border-[#B56DFF]/30 transition-colors duration-700"></div>
+                    <div class="absolute w-[160px] h-[160px] border border-[#B56DFF]/20 rounded-full animate-[spin_30s_linear_infinite_reverse] pointer-events-none"></div>
+                    <div class="absolute w-[300px] h-[300px] border border-dashed border-[#B56DFF]/10 rounded-full animate-[spin_50s_linear_infinite] pointer-events-none"></div>
+                    
+                    <!-- Particles -->
+                    <div class="absolute top-[25%] left-[25%] w-1.5 h-1.5 bg-[#B56DFF] rounded-full opacity-60 blur-[1px] animate-[float_6s_ease-in-out_infinite] pointer-events-none"></div>
+                    <div class="absolute bottom-[35%] right-[25%] w-2 h-2 bg-white rounded-full opacity-40 blur-[1px] animate-[float_8s_ease-in-out_infinite_reverse] pointer-events-none"></div>
+                    <div class="absolute top-[60%] left-[15%] w-1 h-1 bg-[#FFFFFF] rounded-full opacity-50 blur-[0.5px] animate-[float_7s_ease-in-out_infinite] pointer-events-none" style="animation-delay: 2s;"></div>
+                    
+                    <!-- Logo -->
+                    <img src="/LogoIssueSwipeLight.png" alt="IssueSwipe Logo" class="relative z-10 w-[400px] lg:w-[500px] scale-110 lg:scale-125 h-auto object-contain drop-shadow-[0_0_30px_rgba(181,109,255,0.2)] animate-float-premium group-hover:drop-shadow-[0_0_50px_rgba(181,109,255,0.4)] transition-all duration-700">
                 </div>
-                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">10m ago</span>
-            </div>
-            
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="edit_document">edit_document</span>
-                <div class="flex-grow">
-                    <p class="text-on-surface font-code-sm text-code-sm">Documentation updated in <span class="text-on-surface-variant">#docs</span></p>
-                </div>
-                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">15m ago</span>
-            </div>
-            
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="security">security</span>
-                <div class="flex-grow">
-                    <p class="text-on-surface font-code-sm text-code-sm">New security patch in <span class="text-on-surface-variant">attend-warden</span></p>
-                </div>
-                <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">20m ago</span>
             </div>
         </div>
     </div>
