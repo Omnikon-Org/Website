@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "[![GitHub](https://img.shields.io/badge/GitHub-Demon--Die-181717?style=for-the-badge&logo=github)](https://github.com/Omnikon-Org) [![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/yWtjK2Tb8T) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](https://github.com/Omnikon-Org/Website?tab=MIT-1-ov-file)",
+  "main": "auth.js",
+  "scripts": {
+    "dev": "node generate-env.js && vite",
+    "build": "node generate-env.js && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pranav00076/Website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Pranav00076/Website/issues"
+  },
+  "homepage": "https://github.com/Pranav00076/Website#readme",
+  "devDependencies": {
+    "vite": "^8.0.16"
+  }
+}

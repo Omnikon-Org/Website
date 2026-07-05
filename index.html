@@ -1,311 +1,80 @@
-<!DOCTYPE html><html class="dark" lang="en"><head></head><body class="bg-background text-on-background font-body-base antialiased overflow-x-hidden">```html
-
-
-
+<!DOCTYPE html><html class="dark" lang="en">
+<head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>DemonDie - Open Source Community</title>
+<title>Omnikon - Open Source Community</title>
+<link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png?v=1">
+<link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png?v=1">
+<link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png?v=1">
+<link rel="manifest" href="./favicon_io/site.webmanifest?v=1">
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-tertiary": "#313030",
-                        "surface-container-high": "#292a2a",
-                        "surface-variant": "#343535",
-                        "on-tertiary-fixed-variant": "#474646",
-                        "on-secondary-fixed": "#1c1b1b",
-                        "inverse-surface": "#e3e2e2",
-                        "secondary-fixed-dim": "#c8c6c5",
-                        "secondary": "#c8c6c5",
-                        "surface-container-lowest": "#0d0e0f",
-                        "secondary-fixed": "#e5e2e1",
-                        "primary-container": "#ff544b",
-                        "tertiary": "#c8c6c5",
-                        "on-surface-variant": "#e7bcb8",
-                        "surface": "#0f0f0f", /* Adjusted to match style guidance Level 1 */
-                        "on-primary-fixed-variant": "#93000c",
-                        "surface-dim": "#121414",
-                        "primary": "#ff3131", /* Adjusted to match style guidance */
-                        "on-primary-container": "#5c0005",
-                        "error-container": "#93000a",
-                        "secondary-container": "#474746",
-                        "on-error-container": "#ffdad6",
-                        "surface-bright": "#383939",
-                        "tertiary-container": "#929090",
-                        "on-error": "#690005",
-                        "background": "#000000",
-                        "on-secondary": "#313030",
-                        "on-surface": "#e3e2e2",
-                        "error": "#ffb4ab",
-                        "on-secondary-fixed-variant": "#474746",
-                        "on-primary-fixed": "#410002",
-                        "primary-fixed": "#ffdad6",
-                        "tertiary-fixed": "#e5e2e1",
-                        "primary-fixed-dim": "#ffb4ab",
-                        "inverse-primary": "#c00014",
-                        "surface-tint": "#ffb4ab",
-                        "surface-container-highest": "#343535",
-                        "surface-container": "#1a1a1a", /* Border color */
-                        "on-primary": "#000000", /* Text on primary */
-                        "on-background": "#e3e2e2",
-                        "outline-variant": "#1a1a1a",
-                        "inverse-on-surface": "#2f3131",
-                        "outline": "#1a1a1a",
-                        "surface-container-low": "#1a1c1c",
-                        "tertiary-fixed-dim": "#c8c6c5",
-                        "on-tertiary-fixed": "#1c1b1b",
-                        "on-secondary-container": "#b7b5b4",
-                        "on-tertiary-container": "#2a2a29"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0rem", /* Brutalism/Sharp */
-                        "lg": "0rem",
-                        "xl": "0rem",
-                        "full": "9999px" /* Only for specific circular elements */
-                    },
-                    "spacing": {
-                        "gutter": "24px",
-                        "section-gap": "80px",
-                        "margin-mobile": "16px",
-                        "unit": "4px",
-                        "container-max": "1280px"
-                    },
-                    "fontFamily": {
-                        "code-sm": ["JetBrains Mono", "monospace"],
-                        "label-mono": ["JetBrains Mono", "monospace"],
-                        "headline-md-mobile": ["Inter", "sans-serif"],
-                        "body-base": ["JetBrains Mono", "monospace"], /* Using JetBrains for body in this specific aesthetic */
-                        "display-lg": ["Inter", "sans-serif"],
-                        "headline-md": ["Inter", "sans-serif"]
-                    },
-                    "fontSize": {
-                        "code-sm": ["12px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "label-mono": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
-                        "headline-md-mobile": ["24px", { "lineHeight": "1.2", "fontWeight": "600" }],
-                        "body-base": ["14px", { "lineHeight": "1.6", "fontWeight": "400" }], /* Tweaked for terminal feel */
-                        "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        html {
-            scroll-behavior: smooth;
-        }
-        .glow-active {
-            box-shadow: 0 0 8px rgba(255, 49, 49, 0.3);
-            border-color: #ff3131;
-        }
-        .glow-hover:hover {
-            box-shadow: inset 0 0 8px rgba(255, 49, 49, 0.2);
-            border-color: #ff3131;
-        }
-        .pulse-dot {
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(255, 49, 49, 0.7); }
-            70% { box-shadow: 0 0 0 6px rgba(255, 49, 49, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 49, 49, 0); }
-        }
-        .terminal-text::before {
-            content: "> ";
-            color: #ff3131;
-        }
-        .radial-bg {
-            background: radial-gradient(circle at center, rgba(255,49,49,0.1) 0%, transparent 60%);
-        }
-        .grid-bg {
-            background-image: 
-                linear-gradient(to right, #1a1a1a 1px, transparent 1px),
-                linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
-            background-size: 40px 40px;
-        }
-        #home, #projects, #contributors, #community, #about { scroll-margin-top: 100px; }
-
-        /* Chatbot floating button styling */
-        #chatbot-toggle {
-            backdrop-filter: blur(8px);
-            background: rgba(255, 49, 49, 0.15);
-            border: 1px solid rgba(255, 49, 49, 0.4);
-            color: #ff3131;
-            box-shadow: 0 4px 12px rgba(255, 49, 49, 0.2);
-            transition: all 0.3s ease;
-        }
-        #chatbot-toggle:hover {
-            background: rgba(255, 49, 49, 0.25);
-            box-shadow: 0 0 15px rgba(255, 49, 49, 0.4);
-        }
-        /* Chatbot modal container styling */
-        #chatbot-modal {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 380px;
-            max-width: calc(100vw - 40px);
-            height: 500px;
-            max-height: calc(100vh - 120px);
-            background: rgba(15, 15, 15, 0.95);
-            border: 1px solid #1a1a1a;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 0 15px rgba(255, 49, 49, 0.1);
-            display: flex;
-            flex-direction: column;
-            z-index: 10000;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(20px);
-            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            backdrop-filter: blur(20px);
-        }
-        #chatbot-modal.open {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        /* Chatbot Header styling */
-        #chatbot-header {
-            padding: 16px;
-            border-b: 1px solid #1a1a1a;
-            background: rgba(255, 49, 49, 0.05);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        /* Chatbot Messages container styling */
-        #chatbot-messages {
-            flex: 1;
-            overflow-y: auto;
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            scroll-behavior: smooth;
-        }
-        /* Chatbot Scrollbar styling */
-        #chatbot-messages::-webkit-scrollbar {
-            width: 4px;
-        }
-        #chatbot-messages::-webkit-scrollbar-track {
-            background: transparent;
-        }
-        #chatbot-messages::-webkit-scrollbar-thumb {
-            background: #ff3131;
-        }
-        /* Message styling */
-        .chatbot-msg {
-            max-width: 80%;
-            padding: 10px 14px;
-            font-size: 13px;
-            line-height: 1.5;
-            border: 1px solid #1a1a1a;
-        }
-        .chatbot-msg.user {
-            align-self: flex-end;
-            background: rgba(255, 49, 49, 0.1);
-            border-color: rgba(255, 49, 49, 0.3);
-            color: #ffb4ab;
-        }
-        .chatbot-msg.bot {
-            align-self: flex-start;
-            background: rgba(26, 26, 26, 0.8);
-            border-color: #1a1a1a;
-            color: #e3e2e2;
-        }
-        /* Input container styling */
-        #chatbot-input {
-            padding: 12px;
-            border-top: 1px solid #1a1a1a;
-            display: flex;
-            gap: 8px;
-            background: rgba(15, 15, 15, 0.95);
-        }
-        #chatbot-input input {
-            flex: 1;
-            background: transparent;
-            border: 1px solid #1a1a1a;
-            padding: 8px 12px;
-            color: #e3e2e2;
-            font-size: 13px;
-            outline: none;
-        }
-        #chatbot-input input:focus {
-            border-color: rgba(255, 49, 49, 0.5);
-        }
-        #chatbot-input button {
-            background: #ff3131;
-            color: #000000;
-            padding: 8px 16px;
-            font-weight: bold;
-            font-size: 13px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        #chatbot-input button:hover {
-            box-shadow: 0 0 10px rgba(255, 49, 49, 0.5);
-            background: #ff544b;
-        }
-        /* Typing indicator dots styling */
-        .typing-indicator {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            padding: 10px 14px;
-            width: fit-content;
-        }
-        .typing-indicator .dot {
-            width: 6px;
-            height: 6px;
-            background: #ff3131;
-            border-radius: 50%;
-            display: inline-block;
-            animation: bounce 1.4s infinite ease-in-out both;
-        }
-        .typing-indicator .dot:nth-child(1) { animation-delay: -0.32s; }
-        .typing-indicator .dot:nth-child(2) { animation-delay: -0.16s; }
-        @keyframes bounce {
-            0%, 80%, 100% { transform: scale(0.2); }
-            40% { transform: scale(1.0); }
-        }
-    </style>
-<!-- TopNavBar -->
-<nav class="bg-background dark:bg-background docked full-width top-0 border-b border-surface-variant z-50 fixed w-full">
-<div class="flex justify-between items-center w-full px-gutter py-4 max-w-container-max mx-auto">
-<div class="flex items-center gap-2">
-<img src="https://raw.githubusercontent.com/Demon-Die/Website/refs/heads/main/assets/demondie-logo.webp" alt="DemonDie Logo" class="h-8 w-8 mr-2" />
-<span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface text-xl">DemonDie</span>
+<script type="module" src="./assets/tailwind-theme.js"></script>
+    <link rel="stylesheet" href="./assets/common-styles.css">
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative grid-bg overflow-x-hidden">
+<nav class="bg-[#050505]/80 backdrop-blur-md dark:bg-[#050505]/80 docked full-width top-0 border-b border-surface-variant/30 z-50 fixed w-full transition-all">
+<div class="flex justify-between items-center w-full px-gutter h-16 max-w-container-max mx-auto">
+<div class="flex items-center gap-2 h-full">
+<img src="./public/LogoOmnikon.jpeg" alt="Omnikon Logo" class="h-16 w-16 mr-2 object-cover rounded-md" />
+<span class="text-headline-md font-headline-md font-bold text-on-surface dark:text-on-surface text-xl">Omnikon</span>
 </div>
 <div id="desktop-nav" class="hidden md:flex items-center gap-8">
 <a class="text-primary border-b-2 border-primary pb-1 font-label-mono text-label-mono text-xs" href="#home">Home</a>
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#projects">Projects</a>
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#contributors">Contributor</a>
-<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#community">Community</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="#community">Achievements</a>
 <a class="text-on-surface-variant hover:text-on-surface font-label-mono text-label-mono text-xs" href="./blogs.html">Blogs</a>
 </div>
-<a href="https://github.com/Demon-Die" target="_blank"><button class="hidden md:flex items-center gap-2 px-4 py-2 border border-surface-container hover:border-primary glow-hover text-on-surface font-label-mono text-xs transition-all duration-200" >
+<a href="https://github.com/Omnikon-Org" target="_blank"><button class="hidden md:flex items-center gap-2 px-4 py-2 border border-surface-container hover:border-primary glow-hover text-on-surface font-label-mono text-xs transition-all duration-200" >
 <span class="material-symbols-outlined text-sm" data-icon="star">star</span>
                 Star on GitHub
             </button></a>
 
-<button class="md:hidden text-on-surface">
+<button class="md:hidden text-on-surface p-2" onclick="toggleMobileMenu()">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
 </div>
+
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="hidden absolute top-16 left-0 w-full bg-[#050505]/95 backdrop-blur-md border-b border-surface-variant/30 flex-col items-center py-8 space-y-6 md:hidden shadow-2xl">
+    <a class="text-on-surface hover:text-primary font-label-mono text-lg transition-colors" href="#home" onclick="toggleMobileMenu()">Home</a>
+    <a class="text-on-surface-variant hover:text-primary font-label-mono text-lg transition-colors" href="#projects" onclick="toggleMobileMenu()">Projects</a>
+    <a class="text-on-surface-variant hover:text-primary font-label-mono text-lg transition-colors" href="#contributors" onclick="toggleMobileMenu()">Contributor</a>
+    <a class="text-on-surface-variant hover:text-primary font-label-mono text-lg transition-colors" href="#community" onclick="toggleMobileMenu()">Community</a>
+    <a class="text-on-surface-variant hover:text-primary font-label-mono text-lg transition-colors" href="./blogs.html" onclick="toggleMobileMenu()">Blogs</a>
+    <a href="https://github.com/Omnikon-Org" target="_blank" class="w-11/12 mt-4" onclick="toggleMobileMenu()">
+        <button class="w-full flex items-center justify-center gap-2 px-4 py-3 border border-surface-container bg-surface/50 hover:border-primary glow-hover text-on-surface font-label-mono text-sm transition-all duration-200">
+            <span class="material-symbols-outlined text-sm">star</span>
+            Star on GitHub
+        </button>
+    </a>
+</div>
+
+<script>
+    function toggleMobileMenu() {
+        const menu = document.getElementById('mobile-menu');
+        if (menu.classList.contains('hidden')) {
+            menu.classList.remove('hidden');
+            menu.classList.add('flex');
+        } else {
+            menu.classList.add('hidden');
+            menu.classList.remove('flex');
+        }
+    }
+</script>
 </nav>
-<!-- Main Content Canvas -->
-<main class="pt-24 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter grid-bg relative" id="home">
-<!-- Hero Section -->
+
+<main class="pt-24 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter relative" id="home">
+
 <section id="hero-section" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[716px] mb-section-gap relative">
+
+
 <div class="space-y-8 z-10">
-<div class="text-on-surface-variant font-code-sm text-code-sm terminal-text">Building DemonDie OS...</div>
-<h1 class="text-display-lg font-display-lg leading-tight">
+<div class="text-on-surface-variant font-code-sm text-code-sm terminal-text">Building Omnikon OS...</div>
+<h1 class="text-4xl sm:text-5xl md:text-display-lg font-headline-md text-on-surface mb-6 leading-tight">
 <span class="text-on-surface block">Open Source.</span>
 <span class="text-primary block">Community Driven.</span>
 <span class="text-on-surface block">Student Powered.</span>
@@ -313,42 +82,79 @@
 <p class="text-on-surface-variant font-body-base text-body-base max-w-md">
                     We build developer centric open learning, and student developers to create real impact.
                 </p>
-<div class="border border-surface-container p-6 bg-surface max-w-md">
-<div class="text-primary font-code-sm text-code-sm mb-4 uppercase">DemonDie Highlights :</div>
-<ul class="space-y-2 text-on-surface-variant font-code-sm text-code-sm">
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> AI-Learning Hub</li>
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> Real-world impact</li>
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> Open contribution</li>
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> Student-first</li>
-<li class="flex items-start gap-2"><span class="text-primary">&gt;</span> GitHub-native</li>
-</ul>
-<div class="w-2 h-4 bg-primary mt-4 animate-pulse"></div>
+<div class="glass-panel p-6 max-w-md relative overflow-hidden">
+<div class="text-primary font-code-sm text-code-sm mb-4 uppercase flex items-center gap-2">
+    <span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span> Omnikon Highlights
 </div>
-<div class="flex flex-wrap gap-4 pt-4">
-    <a href="https://github.com/orgs/Demon-Die/projects?query=is%3Aopen" target="_blank">
-        <button class="bg-primary text-on-primary font-label-mono text-label-mono px-6 py-3 flex items-center gap-2 hover:shadow-[0_0_15px_rgba(255,49,49,0.5)] transition-all">
+<ul class="space-y-2 text-on-surface-variant font-code-sm text-code-sm relative z-10">
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> AI-Learning Hub</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Real-world impact</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Open contribution</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> Student-first</li>
+<li class="flex items-start gap-2"><span class="text-primary font-bold">›</span> GitHub-native</li>
+</ul>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-transparent opacity-50"></div>
+<div class="w-2 h-4 bg-primary mt-4 animate-pulse relative z-10"></div>
+</div>
+<div class="flex flex-col gap-4 pt-4 items-start w-fit">
+    <div class="flex flex-wrap gap-4">
+        <a href="https://github.com/orgs/Omnikon-Org/projects?query=is%3Aopen" target="_blank">
+            <button class="glass-button text-[#ffffff] font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
 <span class="material-symbols-outlined text-sm" data-icon="rocket_launch">rocket_launch</span>
                         Explore Projects
                     </button>
-    </a>
+        </a>
 
-    <a href="https://discord.gg/4waT35Hxs" target="_blank">
-        <button class="border border-surface-container hover:border-primary glow-hover text-on-surface font-label-mono text-label-mono px-6 py-3 flex items-center gap-2 transition-all">
+        <a href="https://discord.gg/yWtjK2Tb8T" target="_blank">
+            <button class="glass-panel hover:bg-white/5 text-on-surface font-label-mono text-label-mono px-6 py-3 flex items-center gap-2">
 <span class="material-symbols-outlined text-sm" data-icon="group">group</span>
                         Join Community
                     </button>
-    </a>
+        </a>
+    </div>
 
+    <a href="https://unstop.com/p/omnikon-aiml-quiz-challenge-2026-omnikon-1709614" target="_blank" class="w-full">
+        <button class="w-full justify-center bg-primary/20 hover:bg-primary/30 border border-primary text-primary font-label-mono text-label-mono px-6 py-3 flex items-center gap-2 rounded-md transition-all shadow-[0_0_15px_rgba(255,42,75,0.2)]">
+            <span class="material-symbols-outlined text-sm" data-icon="emoji_events">emoji_events</span>
+            Register for AI/ML Quiz
+        </button>
+    </a>
 </div>
 </div>
-<!-- Radial Hero Graphic -->
-    <img src="./Image.png" alt="DemonDie community hero graphic" class="hero-img">
+
+<div class="flex items-center justify-center relative z-10 w-full h-full min-h-[600px]">
+    <!-- Base: Soft radial red glow -->
+    <div class="absolute top-[52%] left-[46%] -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+    
+    <!-- Middle: Animated concentric rings -->
+    <div class="absolute top-[52%] left-[46%] -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center z-0 pointer-events-none">
+        <div class="absolute w-[350px] h-[350px] border border-primary/30 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+        <div class="absolute w-[500px] h-[500px] border border-primary/20 rounded-full animate-[ping_4s_cubic-bezier(0,0,0.2,1)_infinite]" style="animation-delay: 1s;"></div>
+        <div class="absolute w-[650px] h-[650px] border border-primary/10 rounded-full animate-[ping_5s_cubic-bezier(0,0,0.2,1)_infinite]" style="animation-delay: 2s;"></div>
+        <!-- dashed rings -->
+        <div class="absolute w-[400px] h-[400px] border border-dashed border-primary/40 rounded-full animate-[spin_20s_linear_infinite]"></div>
+        <div class="absolute w-[550px] h-[550px] border border-dashed border-primary/30 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
+    </div>
+
+    <!-- Floating particles -->
+    <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[20%] left-[10%] w-2 h-2 bg-primary rounded-full animate-pulse-glow shadow-[0_0_10px_#ff2a4b] opacity-70" style="animation: float 8s ease-in-out infinite;"></div>
+        <div class="absolute top-[30%] right-[15%] w-1.5 h-1.5 bg-primary rounded-full animate-pulse-glow shadow-[0_0_10px_#ff2a4b] opacity-50" style="animation: float 10s ease-in-out infinite reverse; animation-delay: 2s;"></div>
+        <div class="absolute bottom-[25%] left-[15%] w-3 h-3 bg-primary rounded-full animate-pulse-glow shadow-[0_0_15px_#ff2a4b] opacity-60" style="animation: float 9s ease-in-out infinite; animation-delay: 1s;"></div>
+        <div class="absolute bottom-[20%] right-[10%] w-2 h-2 bg-primary rounded-full animate-pulse-glow shadow-[0_0_10px_#ff2a4b] opacity-80" style="animation: float 11s ease-in-out infinite reverse; animation-delay: 3s;"></div>
+        <div class="absolute top-[10%] right-[30%] w-1 h-1 bg-primary rounded-full animate-pulse-glow shadow-[0_0_8px_#ff2a4b] opacity-40" style="animation: float 12s ease-in-out infinite; animation-delay: 4s;"></div>
+        <div class="absolute bottom-[10%] left-[30%] w-2.5 h-2.5 bg-primary rounded-full animate-pulse-glow shadow-[0_0_12px_#ff2a4b] opacity-50" style="animation: float 7s ease-in-out infinite reverse; animation-delay: 1.5s;"></div>
+    </div>
+
+    <!-- Top: The graphic -->
+    <img src="./image.png" alt="Omnikon community hero graphic" class="hero-img max-h-[650px] scale-100 md:scale-125 w-auto object-contain drop-shadow-2xl relative z-10 hover:scale-[1.05] md:hover:scale-[1.3] transition-transform duration-700 ease-out">
+</div>
 </section>
-<!-- Stats Row -->
-<section class="border border-surface-container bg-surface mb-section-gap relative overflow-hidden glow-active">
-<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
-<div class="grid grid-cols-2 md:grid-cols-4 divide-x divide-y md:divide-y-0 divide-surface-container">
-<div class="p-8 flex items-center gap-6">
+
+<section class="glass-panel mb-section-gap relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70"></div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 border-y border-surface-variant/30">
+<div class="p-8 flex items-center gap-6 border-b border-r border-surface-variant/30 lg:border-b-0">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="deployed_code">deployed_code</span>
 </div>
@@ -357,7 +163,7 @@
 <div class="text-code-sm font-code-sm text-on-surface-variant">Active Projects</div>
 </div>
 </div>
-<div class="p-8 flex items-center gap-6">
+<div class="p-8 flex items-center gap-6 border-b border-surface-variant/30 md:border-r lg:border-b-0">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="group">group</span>
 </div>
@@ -366,7 +172,7 @@
 <div class="text-code-sm font-code-sm text-on-surface-variant">Students Engaged</div>
 </div>
 </div>
-<div class="p-8 flex items-center gap-6">
+<div class="p-8 flex items-center gap-6 border-b border-r md:border-r-0 lg:border-r border-surface-variant/30 lg:border-b-0">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
 </div>
@@ -375,7 +181,7 @@
 <div class="text-code-sm font-code-sm text-on-surface-variant">Contributors</div>
 </div>
 </div>
-<div class="p-8 flex items-center gap-6">
+<div class="p-8 flex items-center gap-6 border-b md:border-b-0 border-surface-variant/30 md:border-r lg:border-b-0">
 <div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
 <span class="material-symbols-outlined" data-icon="visibility">visibility</span>
 </div>
@@ -384,25 +190,77 @@
 <div class="text-code-sm font-code-sm text-on-surface-variant">Repository Stars</div>
 </div>
 </div>
+<div class="p-8 flex items-center gap-6 border-r border-surface-variant/30">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10">
+<span class="material-symbols-outlined" data-icon="article">article</span>
 </div>
+<div>
+<div id="blog-count" class="text-headline-md font-headline-md text-on-surface">...</div>
+<div class="text-code-sm font-code-sm text-on-surface-variant">Articles Published</div>
+</div>
+</div>
+<a href="#community" class="p-8 flex items-center gap-6 hover:bg-surface-variant/30 transition-colors cursor-pointer group">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary bg-primary/10 group-hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined" data-icon="emoji_events">emoji_events</span>
+</div>
+<div>
+<div class="text-headline-md font-headline-md text-on-surface group-hover:text-primary transition-colors">1.6K+</div>
+<div class="text-code-sm font-code-sm text-on-surface-variant">Quiz Registrations</div>
+</div>
+</a>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", async () => {
+        try {
+            const envResp = await fetch('env-public.json');
+            const env = await envResp.json();
+            const supabaseUrl = env.SUPABASE_URL;
+            const supabaseKey = env.SUPABASE_ANON_KEY;
+            if(!supabaseUrl || !supabaseKey) return;
+            
+            let normalizedUrl = supabaseUrl.trim();
+            if (normalizedUrl.endsWith('/rest/v1/')) {
+                normalizedUrl = normalizedUrl.slice(0, -9);
+            } else if (normalizedUrl.endsWith('/rest/v1')) {
+                normalizedUrl = normalizedUrl.slice(0, -8);
+            }
+            
+            const resp = await fetch(`${normalizedUrl}/rest/v1/blogs?select=id`, {
+                method: 'HEAD',
+                headers: {
+                    'apikey': supabaseKey,
+                    'Authorization': `Bearer ${supabaseKey}`,
+                    'Prefer': 'count=exact'
+                }
+            });
+            const range = resp.headers.get('content-range');
+            if(range) {
+                const count = range.split('/')[1];
+                document.getElementById('blog-count').innerText = count;
+            }
+        } catch(e) {
+            console.error("Failed to fetch blog count", e);
+        }
+    });
+</script>
 </section>
-<!-- Developer Journey -->
+
 <section class="mb-section-gap">
 <div class="flex justify-between items-center mb-8">
 <div class="flex items-center gap-2 text-primary">
 <span class="material-symbols-outlined" data-icon="code">code</span>
 <h2 class="text-on-surface font-label-mono text-label-mono">Developer Journey</h2>
 </div>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-code-sm font-code-sm flex items-center gap-1" href="https://github.com/orgs/Demon-Die/people" target="_blank">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-code-sm font-code-sm flex items-center gap-1" href="https://github.com/orgs/Omnikon-Org/people" target="_blank">
                 Explore roles &amp; modules <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
-<!-- Connecting Line -->
+
 <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-surface-container -z-10 transform -translate-y-1/2"></div>
 <div class="hidden md:block absolute top-1/2 left-0 w-1/2 h-px bg-primary -z-10 transform -translate-y-1/2"></div>
-<!-- Journey Steps -->
-<div class="bg-surface border border-surface-container p-6 flex flex-col items-center text-center gap-4 glow-hover transition-all">
+
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all">
 <div class="w-16 h-16 border border-primary rounded-full flex items-center justify-center text-primary bg-surface z-10 glow-active">
 <span class="material-symbols-outlined text-3xl" data-icon="school">school</span>
 </div>
@@ -411,7 +269,7 @@
 <p class="text-on-surface-variant text-code-sm font-code-sm">Start your<br>learning journey</p>
 </div>
 </div>
-<div class="bg-surface border border-surface-container p-6 flex flex-col items-center text-center gap-4 glow-hover transition-all relative">
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all relative">
 <div class="hidden md:flex absolute top-1/2 -left-3 w-6 h-6 items-center justify-center text-primary transform -translate-y-1/2 bg-background">
 <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
 </div>
@@ -423,7 +281,7 @@
 <p class="text-on-surface-variant text-code-sm font-code-sm">Learn, practice<br>and build</p>
 </div>
 </div>
-<div class="bg-surface border border-surface-container p-6 flex flex-col items-center text-center gap-4 glow-hover transition-all relative">
+<div class="glass-panel p-6 flex flex-col items-center text-center gap-4 hover:-translate-y-1 transition-all relative">
 <div class="hidden md:flex absolute top-1/2 -left-3 w-6 h-6 items-center justify-center text-primary transform -translate-y-1/2 bg-background">
 <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
 </div>
@@ -466,88 +324,379 @@
 <div class="h-px bg-surface-container flex-grow"></div>
 </div>
 </section>
-<!-- Projects Split -->
+
+<section id="community" class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-section-gap items-center">
+    <!-- Left Column: Feed & Info -->
+    <div class="flex flex-col gap-8">
+        <div>
+            <h2 class="text-display-lg font-headline-md text-on-surface mb-2">
+                Omnikon <span class="text-primary">Achievements</span>
+            </h2>
+            <p class="text-on-surface-variant font-code-sm text-code-sm mb-6">
+                Real impact. Real numbers. Join the growing community of innovators.
+            </p>
+            <div class="overflow-hidden w-full bg-surface-container/50 border border-surface-variant/30 py-2 rounded-md mb-6">
+                <div class="whitespace-nowrap animate-[marquee_20s_linear_infinite] inline-flex gap-4 text-primary font-label-mono text-xs w-max">
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                    <span>Build. Learn. Innovate. Compete.</span>
+                    <span>•</span>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="glass-button text-white font-label-mono text-xs px-6 py-3">Explore Events</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-6 relative before:absolute before:left-[19px] before:top-4 before:bottom-4 before:w-[2px] before:bg-gradient-to-b before:from-primary/50 before:to-transparent">
+            
+            <!-- LIVE: AI/ML Quiz -->
+            <div class="relative pl-12 scroll-reveal">
+                <div class="absolute left-0 top-6 w-10 h-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface border-2 border-primary flex items-center justify-center z-10 animate-pulse-glow">
+                    <div class="w-3 h-3 bg-primary rounded-full"></div>
+                </div>
+                <div class="glass-panel p-1 rounded-xl group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden border-primary/40 hover:border-primary/80 shadow-[0_0_20px_rgba(255,42,75,0.1)] hover:shadow-[0_0_30px_rgba(255,42,75,0.2)]">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary animate-pulse"></div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-2 py-1 bg-primary/20 text-primary text-[10px] font-bold rounded uppercase tracking-wider border border-primary/30 flex items-center gap-1">
+                                <div class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></div> LIVE
+                            </span>
+                            <span class="text-primary text-xs font-code-sm border border-primary/30 px-2 py-1 rounded">Featured</span>
+                        </div>
+                        <h3 class="text-on-surface font-headline-md text-xl mb-2">AI/ML Quiz Challenge 2026</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                            <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">quiz</span> 50 Questions</div>
+                            <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">timer</span> 60 Minutes</div>
+                            <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">emoji_events</span> ₹1000 Prize Pool</div>
+                            <div class="flex items-center gap-2 text-on-surface-variant text-sm"><span class="material-symbols-outlined text-primary text-sm">local_activity</span> ₹30 Entry</div>
+                        </div>
+                        <img src="./public/AI_ML_Poster.png" alt="AI/ML Quiz Poster" class="w-full h-auto rounded-lg border border-surface-variant/30 mb-4 object-cover" onerror="this.style.display='none'">
+                        <a href="https://unstop.com/p/omnikon-aiml-quiz-challenge-2026-omnikon-1709614" target="_blank" class="block w-full">
+                            <button class="w-full py-2 bg-primary/10 hover:bg-primary/20 text-primary border border-primary/30 rounded-md font-label-mono text-xs transition-colors">Register Now</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COMPLETED: Quiz Arena -->
+            <div class="relative pl-12 scroll-reveal" style="transition-delay: 100ms;">
+                <div class="absolute left-0 top-6 w-6 h-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface border-2 border-surface-variant flex items-center justify-center z-10">
+                    <div class="w-2 h-2 bg-surface-variant rounded-full"></div>
+                </div>
+                <div class="glass-panel p-5 rounded-xl group hover:scale-[1.02] transition-transform duration-300 relative border-surface-variant/50 hover:border-surface-variant">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-2 py-1 bg-surface-variant/50 text-on-surface-variant text-[10px] font-bold rounded uppercase tracking-wider border border-surface-variant">COMPLETED</span>
+                        <span class="text-on-surface-variant text-xs font-code-sm">Legacy</span>
+                    </div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="./public/QuizArenaLogo.png" alt="Quiz Arena Logo" class="w-20 h-20 object-contain">
+                        <h3 class="text-on-surface font-headline-md text-lg">Omnikon Quiz Arena</h3>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-2 sm:gap-3 mb-4">
+                        <div class="bg-surface/50 p-2 sm:p-3 rounded border border-surface-variant/30">
+                            <div class="text-primary font-bold text-base sm:text-lg"><span class="counter" data-target="1600">0</span>+</div>
+                            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider">Registrations</div>
+                        </div>
+                        <div class="bg-surface/50 p-3 rounded border border-surface-variant/30">
+                            <div class="text-primary font-bold text-lg"><span class="counter" data-target="168.9">0</span>K</div>
+                            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider">Impressions</div>
+                        </div>
+                        <div class="bg-surface/50 p-3 rounded border border-surface-variant/30">
+                            <div class="text-on-surface font-bold text-lg counter" data-target="264">0</div>
+                            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider">Reviews</div>
+                        </div>
+                        <div class="bg-surface/50 p-3 rounded border border-surface-variant/30">
+                            <div class="text-on-surface font-bold text-lg"><span class="counter" data-target="71.4">0</span>%</div>
+                            <div class="text-on-surface-variant text-[10px] uppercase tracking-wider">Engineering</div>
+                        </div>
+                    </div>
+                    <p class="text-on-surface-variant text-xs font-code-sm border-t border-surface-variant/30 pt-3">
+                        Massive student engagement across domains.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Right Column: Recent Activity & Featured Project -->
+    <div class="flex flex-col gap-6 h-full">
+        <!-- Recent Activity (Height reduced by ~35%) -->
+        <div class="glass-panel flex flex-col h-[325px]">
+            <div class="p-6 border-b border-surface-container shrink-0">
+                <div class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined" data-icon="history">history</span>
+                    <h2 class="text-on-surface font-label-mono text-label-mono">Recent Activity</h2>
+                </div>
+            </div>
+            <div id="recent-activity" class="p-6 flex-grow overflow-y-auto space-y-6 scroll-smooth custom-scrollbar">
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Dev</span> PR merged in <span class="text-on-surface-variant">demon-structureize</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">2m ago</span>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="upload">upload</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Alina</span> Push Layout &amp; module progress</p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">5m ago</span>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="person_add">person_add</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm">New contributor joined: <span class="text-primary">Aman</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">10m ago</span>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="edit_document">edit_document</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm">Documentation updated in <span class="text-on-surface-variant">#docs</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">15m ago</span>
+                </div>
+                
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="security">security</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm">New security patch in <span class="text-on-surface-variant">attend-warden</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">20m ago</span>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">John</span> fixed an issue in <span class="text-on-surface-variant">ui-components</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">25m ago</span>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="check_circle">check_circle</span>
+                    <div class="flex-grow">
+                        <p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Sarah</span> completed review for <span class="text-on-surface-variant">IssueSwipe</span></p>
+                    </div>
+                    <span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">30m ago</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured Project -->
+        <style>
+            .featured-project-card {
+                opacity: 0;
+                transform: translateY(25px);
+                transition: opacity 0.8s cubic-bezier(0.19, 1, 0.22, 1), transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+            }
+            .featured-project-card.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            @keyframes float-premium {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-4px); }
+            }
+            .animate-float-premium {
+                animation: float-premium 6s ease-in-out infinite;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 6px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 10px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+            .bg-grid-pattern {
+                background-image: 
+                    linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+                background-size: 20px 20px;
+            }
+            .bg-grid-pattern-moving {
+                animation: move-grid 20s linear infinite;
+            }
+            @keyframes move-grid {
+                0% { background-position: 0 0; }
+                100% { background-position: 20px 20px; }
+            }
+        </style>
+        
+        <div class="scroll-reveal featured-project-card relative overflow-hidden flex flex-col flex-grow bg-[#090909] rounded-[18px] border border-[#B56DFF]/20 hover:border-[#B56DFF]/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(181,109,255,0.15)] group hover:-translate-y-1">
+            <!-- Background effects -->
+            <div class="absolute inset-0 z-0 overflow-hidden rounded-[18px]">
+                <!-- Radial glow -->
+                <div class="absolute top-[40%] right-[10%] -translate-y-1/2 w-[350px] h-[350px] bg-[#B56DFF]/15 rounded-full blur-[90px] group-hover:bg-[#B56DFF]/25 transition-all duration-700 pointer-events-none"></div>
+                <div class="absolute bottom-[-10%] left-[-10%] w-[200px] h-[200px] bg-[#B56DFF]/10 rounded-full blur-[70px] pointer-events-none"></div>
+                <!-- Grid -->
+                <div class="absolute inset-0 bg-grid-pattern bg-grid-pattern-moving opacity-40 group-hover:opacity-70 transition-opacity duration-1000 pointer-events-none"></div>
+            </div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row h-full">
+                <!-- Left Side (Text & Chips) -->
+                <div class="p-6 sm:p-8 flex flex-col justify-between w-full md:w-1/2 relative shrink-0">
+                    <!-- Decorative Elements -->
+                    <div class="absolute top-6 left-6 text-[#B56DFF]/30 font-mono text-[12px] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                        &lt; /&gt;
+                    </div>
+                    <div class="absolute bottom-12 right-12 text-[#B56DFF]/40 font-mono text-xl animate-pulse pointer-events-none">
+                        +
+                    </div>
+                    <div class="absolute top-1/2 right-4 w-12 h-[1px] bg-gradient-to-r from-transparent to-[#B56DFF]/20 pointer-events-none"></div>
+                    
+                    <div>
+                        <div class="mb-5 inline-flex">
+                            <span class="px-2.5 py-1.5 bg-[#1a1a1a] border border-[#333] text-[#B56DFF] text-[10px] font-bold rounded uppercase tracking-wider flex items-center gap-2 shadow-[0_0_10px_rgba(181,109,255,0.1)]">
+                                <div class="w-1.5 h-1.5 rounded-full bg-[#B56DFF] animate-pulse"></div> Open Source Project
+                            </span>
+                        </div>
+                        <h3 class="text-[48px] font-bold mb-2 bg-gradient-to-r from-[#FFFFFF] to-[#B56DFF] text-transparent bg-clip-text leading-tight">
+                            IssueSwipe
+                        </h3>
+                        <p class="text-[16px] text-[#BFBFBF] leading-relaxed mb-6 font-code-sm">
+                            Swipe through GitHub issues like Tinder.<br>
+                            Find beginner-friendly issues.<br>
+                            Contribute faster.<br>
+                            Build your OSS profile.
+                        </p>
+                        
+                        <div class="flex flex-wrap gap-2.5 mb-8">
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">Good First Issues</span>
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">Smart Matching</span>
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">GitHub Sync</span>
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">Open Source</span>
+                            <span class="px-3.5 py-1.5 bg-[#141414] border border-[#2a2a2a] rounded-full text-[13px] font-medium text-white/90 shadow-sm">Fast Review</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-auto">
+                        <a href="https://github.com/Omnikon-Org/IssuesSwipe" target="_blank" class="flex-1 flex">
+                            <button class="w-full h-full flex items-center justify-center gap-2 px-5 py-3.5 bg-transparent border border-surface-variant rounded-lg text-white font-semibold text-[15px] hover:border-[#B56DFF] hover:shadow-[0_0_15px_rgba(181,109,255,0.3)] hover:-translate-y-0.5 transition-all duration-300 whitespace-nowrap">
+                                <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>View Repository</span>
+                            </button>
+                        </a>
+                        <a href="https://issues-swipe-eta.vercel.app/" target="_blank" class="flex-1 flex">
+                            <button class="w-full h-full flex items-center justify-center gap-2 px-5 py-3.5 bg-gradient-to-r from-[#9333ea] to-[#B56DFF] rounded-lg text-white font-semibold text-[15px] hover:scale-[1.03] hover:shadow-[0_0_20px_rgba(181,109,255,0.5)] transition-all duration-300 whitespace-nowrap">
+                                <span class="material-symbols-outlined text-[18px] shrink-0">open_in_new</span>
+                                <span>Launch Live Demo</span>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side (Logo & Art) -->
+                <div class="hidden md:flex w-full md:w-1/2 relative items-center justify-center min-h-[300px] p-6 shrink-0">
+                    <!-- Decorative blurred blobs -->
+                    <div class="absolute top-[10%] left-[20%] w-[100px] h-[100px] bg-[#B56DFF]/20 rounded-full blur-[40px] pointer-events-none"></div>
+                    <div class="absolute bottom-[20%] right-[10%] w-[150px] h-[150px] bg-[#9333ea]/20 rounded-full blur-[50px] pointer-events-none"></div>
+                    
+                    <!-- Faint orbital rings -->
+                    <div class="absolute w-[220px] h-[220px] border border-[#B56DFF]/15 rounded-full animate-[spin_40s_linear_infinite] pointer-events-none group-hover:border-[#B56DFF]/30 transition-colors duration-700"></div>
+                    <div class="absolute w-[160px] h-[160px] border border-[#B56DFF]/20 rounded-full animate-[spin_30s_linear_infinite_reverse] pointer-events-none"></div>
+                    <div class="absolute w-[300px] h-[300px] border border-dashed border-[#B56DFF]/10 rounded-full animate-[spin_50s_linear_infinite] pointer-events-none"></div>
+                    
+                    <!-- Particles -->
+                    <div class="absolute top-[25%] left-[25%] w-1.5 h-1.5 bg-[#B56DFF] rounded-full opacity-60 blur-[1px] animate-[float_6s_ease-in-out_infinite] pointer-events-none"></div>
+                    <div class="absolute bottom-[35%] right-[25%] w-2 h-2 bg-white rounded-full opacity-40 blur-[1px] animate-[float_8s_ease-in-out_infinite_reverse] pointer-events-none"></div>
+                    <div class="absolute top-[60%] left-[15%] w-1 h-1 bg-[#FFFFFF] rounded-full opacity-50 blur-[0.5px] animate-[float_7s_ease-in-out_infinite] pointer-events-none" style="animation-delay: 2s;"></div>
+                    
+                    <!-- Logo -->
+                    <img src="/LogoIssueSwipeLight.png" alt="IssueSwipe Logo" class="relative z-10 w-[400px] lg:w-[500px] scale-110 lg:scale-125 h-auto object-contain drop-shadow-[0_0_30px_rgba(181,109,255,0.2)] animate-float-premium group-hover:drop-shadow-[0_0_50px_rgba(181,109,255,0.4)] transition-all duration-700">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Microinteractions Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Scroll Reveal
+            const revealElements = document.querySelectorAll('.scroll-reveal');
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        
+                        // Trigger Counters when visible
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            const target = parseFloat(counter.getAttribute('data-target'));
+                            const duration = 2000;
+                            const stepTime = Math.abs(Math.floor(duration / 60));
+                            let current = 0;
+                            const increment = target / (duration / stepTime);
+                            
+                            const isDecimal = target % 1 !== 0;
+
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    counter.innerText = target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.innerText = isDecimal ? current.toFixed(1) : Math.ceil(current);
+                                }
+                            }, stepTime);
+                            
+                            // Remove class to prevent re-triggering
+                            counter.classList.remove('counter');
+                        });
+
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</section>
+
 <section id="projects" class="grid grid-cols-1 lg:grid-cols-1 gap-6 mb-section-gap">
-<!-- Projects Explorer -->
-<div class="border border-surface-container bg-surface p-6">
+
+<div class="glass-panel p-6">
 <div class="flex justify-between items-center mb-6">
 <div class="flex items-center gap-2 text-primary">
 <span class="material-symbols-outlined" data-icon="folder_open">folder_open</span>
 <h2 class="text-on-surface font-label-mono text-label-mono">Projects Explorer</h2>
 </div>
-<a class="text-primary hover:text-primary-container transition-colors text-code-sm font-code-sm flex items-center gap-1" href="https://github.com/orgs/Demon-Die/projects?query=is%3Aopen" target="_blank">
+<a class="text-primary hover:text-primary-container transition-colors text-code-sm font-code-sm flex items-center gap-1" href="https://github.com/orgs/Omnikon-Org/projects?query=is%3Aopen" target="_blank">
                     View all <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
-<div class="space-y-4">
-  <!-- Project Item -->
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">CNTRL</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">An AI-powered desktop browser built with Tauri, Rust, and TypeScript — featuring hybrid local/cloud AI routing, smart navigation, and webview rendering.</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
-  </div>
-  <!-- Project Item -->
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">.github</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1"></div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
-  </div>
-  <!-- Project Item -->
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">Website</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">DemonDie is an open-source technology community building impactful software and helping developers grow through collaboration.</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 2</div>
-  </div>
-  <!-- Project Item -->
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">DemonTechRoadmap</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">Community-driven roadmaps for students and aspiring developers.</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 5</div>
-  </div>
-  <!-- Project Item -->
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">UnVibe</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">UnVibe trains developers to truly understand code, not just generate it. AI writes the hardest solution — you decode it, rebuild it simpler, then defend your understanding in interviews. Your \"Irreplaceability Score\" tracks your depth. Goal: be skilled enough that no company can replace you with a prompt.</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 1</div>
-  </div>
-  <!-- Project Item -->
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">Certifier</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">Auto issuing badges for Contributors</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 0</div>
-  </div>
-  <!-- Project Item -->
-  <div class="flex items-start gap-4 p-2 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary">
-    <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
-    <div class="flex-grow">
-      <div class="text-on-surface font-label-mono text-sm">SyncCanvas</div>
-      <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">SyncCanvas is an AI-powered collaborative whiteboard for real-time brainstorming, diagramming, and team collaboration on an infinite canvas. 🚀</div>
-    </div>
-    <div class="flex items-center gap-1 text-on-surface-variant text-code-sm"><span class="material-symbols-outlined text-sm" data-icon="star">star</span> 1</div>
-  </div>
-</div>
+<div class="space-y-4" id="projects-container">
+    <div class="text-center text-on-surface-variant text-code-sm font-code-sm py-8">Loading projects...</div>
 </div>
 
 </section>
-<!-- Contributor Wall -->
+
 <section id="contributors" class="mb-section-gap">
 <div class="flex items-center gap-4 mb-8">
 <div class="flex items-center gap-2 text-primary">
@@ -555,19 +704,20 @@
 <h2 class="text-on-surface font-label-mono text-label-mono whitespace-nowrap">Contributor Wall</h2>
 </div>
 <div class="h-px bg-surface-container flex-grow"></div>
-<a class="text-primary hover:text-primary-container transition-colors text-code-sm font-code-sm flex items-center gap-1 whitespace-nowrap" href="https://github.com/orgs/Demon-Die/people" target="_blank">
+<a class="text-primary hover:text-primary-container transition-colors text-code-sm font-code-sm flex items-center gap-1 whitespace-nowrap" href="https://github.com/orgs/Omnikon-Org/people" target="_blank">
                 View all contributors <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
 </a>
 </div>
-<!-- Dynamic Contributors Container -->
+
 <div class="flex flex-wrap justify-center gap-6 md:gap-8" id="contributors-list"></div>
-<!-- Script to populate contributors -->
+
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   fetch('github_summary.json')
     .then(res => res.json())
     .then(data => {
-      const container = document.getElementById('contributors-list');
+      // Render Contributors
+      const contribContainer = document.getElementById('contributors-list');
       data.members
         .filter(member => member.type !== 'Bot' && !member.login.toLowerCase().includes('bot'))
         .forEach(member => {
@@ -581,129 +731,46 @@ document.addEventListener('DOMContentLoaded', () => {
               <div class="text-on-surface font-label-mono text-sm">${member.login}</div>
             </div>
           `;
-          container.appendChild(div);
+          contribContainer.appendChild(div);
         });
+
+      // Render Projects
+      const projContainer = document.getElementById('projects-container');
+      if (projContainer && data.repos) {
+        projContainer.innerHTML = '';
+        data.repos.forEach(repo => {
+          const repoHtml = `
+            <a href="${repo.html_url}" target="_blank" class="flex items-start gap-4 p-4 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary block group">
+              <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+              <div class="flex-grow">
+                <div class="flex items-center gap-2">
+                  <div class="text-on-surface font-label-mono text-sm group-hover:text-primary transition-colors">${repo.name}</div>
+                  ${repo.homepage ? `<button onclick="window.open('${repo.homepage}', '_blank'); event.preventDefault();" class="px-3 py-1 bg-primary/20 hover:bg-primary border border-primary text-white hover:text-background text-[10px] uppercase font-bold rounded ml-3 z-10 relative cursor-pointer transition-all shadow-[0_0_10px_rgba(255,42,75,0.2)]">Live Website</button>` : ''}
+                </div>
+                <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">${repo.description || ''}</div>
+              </div>
+              <div class="flex items-center gap-1 text-on-surface-variant text-code-sm">
+                <span class="material-symbols-outlined text-sm" data-icon="star">star</span> ${repo.stars}
+              </div>
+            </a>
+          `;
+          projContainer.insertAdjacentHTML('beforeend', repoHtml);
+        });
+      }
     })
-    .catch(err => console.error('Failed to load contributors:', err));
+    .catch(err => {
+      console.error('Failed to load GitHub summary:', err);
+      const projContainer = document.getElementById('projects-container');
+      if (projContainer) projContainer.innerHTML = '<div class="text-center text-primary text-code-sm">Failed to load projects.</div>';
+    });
 });
 </script>
 </section>
-<!-- Feed & Activity Split -->
-<section id="community" class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-section-gap">
-<!-- Community Feed -->
-<div class="border border-surface-container bg-surface flex flex-col h-[400px]" >
-<div class="p-6 border-b border-surface-container flex justify-between items-center">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined" data-icon="forum">forum</span>
-<h2 class="text-on-surface font-label-mono text-label-mono">Community Feed</h2>
-</div>
-<div class="flex items-center gap-2 text-code-sm font-code-sm text-on-surface">
-<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div> Live
-                </div>
-</div>
-<div id="community-feed" class="p-6 flex-grow overflow-y-auto space-y-6">
-<!-- Feed Item -->
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">S</div>
-<div class="flex-grow">
-<div class="flex justify-between items-baseline mb-1">
-<span class="text-on-surface font-label-mono text-sm">Sonu</span>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">3m ago</span>
-</div>
-<p class="text-on-surface-variant text-code-sm font-code-sm">Fixed a bug in user progress system. Function optimized!</p>
-</div>
-</div>
-<!-- Feed Item -->
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">A</div>
-<div class="flex-grow">
-<div class="flex justify-between items-baseline mb-1">
-<span class="text-on-surface font-label-mono text-sm">Alina</span>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">5m ago</span>
-</div>
-<p class="text-on-surface-variant text-code-sm font-code-sm">Added dark mode to the React microlearn</p>
-</div>
-</div>
-<!-- Feed Item -->
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">D</div>
-<div class="flex-grow">
-<div class="flex justify-between items-baseline mb-1">
-<span class="text-on-surface font-label-mono text-sm">Dev</span>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">8m ago</span>
-</div>
-<p class="text-on-surface-variant text-code-sm font-code-sm">New component for chart.js integration</p>
-</div>
-</div>
-<!-- Feed Item -->
-<div class="flex gap-4">
-<div class="w-8 h-8 rounded-full border border-primary flex-shrink-0 flex items-center justify-center bg-primary/10 text-primary text-xs">M</div>
-<div class="flex-grow">
-<div class="flex justify-between items-baseline mb-1">
-<span class="text-on-surface font-label-mono text-sm">Mayank</span>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px]">12m ago</span>
-</div>
-<p class="text-on-surface-variant text-code-sm font-code-sm">Setup CI for the backend repo</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Recent Activity -->
-<div class="border border-surface-container bg-surface flex flex-col h-[400px]">
-<div class="p-6 border-b border-surface-container">
-<div class="flex items-center gap-2 text-primary">
-<span class="material-symbols-outlined" data-icon="history">history</span>
-<h2 class="text-on-surface font-label-mono text-label-mono">Recent Activity</h2>
-</div>
-</div>
-<div id="recent-activity" class="p-6 flex-grow overflow-y-auto space-y-6">
-<!-- Activity Item -->
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="commit">commit</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Dev</span> PR merged in <span class="text-on-surface-variant">demon-structureize</span></p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">2m ago</span>
-</div>
-<!-- Activity Item -->
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="upload">upload</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm"><span class="text-primary">Alina</span> Push Layout &amp; module progress</p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">5m ago</span>
-</div>
-<!-- Activity Item -->
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="person_add">person_add</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm">New contributor joined: <span class="text-primary">Aman</span></p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">10m ago</span>
-</div>
-<!-- Activity Item -->
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="edit_document">edit_document</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm">Documentation updated in <span class="text-on-surface-variant">#docs</span></p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">15m ago</span>
-</div>
-<!-- Activity Item -->
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-sm mt-0.5" data-icon="security">security</span>
-<div class="flex-grow">
-<p class="text-on-surface font-code-sm text-code-sm">New security patch in <span class="text-on-surface-variant">attend-warden</span></p>
-</div>
-<span class="text-on-surface-variant text-code-sm font-code-sm text-[10px] whitespace-nowrap">20m ago</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Call to Action -->
-<section class="border border-surface-container bg-surface relative overflow-hidden mb-section-gap p-12">
+
+
+<section class="glass-panel relative overflow-hidden mb-section-gap p-12">
 <div class="absolute right-0 top-1/2 transform -translate-y-1/2 opacity-20 pointer-events-none w-96 h-96">
-<!-- Abstract wireframe globe representation -->
+
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 <circle cx="50" cy="50" fill="none" r="45" stroke="#ff3131" stroke-width="0.5"></circle>
 <ellipse cx="50" cy="50" fill="none" rx="45" ry="15" stroke="#ff3131" stroke-width="0.5"></ellipse>
@@ -715,7 +782,7 @@ document.addEventListener('DOMContentLoaded', () => {
 <circle cx="80" cy="60" fill="#ff3131" r="1"></circle>
 <circle cx="30" cy="70" fill="#ff3131" r="1.5"></circle>
 <circle cx="50" cy="50" fill="#ff3131" r="2"></circle>
-<!-- Decorative nodes and lines -->
+
 <path d="M 20 30 L 50 50 L 70 20" fill="none" stroke="#ff3131" stroke-opacity="0.5" stroke-width="0.2"></path>
 <path d="M 30 70 L 50 50 L 80 60" fill="none" stroke="#ff3131" stroke-opacity="0.5" stroke-width="0.2"></path>
 </svg>
@@ -731,15 +798,15 @@ document.addEventListener('DOMContentLoaded', () => {
             </p>
 </div>
 <div class="flex flex-col gap-4">
-    <a href="https://github.com/Demon-Die" target="_blank">
-        <button class="bg-[#c00014] text-white font-label-mono text-label-mono px-6 py-4 flex items-center justify-center gap-2 hover:bg-primary transition-all w-full max-w-sm border border-[#ff3131]/30">
+    <a href="https://github.com/Omnikon-Org" target="_blank">
+        <button class="glass-button w-full px-6 py-4 flex items-center justify-center gap-2 text-white font-label-mono text-label-mono">
 <span class="material-symbols-outlined text-sm" data-icon="code">code</span>
                 Join on GitHub
             </button>
     </a>
 
-    <a href="https://discord.gg/4waT35Hxs" target="_blank">
-        <button class="border border-surface-container bg-surface hover:border-primary glow-hover text-on-surface font-label-mono text-label-mono px-6 py-4 flex items-center justify-center gap-2 transition-all w-full max-w-sm">
+    <a href="https://discord.gg/yWtjK2Tb8T" target="_blank">
+        <button class="glass-panel w-full px-6 py-4 flex items-center justify-center gap-2 hover:bg-white/5 text-on-surface font-label-mono text-label-mono">
 <span class="material-symbols-outlined text-sm" data-icon="forum">forum</span>
                 Join our Discord
             </button>
@@ -749,21 +816,23 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </section>
 </main>
-  <!-- Floating Chatbot Button -->
+  
   <button id="chatbot-toggle" class="fixed bottom-4 right-4 rounded-full shadow-lg bg-primary/20 backdrop-blur-md border border-primary p-3 hover:bg-primary/30 transition">
     <span class="material-symbols-outlined text-2xl text-primary">hub</span>
   </button>
-  <!-- Chatbot Modal Container -->
+  
   <div id="chatbot-modal" class="hidden"></div>
-  <!-- Env Loader -->
+  
   <script>
     window.env = {};
     (async function() {
       try {
-        const responseJson = await fetch('env.json');
+        const responseJson = await fetch('env-public.json');
         if (responseJson.ok) {
           window.env = await responseJson.json();
-        } else {
+        }
+        
+        try {
           const responseEnv = await fetch('.env');
           if (responseEnv.ok) {
             const text = await responseEnv.text();
@@ -776,7 +845,7 @@ document.addEventListener('DOMContentLoaded', () => {
               }
             });
           }
-        }
+        } catch(err) { /* .env missing on prod */ }
       } catch (e) {
         console.warn('Environment loading error:', e);
       } finally {
@@ -785,17 +854,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     })();
   </script>
-  <!-- Script includes -->
-  <script src="fetch_recent_activity.js"></script>
-  <script src="fetch_community_feed.js"></script>
-  <script src="chatbot.js"></script>
-<!-- Footer -->
+  
+  <script type="module" src="fetch_recent_activity.js"></script>
+  <script type="module" src="fetch_community_feed.js"></script>
+  <script type="module" src="chatbot.js"></script>
+
 <footer class="bg-background dark:bg-background border-t border-surface-variant relative z-10">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-gutter py-section-gap max-w-container-max mx-auto" id="about">
 <div class="space-y-4">
 <div class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-2">
 <span class="material-symbols-outlined" data-icon="hexagon" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1;">hexagon</span>
-                    DemonDie
+                    Omnikon
                 </div>
 <p class="text-body-base font-body-base text-on-surface-variant text-sm max-w-xs">
                     Open source, open learning, devloped on learning, built by students, scaled by contributors around the globe.
@@ -823,10 +892,10 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="space-y-4">
 <h4 class="text-on-surface font-label-mono text-label-mono font-bold mb-4">Connect</h4>
 <div class="flex flex-col gap-2">
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://github.com/Demon-Die" target="_blank">GitHub</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://discord.gg/4waT35Hxs" target="_blank">Discord</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://x.com/DemonDieOrg" target="_blank">Twitter</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://www.linkedin.com/in/demondie-org/" target="_blank">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://github.com/Omnikon-Org" target="_blank">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://discord.gg/yWtjK2Tb8T" target="_blank">Discord</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://x.com/OmnikonOrg" target="_blank">Twitter</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-sm font-code-sm" href="https://www.linkedin.com/in/omnikon-org/" target="_blank">LinkedIn</a>
 </div></div></div></footer>
 
 <script>
@@ -877,6 +946,6 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
-<script src="auth.js" defer></script>
-<script src="./particles.js" defer></script>
+<script type="module" src="auth.js"></script>
+<script type="module" src="./particles.js"></script>
 </body></html>

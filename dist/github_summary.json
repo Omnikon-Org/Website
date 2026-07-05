@@ -7,43 +7,43 @@
     "name": "CNTRL",
     "description": "An AI-powered desktop browser built with Tauri, Rust, and TypeScript — featuring hybrid local/cloud AI routing, smart navigation, and webview rendering.",
     "stars": 0,
-    "html_url": "https://github.com/Demon-Die/CNTRL"
+    "html_url": "https://github.com/Omnikon-Org/CNTRL"
   },
   {
     "name": ".github",
     "description": null,
     "stars": 0,
-    "html_url": "https://github.com/Demon-Die/.github"
+    "html_url": "https://github.com/Omnikon-Org/.github"
   },
   {
     "name": "Website",
-    "description": "DemonDie is an open-source technology community building impactful software and helping developers grow through collaboration.",
+    "description": "Omnikon is an open-source technology community building impactful software and helping developers grow through collaboration.",
     "stars": 2,
-    "html_url": "https://github.com/Demon-Die/Website"
+    "html_url": "https://github.com/Omnikon-Org/Website"
   },
   {
     "name": "DemonTechRoadmap",
     "description": "Community-driven roadmaps for students and aspiring developers.",
     "stars": 5,
-    "html_url": "https://github.com/Demon-Die/DemonTechRoadmap"
+    "html_url": "https://github.com/Omnikon-Org/DemonTechRoadmap"
   },
   {
     "name": "UnVibe",
     "description": "UnVibe trains developers to truly understand code, not just generate it. AI writes the hardest solution — you decode it, rebuild it simpler, then defend your understanding in interviews. Your \"Irreplaceability Score\" tracks your depth. The goal: be skilled enough that no company can replace you with a prompt.",
     "stars": 1,
-    "html_url": "https://github.com/Demon-Die/UnVibe"
+    "html_url": "https://github.com/Omnikon-Org/UnVibe"
   },
   {
     "name": "Certifier",
     "description": "Auto issuing badges for Contributors",
     "stars": 0,
-    "html_url": "https://github.com/Demon-Die/Certifier"
+    "html_url": "https://github.com/Omnikon-Org/Certifier"
   },
   {
     "name": "SyncCanvas",
     "description": "SyncCanvas is an AI-powered collaborative whiteboard for real-time brainstorming, diagramming, and team collaboration on an infinite canvas. 🚀",
     "stars": 1,
-    "html_url": "https://github.com/Demon-Die/SyncCanvas"
+    "html_url": "https://github.com/Omnikon-Org/SyncCanvas"
   }
 ],
   "members": [

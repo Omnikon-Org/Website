@@ -8,7 +8,7 @@ class Particle {
         this.baseY = y;
         this.size = Math.random() * 2 + 1;
         this.density = (Math.random() * 30) + 15;
-        this.color = 'rgba(255, 49, 49, 0.5)';
+        this.color = 'rgba(255, 42, 75, 0.4)';
         this.angle = Math.random() * Math.PI * 2;
         this.speed = Math.random() * 1.2 + 0.4;
     }
@@ -104,7 +104,7 @@ class Particle {
 
                 if (distance < 75) {
                     let opacity = 1 - (distance / 75);
-                    ctx.strokeStyle = `rgba(255, 49, 49, ${opacity * 0.12})`;
+                    ctx.strokeStyle = `rgba(255, 42, 75, ${opacity * 0.15})`;
                     ctx.lineWidth = 0.7;
                     ctx.beginPath();
                     ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -166,7 +166,7 @@ class Particle {
     }
 
     document.addEventListener("DOMContentLoaded", () => {
-        // Preload cursor assets to prevent browser latency/flicker on state changes
+        
         const preloadNormal = document.createElement('link');
         preloadNormal.rel = 'preload';
         preloadNormal.as = 'image';
@@ -176,22 +176,23 @@ class Particle {
         const preloadActive = document.createElement('link');
         preloadActive.rel = 'preload';
         preloadActive.as = 'image';
-        preloadActive.href = './cursor/CursorActive_64x64.png';
+        preloadActive.href = './cursor/CursorActiveNew.png?v=2';
         document.head.appendChild(preloadActive);
 
-        // Backup JS preloading
+        
         const imgNormal = new Image();
         imgNormal.src = './cursor/Cursor_64x64.png';
         const imgActive = new Image();
-        imgActive.src = './cursor/CursorActive_64x64.png';
+        imgActive.src = './cursor/CursorActiveNew.png?v=2';
 
         const cursorStyle = document.createElement('style');
         cursorStyle.textContent = `
             html, body, a, button, select, [role="button"] {
-                cursor: url('./cursor/Cursor_64x64.png') 16 7, auto;
+                cursor: url('./cursor/Cursor_64x64.png') 16 7, auto !important;
             }
+            a:hover, button:hover, select:hover, [role="button"]:hover, .cursor-pointer, .cursor-pointer:hover,
             a:active, button:active, select:active, [role="button"]:active, :active {
-                cursor: url('./cursor/CursorActive_64x64.png') 16 7, auto !important;
+                cursor: url('./cursor/CursorActiveNew.png?v=2') 16 7, auto !important;
             }
         `;
         document.head.appendChild(cursorStyle);

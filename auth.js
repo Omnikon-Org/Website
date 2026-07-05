@@ -2,7 +2,7 @@
   let auth = null;
   let modal = null;
 
-  // Injected CSS for the custom cyberpunk auth modal and avatar widget
+  
   const style = document.createElement('style');
   style.textContent = `
     .auth-modal-overlay {
@@ -42,14 +42,14 @@
   `;
   document.head.appendChild(style);
 
-  // Initialize Firebase and set up auth state listener
+  
   async function initFirebase() {
-    // Wait for window.env variables to load
+    
     if (!window.envLoaded) {
       await new Promise(resolve => window.addEventListener('envLoaded', resolve, { once: true }));
     }
 
-    // Check if Firebase configs are provided
+    
     if (!window.env?.FIREBASE_API_KEY) {
       console.warn('Firebase configuration missing in environment.');
       return;
@@ -65,16 +65,16 @@
     };
 
     try {
-      // In compat mode, initialize if not already done
+      
       if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
       }
       auth = firebase.auth();
 
-      // Mount login modal and UI triggers
+      
       mountAuthUI();
 
-      // Listen for auth state shifts
+      
       auth.onAuthStateChanged((user) => {
         updateAuthWidget(user);
       });
@@ -83,20 +83,20 @@
     }
   }
 
-  // Create and inject the modal, locate navbar to bind widget
+  
   function mountAuthUI() {
-    // Create Auth Modal Overlay
+    
     modal = document.createElement('div');
     modal.className = 'auth-modal-overlay';
     modal.id = 'auth-modal';
     modal.innerHTML = `
       <div class="auth-modal-content">
         <div class="flex items-center justify-between border-b border-surface-variant pb-3 mb-6">
-          <span class="text-primary font-label-mono text-sm tracking-wider font-bold">SECURE_GATE // AUTH_REQUIRED</span>
+          <span class="text-primary font-label-mono text-sm tracking-wider font-bold">SECURE_GATE 
           <button id="auth-close" class="text-on-surface-variant hover:text-primary transition-colors text-sm">✖</button>
         </div>
         <p class="text-on-surface-variant font-code-sm text-code-sm mb-6 uppercase tracking-wider leading-relaxed">
-          Awaiting verification token. Select a provider below to connect to the DemonDie network.
+          Awaiting verification token. Select a provider below to connect to the Omnikon network.
         </p>
         <div class="flex flex-col gap-4">
           <button id="auth-github-btn" class="group flex items-center justify-center gap-3 bg-transparent text-on-surface border border-surface-variant hover:border-primary hover:text-primary transition-all duration-200 py-3 font-label-mono text-xs glow-btn-red">
@@ -112,18 +112,18 @@
     `;
     document.body.appendChild(modal);
 
-    // Bind Close events
+    
     document.getElementById('auth-close').addEventListener('click', () => modal.classList.remove('open'));
     modal.addEventListener('click', (e) => {
       if (e.target === modal) modal.classList.remove('open');
     });
 
-    // Bind Social Logins
+    
     document.getElementById('auth-github-btn').addEventListener('click', () => signIn('github'));
     document.getElementById('auth-google-btn').addEventListener('click', () => signIn('google'));
   }
 
-  // Handle Sign-In Popups
+  
   function signIn(providerName) {
     let provider;
     if (providerName === 'github') {
@@ -142,7 +142,7 @@
       });
   }
 
-  // Update navbar triggers based on auth state
+  
   function updateAuthWidget(user) {
     const mobileToggle = document.querySelector('nav button.md\\:hidden, header button.md\\:hidden');
     if (!mobileToggle) return;
@@ -166,14 +166,14 @@
         
         let isAdmin = allowedAdmins.includes(displayName) || allowedAdmins.includes(emailPrefix) || allowedAdmins.includes(screenName);
         
-        // Also check providerData for github username if available
+        
         if (!isAdmin && user.providerData) {
           for (const provider of user.providerData) {
             if (provider.providerId === 'github.com') {
-              // Sometimes github email is username@users.noreply.github.com
+              
               const providerEmailPrefix = (provider.email || '').split('@')[0].toLowerCase();
               const providerName = (provider.displayName || '').toLowerCase().replace(/\\s+/g, '');
-              const providerUid = provider.uid; // e.g. "108343166" for Pranav00076
+              const providerUid = provider.uid; 
               if (allowedAdmins.includes(providerEmailPrefix) || allowedAdmins.includes(providerName) || providerUid === "108343166" || providerUid === "140939527" || providerUid === "140889218" || providerUid === "96338573") {
                 isAdmin = true;
                 break;
@@ -191,7 +191,7 @@
         }
       }
 
-      const avatarUrl = user.photoURL || 'https://raw.githubusercontent.com/Demon-Die/Website/refs/heads/main/assets/demondie-logo.webp';
+      const avatarUrl = user.photoURL || './public/LogoOmnikon.jpeg';
       authWidget.innerHTML = `
         <div class="flex items-center gap-3">
           <img class="w-8 h-8 rounded-full border border-primary object-cover" src="${avatarUrl}" alt="Profile">
@@ -223,7 +223,7 @@
     }
   }
 
-  // Start init sequence
+  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initFirebase);
   } else {
