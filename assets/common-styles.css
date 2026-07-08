@@ -29,7 +29,38 @@ body.grid-bg {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
 }
+
+/* Spotlight glow */
+.glass-panel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        400px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255, 42, 75, 0.08),
+        transparent 40%
+    );
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.glass-panel:hover::before {
+    opacity: 1;
+}
+
+.glass-panel > * {
+    position: relative;
+    z-index: 1;
+}
+
 .glass-panel:hover {
     border-color: rgba(255, 42, 75, 0.3);
     box-shadow: 0 8px 32px rgba(255, 42, 75, 0.15);
