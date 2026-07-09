@@ -25,29 +25,10 @@ TOTAL_STARS=$(echo "$REPOS" | jq '[.[] .stargazers_count] | add')
 REPOS_DATA=$(echo "$REPOS" | jq '[.[] | {name: .name, description: .description, stars: .stargazers_count, html_url: .html_url, homepage: .homepage}]')
 
 # ------------------------------------------------------------
-# Aggregate all unique contributors across all repositories using JSON array merging
-ALL_CONTRIBS="[]"
-for REPO_NAME in $(echo "$REPOS" | jq -r '.[].name'); do
-  PAGE=1
-  while true; do
-    ContribResp=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/repos/$ORG/$REPO_NAME/contributors?per_page=100&page=$PAGE")
-    COUNT=$(echo "$ContribResp" | jq length)
-    if [[ $COUNT -eq 0 ]]; then
-      break
-    fi
-    # Merge this page's contributors into the accumulator (ensure array)
-    ALL_CONTRIBS=$(printf '%s\n%s' "$ALL_CONTRIBS" "$ContribResp" | jq -s 'add')
-    ((PAGE++))
-  done
-done
-
-# Deduplicate contributors
-UNIQUE_CONTRIBS=$(echo "$ALL_CONTRIBS" | jq 'unique_by(.login)')
 # Fetch org members and ensure it's an array
 ORG_MEMBERS_RAW=$(curl -s -H "Authorization: token $TOKEN" "https://api.github.com/orgs/$ORG/members?per_page=100")
 ORG_MEMBERS=$(echo "$ORG_MEMBERS_RAW" | jq 'if type=="array" then . else [. ] end')
-# Merge contributors and org members, deduplicate again
-ALL_USERS=$(printf '%s\n%s' "$UNIQUE_CONTRIBS" "$ORG_MEMBERS" | jq -s 'add | unique_by(.login)')
+ALL_USERS=$(echo "$ORG_MEMBERS" | jq 'unique_by(.login)')
 PRIORITY_LOGINS=("RishiByte" "Pranav00076" "SharanyoBanerjee" "Yuvraj-Sarathe")
 MEMBERS_DATA="[]"
 # Add priority members first
