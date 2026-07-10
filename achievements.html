@@ -4,7 +4,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Achievements | Omnikon</title>
 <meta name="description" content="Discover the achievements, events, and milestones of the Omnikon community.">
-<link rel="canonical" href="https://omnikon.org/achievements.html">
+<link rel="canonical" href="https://omnikonhub.com/achievements.html">
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png?v=1">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png?v=1">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png?v=1">
@@ -15,6 +15,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script type="module" src="./assets/tailwind-theme.js"></script>
     <link rel="stylesheet" href="./assets/common-styles.css">
+
+<!-- SEO: JSON-LD for Organization Logo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Omnikon",
+  "url": "https://omnikonhub.com/",
+  "logo": "https://omnikonhub.com/favicon_io/android-chrome-512x512.png",
+  "sameAs": [
+    "https://github.com/Omnikon-Org",
+    "https://discord.gg/yWtjK2Tb8T",
+    "https://x.com/OmnikonOrg",
+    "https://www.linkedin.com/in/omnikon-org/"
+  ]
+}
+</script>
+
+<link rel="icon" type="image/png" sizes="192x192" href="./favicon_io/android-chrome-192x192.png?v=1">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon_io/android-chrome-512x512.png?v=1">
 </head>
 <body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative grid-bg overflow-x-hidden">
 <nav class="bg-[#050505]/80 backdrop-blur-md dark:bg-[#050505]/80 docked full-width top-0 border-b border-surface-variant/30 z-50 fixed w-full transition-all">
@@ -105,40 +125,6 @@
 
         <div class="flex flex-col gap-6 relative before:absolute before:left-[19px] before:top-4 before:bottom-4 before:w-[2px] before:bg-gradient-to-b before:from-primary/50 before:to-transparent">
             
-            <!-- AI/ML Quiz -->
-            <div class="relative pl-12 scroll-reveal">
-                <div class="absolute left-0 top-6 w-6 h-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface border-2 border-primary flex items-center justify-center z-10">
-                    <div class="w-2 h-2 bg-primary rounded-full"></div>
-                </div>
-                <div class="glass-panel p-1 rounded-xl group hover:scale-[1.02] transition-transform duration-300 relative overflow-hidden border-primary/40 hover:border-primary/80 shadow-[0_0_10px_rgba(255,42,75,0.05)] hover:shadow-[0_0_15px_rgba(255,42,75,0.1)]">
-                    <div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
-                    <div class="p-4">
-                        <div class="flex justify-end items-start mb-3">
-                            <span class="text-primary text-xs font-code-sm border border-primary/30 px-2 py-1 rounded">Featured</span>
-                        </div>
-                        <div class="flex items-center gap-3 mb-3">
-                            <img src="./public/QuizArenaLogo.png" alt="Quiz Arena Logo" class="w-12 h-12 object-contain">
-                            <div>
-                                <h3 class="text-on-surface font-headline-md text-base leading-tight">AI/ML Quiz</h3>
-                                <p class="text-on-surface-variant text-[11px] font-code-sm mt-0.5">Omnikon Quiz Arena</p>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 gap-1.5 mb-2">
-                            <div class="bg-surface/50 p-1.5 px-2 rounded border border-surface-variant/30">
-                                <div class="text-primary font-bold text-sm">50</div>
-                                <div class="text-on-surface-variant text-[9px] uppercase tracking-wider">Questions</div>
-                            </div>
-                            <div class="bg-surface/50 p-1.5 px-2 rounded border border-surface-variant/30">
-                                <div class="text-primary font-bold text-sm">60</div>
-                                <div class="text-on-surface-variant text-[9px] uppercase tracking-wider">Minutes</div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
             <!-- ACHIEVEMENT: Open Source Programs -->
             <div class="relative pl-12 scroll-reveal" style="transition-delay: 50ms;">
                 <div class="absolute left-0 top-6 w-8 h-8 -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface border-2 border-[#9333ea] flex items-center justify-center z-10 shadow-[0_0_10px_rgba(147,51,234,0.3)]">

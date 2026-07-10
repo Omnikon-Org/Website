@@ -11,7 +11,10 @@ export default defineConfig({
         faqs: resolve(__dirname, 'faqs.html'),
         guidelines: resolve(__dirname, 'guidelines.html'),
         licence: resolve(__dirname, 'licence.html'),
-        err404: resolve(__dirname, '404err.html')
+        err404: resolve(__dirname, '404err.html'),
+        projects: resolve(__dirname, 'projects.html'),
+        members: resolve(__dirname, 'members.html'),
+        achievements: resolve(__dirname, 'achievements.html')
       }
     }
   }
