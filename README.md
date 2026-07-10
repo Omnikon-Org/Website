@@ -27,7 +27,7 @@ An AI-powered collaborative whiteboard for real-time brainstorming, diagramming,
 
 ## 💻 Local Development
 
-This repository is a static website, so there is no Node install or build step required. The site relies on the Tailwind CDN and Vanilla CSS.
+This repository uses **Vite** as its build tool for an optimized developer experience, alongside Tailwind and Vanilla CSS.
 
 ### 1. Environment Setup
 To run the website fully (including GitHub stats, Supabase integration, and Firebase Authentication), you need to configure your environment variables. 
@@ -48,17 +48,28 @@ Copy the provided `.env.example` or create a new `env.json` and `.env` file in t
 ```
 
 ### 2. Start Local Server
-Because the website fetches local JSON and module files, you must serve it over HTTP (opening `index.html` directly in the browser may cause CORS issues).
+
+Ensure you have Node.js installed. Then, install dependencies and start the Vite development server:
 
 ```bash
 # Clone the repo
 git clone https://github.com/Omnikon-Org/Website.git
 cd Website
 
-# Start a local web server (e.g. using npx)
-npx -y http-server -p 8080
+# Install dependencies
+npm install
+
+# Start the local development server
+npm run dev
 ```
-Open `http://localhost:8080` in your browser.
+
+### 3. Build for Production
+
+To create an optimized production build (which also includes generated SEO configurations like `sitemap.xml` and `robots.txt` in the `dist` folder), run:
+
+```bash
+npm run build
+```
 
 ---
 
