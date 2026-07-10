@@ -4,7 +4,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Projects | Omnikon</title>
 <meta name="description" content="Explore open-source projects built by the Omnikon community.">
-<link rel="canonical" href="https://omnikon.org/projects.html">
+<link rel="canonical" href="https://omnikonhub.com/projects.html">
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png?v=1">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png?v=1">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png?v=1">
@@ -15,6 +15,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script type="module" src="./assets/tailwind-theme.js"></script>
     <link rel="stylesheet" href="./assets/common-styles.css">
+
+<!-- SEO: JSON-LD for Organization Logo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Omnikon",
+  "url": "https://omnikonhub.com/",
+  "logo": "https://omnikonhub.com/favicon_io/android-chrome-512x512.png",
+  "sameAs": [
+    "https://github.com/Omnikon-Org",
+    "https://discord.gg/yWtjK2Tb8T",
+    "https://x.com/OmnikonOrg",
+    "https://www.linkedin.com/in/omnikon-org/"
+  ]
+}
+</script>
+
+<link rel="icon" type="image/png" sizes="192x192" href="./favicon_io/android-chrome-192x192.png?v=1">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon_io/android-chrome-512x512.png?v=1">
 </head>
 <body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative grid-bg overflow-x-hidden">
 <nav class="bg-[#050505]/80 backdrop-blur-md dark:bg-[#050505]/80 docked full-width top-0 border-b border-surface-variant/30 z-50 fixed w-full transition-all">
@@ -88,7 +108,44 @@
 
 </section>
 
-
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('github_summary.json')
+    .then(res => res.json())
+    .then(data => {
+      // Render Projects
+      const projContainer = document.getElementById('projects-container');
+      if (projContainer && data.repos) {
+        projContainer.innerHTML = '';
+        data.repos.forEach(repo => {
+          const repoHtml = `
+            <a href="${repo.html_url}" target="_blank" class="flex items-start gap-4 p-4 hover:bg-surface-variant transition-colors border-l-2 border-transparent hover:border-primary block group">
+              <span class="material-symbols-outlined text-primary mt-1" data-icon="folder">folder</span>
+              <div class="flex-grow">
+                <div class="flex items-center gap-2">
+                  <div class="text-on-surface font-label-mono text-sm group-hover:text-primary transition-colors">${repo.name}</div>
+                  ${repo.name.toLowerCase() === 'astrodex' ? `<span class="px-2 py-0.5 bg-primary/20 text-primary border border-primary/30 text-[10px] uppercase font-bold rounded ml-2 shadow-[0_0_10px_rgba(255,42,75,0.2)]">GSSoC 2026</span>` : ''}
+                  ${repo.name.toLowerCase() === 'cntrl' ? `<span class="px-2 py-0.5 bg-primary/20 text-primary border border-primary/30 text-[10px] uppercase font-bold rounded ml-2 shadow-[0_0_10px_rgba(255,42,75,0.2)]">ECSoC 2026</span>` : ''}
+                  ${repo.homepage ? `<button onclick="window.open('${repo.homepage}', '_blank'); event.preventDefault();" class="px-3 py-1 bg-primary/20 hover:bg-primary border border-primary text-white hover:text-background text-[10px] uppercase font-bold rounded ml-3 z-10 relative cursor-pointer transition-all shadow-[0_0_10px_rgba(255,42,75,0.2)]">Live Website</button>` : ''}
+                </div>
+                <div class="text-on-surface-variant text-code-sm font-code-sm mt-1">${repo.description || ''}</div>
+              </div>
+              <div class="flex items-center gap-1 text-on-surface-variant text-code-sm">
+                <span class="material-symbols-outlined text-sm" data-icon="star">star</span> ${repo.stars}
+              </div>
+            </a>
+          `;
+          projContainer.insertAdjacentHTML('beforeend', repoHtml);
+        });
+      }
+    })
+    .catch(err => {
+      console.error('Failed to load GitHub summary:', err);
+      const projContainer = document.getElementById('projects-container');
+      if (projContainer) projContainer.innerHTML = '<div class="text-center text-primary text-code-sm">Failed to load projects.</div>';
+    });
+});
+</script>
 </main>
   
   <button id="chatbot-toggle" class="fixed bottom-4 right-4 rounded-full shadow-lg bg-primary/20 backdrop-blur-md border border-primary p-3 hover:bg-primary/30 transition">
