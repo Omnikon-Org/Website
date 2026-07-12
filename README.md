@@ -100,6 +100,6 @@ Distributed under the **MIT License**. See the `LICENSE` file for details.
 - **GitHub Org:** https://github.com/Omnikon-Org
 - **Discord:** https://discord.gg/yWtjK2Tb8T
 - **Twitter:** https://x.com/OmnikonOrg
-- **LinkedIn:** https://www.linkedin.com/in/omnikon-org/
+- **LinkedIn:** https://www.linkedin.com/company/omnikon-org
 
 *Join us, build together, and make open-source learning fun!*
