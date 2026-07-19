@@ -20,7 +20,19 @@
 
 <link rel="icon" type="image/png" sizes="192x192" href="./favicon_io/android-chrome-192x192.png?v=1">
 <link rel="icon" type="image/png" sizes="512x512" href="./favicon_io/android-chrome-512x512.png?v=1">
-<meta name="description" content="Meet the talented developers, designers, and innovators in the Omnikon community.">\n<link rel="canonical" href="https://omnikonhub.com/members.html">\n<meta property="og:title" content="Meet the Omnikon Community">\n<meta property="og:description" content="Meet the talented developers, designers, and innovators in the Omnikon community.">\n<meta property="og:url" content="https://omnikonhub.com/members.html">\n<meta property="og:type" content="website">\n<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="Meet the Omnikon Community">\n<meta name="twitter:description" content="Meet the talented developers, designers, and innovators in the Omnikon community.">\n<meta name="robots" content="index, follow">\n<link rel="stylesheet" href="./assets/hackathon-window.css">\n<script type="module" src="./assets/hackathon-window.js"></script><script type="application/ld+json">[
+<meta name="description" content="Meet the talented developers, designers, and innovators in the Omnikon community.">
+<link rel="canonical" href="https://omnikonhub.com/members.html">
+<meta property="og:title" content="Meet the Omnikon Community">
+<meta property="og:description" content="Meet the talented developers, designers, and innovators in the Omnikon community.">
+<meta property="og:url" content="https://omnikonhub.com/members.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Meet the Omnikon Community">
+<meta name="twitter:description" content="Meet the talented developers, designers, and innovators in the Omnikon community.">
+<meta name="robots" content="index, follow">
+<meta name="view-transition" content="same-origin">
+<link rel="stylesheet" href="./assets/hackathon-window.css">
+<script type="module" src="./assets/hackathon-window.js"></script><script type="application/ld+json">[
   {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -44,7 +56,7 @@
     "@type": "AboutPage",
     "name": "Meet the Omnikon Community"
   }
-]</script></head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative grid-bg overflow-x-hidden">\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+]</script></head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative grid-bg overflow-x-hidden">
 
 <nav class="bg-[#050505]/80 backdrop-blur-md dark:bg-[#050505]/80 docked full-width top-0 border-b border-surface-variant/30 z-50 fixed w-full transition-all">
 <div class="flex justify-between items-center w-full px-gutter h-16 max-w-container-max mx-auto">
@@ -97,7 +109,7 @@
 </script>
 </nav>
 
-<main class="pt-24 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter relative" id="home"><nav class="breadcrumbs-ui py-4 max-w-container-max mx-auto px-gutter text-sm text-on-surface-variant" aria-label="breadcrumb">\n<a href="index.html" class="hover:text-primary">Home</a> &gt; <span>Meet the Omnikon Community</span>\n</nav>
+<main class="pt-24 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter relative" id="home"><nav class="breadcrumbs-ui py-4 max-w-container-max mx-auto px-gutter text-sm text-on-surface-variant" aria-label="breadcrumb"><a href="index.html" class="hover:text-primary">Home</a> &gt; <span>Meet the Omnikon Community</span></nav>
 <section id="contributors" class="mb-section-gap">
 <div class="flex items-center gap-4 mb-8">
 <div class="flex items-center gap-2 text-primary">
@@ -210,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const responseEnv = await fetch('.env');
           if (responseEnv.ok) {
             const text = await responseEnv.text();
-            text.split('\n').forEach(line => {
+            text.split('').forEach(line => {
               const parts = line.split('=');
               if (parts.length >= 2) {
                 const key = parts[0].trim();

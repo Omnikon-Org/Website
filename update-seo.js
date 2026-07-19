@@ -97,6 +97,10 @@ const getNavLinks = (isMobile) => {
 
 files.forEach(file => {
   let html = fs.readFileSync(path.join(dir, file), 'utf-8');
+  
+  // Clean up any literal '\n' strings mistakenly injected in previous runs
+  html = html.replace(/\\n/g, '');
+
   let $ = cheerio.load(html);
 
   // Semantics
@@ -130,9 +134,10 @@ files.forEach(file => {
     '<meta name="twitter:title" content="' + meta.title + '">',
     '<meta name="twitter:description" content="' + meta.desc + '">',
     '<meta name="robots" content="index, follow">',
+    '<meta name="view-transition" content="same-origin" />',
     '<link rel="stylesheet" href="./assets/hackathon-window.css">',
     '<script type="module" src="./assets/hackathon-window.js"></script>'
-  ].join('\\n');
+  ].join('\n');
   $('head').append(headMeta);
 
   // Structured Data
@@ -157,7 +162,7 @@ files.forEach(file => {
         '<nav class="breadcrumbs-ui py-4 max-w-container-max mx-auto px-gutter text-sm text-on-surface-variant" aria-label="breadcrumb">',
         '<a href="index.html" class="hover:text-primary">Home</a> &gt; <span>' + meta.title.split(' |')[0] + '</span>',
         '</nav>'
-      ].join('\\n');
+      ].join('\n');
       $('main').prepend(bc);
     }
   }
