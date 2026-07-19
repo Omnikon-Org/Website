@@ -1,4 +1,7 @@
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function initHeroAnimation() {
     const container = document.getElementById('omnikon-hero-animation-container');
@@ -13,7 +16,13 @@ export function initHeroAnimation() {
 
     initParticles();
 
-    const tl = gsap.timeline({ delay: 0.3 });
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '#omnikon-hero-animation-container',
+            start: 'top 80%',
+        },
+        delay: 0.1
+    });
     const fills = document.querySelectorAll('.omnikon-letter-fill');
     const glows = document.querySelectorAll('.omnikon-letter-glow');
     
@@ -27,8 +36,8 @@ export function initHeroAnimation() {
 
     // Add subtle red glow and embers as each letter fills
     tl.to(glows, {
-        '-webkit-text-stroke': '1px rgba(220, 38, 38, 0.6)',
-        filter: 'drop-shadow(0 0 15px rgba(220, 38, 38, 0.8))',
+        '-webkit-text-stroke': '1px rgba(255, 0, 0, 0.8)',
+        filter: 'drop-shadow(0 0 25px rgba(255, 0, 0, 1))',
         duration: 0.8,
         stagger: 0.15,
         ease: 'power2.out'
@@ -84,16 +93,16 @@ function initParticles() {
     const particles = [];
     const colors = ['#DC2626', '#991B1B', '#ff4d4d'];
 
-    // 40 particles for subtle effect
-    for (let i = 0; i < 40; i++) {
+    // 100 particles for a crazier effect
+    for (let i = 0; i < 100; i++) {
         particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 1.5 + 0.5,
+            radius: Math.random() * 2.0 + 1.0,
             color: colors[Math.floor(Math.random() * colors.length)],
-            vx: (Math.random() - 0.5) * 0.2,
-            vy: (Math.random() - 0.5) * 0.4 - 0.1, 
-            alpha: Math.random() * 0.5 + 0.1
+            vx: (Math.random() - 0.5) * 0.5,
+            vy: (Math.random() - 0.5) * 0.8 - 0.2, 
+            alpha: Math.random() * 0.8 + 0.2
         });
     }
 
