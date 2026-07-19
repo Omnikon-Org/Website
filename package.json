@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/Pranav00076/Website#readme",
   "devDependencies": {
+    "cheerio": "^1.2.0",
     "vite": "^8.0.16"
+  },
+  "dependencies": {
+    "motion": "^12.42.2"
   }
 }
