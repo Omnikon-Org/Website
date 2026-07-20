@@ -23,6 +23,7 @@
 
 
 
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <title>Developer Blog | Omnikon</title>
@@ -84,8 +85,8 @@
     "@type": "Blog",
     "name": "Developer Blog | Omnikon"
   }
-]</script>  <script type="module" crossorigin src="/assets/blogs-DCn2Nax2.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/shuffle-effect-BkuOc6XX.js">
+]</script>  <script type="module" crossorigin src="/assets/blogs-DlKnErqA.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/shuffle-effect-DiG0FoZh.js">
   <link rel="stylesheet" crossorigin href="/assets/shuffle-effect-DMmTAcEu.css">
 </head><body class="text-on-surface antialiased min-h-screen flex flex-col selection:bg-primary selection:text-background grid-bg">
 
@@ -384,20 +385,7 @@
           window.env = await responseJson.json();
         }
         
-        try {
-          const responseEnv = await fetch('.env');
-          if (responseEnv.ok) {
-            const text = await responseEnv.text();
-            text.split('').forEach(line => {
-              const parts = line.split('=');
-              if (parts.length >= 2) {
-                const key = parts[0].trim();
-                const val = parts.slice(1).join('=').trim().replace(/^["']|["']$/g, '');
-                window.env[key] = val;
-              }
-            });
-          }
-        } catch(err) { /* .env missing on prod */ }
+        
       } catch (e) {
         console.warn('Environment loading error:', e);
       } finally {

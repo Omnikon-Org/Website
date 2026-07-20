@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script type="module" src="./assets/tailwind-theme.js"></script>
+
     <link rel="stylesheet" href="./assets/common-styles.css">
     <link rel="stylesheet" href="./assets/hero-animation.css">
     <script type="module" src="./assets/hero-animation.js"></script>
@@ -968,20 +968,7 @@ document.addEventListener('DOMContentLoaded', () => {
           window.env = await responseJson.json();
         }
         
-        try {
-          const responseEnv = await fetch('.env');
-          if (responseEnv.ok) {
-            const text = await responseEnv.text();
-            text.split('').forEach(line => {
-              const parts = line.split('=');
-              if (parts.length >= 2) {
-                const key = parts[0].trim();
-                const val = parts.slice(1).join('=').trim().replace(/^["']|["']$/g, '');
-                window.env[key] = val;
-              }
-            });
-          }
-        } catch(err) { /* .env missing on prod */ }
+        
       } catch (e) {
         console.warn('Environment loading error:', e);
       } finally {

@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
     
     
 
@@ -90,9 +91,9 @@
       "url": "https://hackathon-website-sooty-delta.vercel.app/"
     }
   }
-]</script>  <script type="module" crossorigin src="/assets/main-Du3LUq0o.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/shuffle-effect-BkuOc6XX.js">
-  <link rel="modulepreload" crossorigin href="/assets/interactivity-DDCybJyp.js">
+]</script>  <script type="module" crossorigin src="/assets/main-D3gB2-St.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/shuffle-effect-DiG0FoZh.js">
+  <link rel="modulepreload" crossorigin href="/assets/interactivity-BlMYhYZX.js">
   <link rel="stylesheet" crossorigin href="/assets/shuffle-effect-DMmTAcEu.css">
   <link rel="stylesheet" crossorigin href="/assets/main-BOyeTGbV.css">
 </head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative grid-bg overflow-x-hidden">
@@ -967,20 +968,7 @@ document.addEventListener('DOMContentLoaded', () => {
           window.env = await responseJson.json();
         }
         
-        try {
-          const responseEnv = await fetch('.env');
-          if (responseEnv.ok) {
-            const text = await responseEnv.text();
-            text.split('').forEach(line => {
-              const parts = line.split('=');
-              if (parts.length >= 2) {
-                const key = parts[0].trim();
-                const val = parts.slice(1).join('=').trim().replace(/^["']|["']$/g, '');
-                window.env[key] = val;
-              }
-            });
-          }
-        } catch(err) { /* .env missing on prod */ }
+        
       } catch (e) {
         console.warn('Environment loading error:', e);
       } finally {
