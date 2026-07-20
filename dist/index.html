@@ -5,8 +5,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png?v=1">
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png?v=1">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png?v=1">
-<link rel="manifest" href="./favicon_io/site.webmanifest?v=1">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="manifest" href="./favicon_io/manifest.json?v=1">
+
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -90,10 +90,10 @@
       "url": "https://hackathon-website-sooty-delta.vercel.app/"
     }
   }
-]</script>  <script type="module" crossorigin src="/assets/main-CalBDUyi.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/particles-DYNMTcU5.js">
-  <link rel="modulepreload" crossorigin href="/assets/interactivity-hBOOLBtt.js">
-  <link rel="stylesheet" crossorigin href="/assets/particles-DMmTAcEu.css">
+]</script>  <script type="module" crossorigin src="/assets/main-Du3LUq0o.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/shuffle-effect-BkuOc6XX.js">
+  <link rel="modulepreload" crossorigin href="/assets/interactivity-DDCybJyp.js">
+  <link rel="stylesheet" crossorigin href="/assets/shuffle-effect-DMmTAcEu.css">
   <link rel="stylesheet" crossorigin href="/assets/main-BOyeTGbV.css">
 </head><body class="bg-background text-on-surface antialiased flex flex-col min-h-screen relative grid-bg overflow-x-hidden">
 
@@ -150,7 +150,7 @@
 
 <main class="pt-24 pb-section-gap max-w-container-max mx-auto px-margin-mobile md:px-gutter relative" id="home">
 
-<section id="hero-section" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[716px] mb-section-gap relative">
+<section id="hero-section" class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center min-h-[400px] md:min-h-[716px] mb-section-gap relative">
 
 <div class="space-y-8 z-10">
 <div class="text-on-surface-variant font-code-sm text-code-sm terminal-text">Building Omnikon OS...</div>
@@ -200,16 +200,16 @@
 
 <div class="flex items-center justify-center relative z-10 w-full h-full min-h-[600px]">
     <!-- Base: Soft radial red glow -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] z-0 pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[600px] md:h-[600px] bg-primary/20 rounded-full blur-[60px] md:blur-[120px] z-0 pointer-events-none"></div>
     
     <!-- Middle: Animated concentric rings -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex items-center justify-center z-0 pointer-events-none">
-        <div class="absolute w-[350px] h-[350px] border border-primary/30 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
-        <div class="absolute w-[500px] h-[500px] border border-primary/20 rounded-full animate-[ping_4s_cubic-bezier(0,0,0.2,1)_infinite]" style="animation-delay: 1s;"></div>
-        <div class="absolute w-[650px] h-[650px] border border-primary/10 rounded-full animate-[ping_5s_cubic-bezier(0,0,0.2,1)_infinite]" style="animation-delay: 2s;"></div>
+        <div class="absolute w-[200px] h-[200px] md:w-[350px] md:h-[350px] border border-primary/30 rounded-full animate-[ping_3s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
+        <div class="absolute w-[250px] h-[250px] md:w-[500px] md:h-[500px] border border-primary/20 rounded-full animate-[ping_4s_cubic-bezier(0,0,0.2,1)_infinite]" style="animation-delay: 1s;"></div>
+        <div class="absolute w-[300px] h-[300px] md:w-[650px] md:h-[650px] border border-primary/10 rounded-full animate-[ping_5s_cubic-bezier(0,0,0.2,1)_infinite]" style="animation-delay: 2s;"></div>
         <!-- dashed rings -->
-        <div class="absolute w-[400px] h-[400px] border border-dashed border-primary/40 rounded-full animate-[spin_20s_linear_infinite]"></div>
-        <div class="absolute w-[550px] h-[550px] border border-dashed border-primary/30 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
+        <div class="absolute w-[220px] h-[220px] md:w-[400px] md:h-[400px] border border-dashed border-primary/40 rounded-full animate-[spin_20s_linear_infinite]"></div>
+        <div class="absolute w-[280px] h-[280px] md:w-[550px] md:h-[550px] border border-dashed border-primary/30 rounded-full animate-[spin_30s_linear_infinite_reverse]"></div>
     </div>
 
     <!-- Floating particles -->
@@ -223,7 +223,7 @@
     </div>
 
     <!-- Top: The graphic -->
-    <img src="/assets/image-rAX6-vYd.png" alt="Omnikon community hero graphic" class="hero-img max-h-[650px] scale-100 md:scale-125 w-auto object-contain drop-shadow-2xl relative z-10 hover:scale-[1.05] md:hover:scale-[1.3] transition-transform duration-700 ease-out">
+    <img src="/assets/image-rAX6-vYd.png" alt="Omnikon community hero graphic" class="hero-img max-w-full max-h-[350px] md:max-h-[650px] scale-100 md:scale-125 w-auto object-contain drop-shadow-2xl relative z-10 hover:scale-[1.05] md:hover:scale-[1.3] transition-transform duration-700 ease-out">
 </div>
 </section>
 
@@ -651,8 +651,8 @@
             <!-- Background effects -->
             <div class="absolute inset-0 z-0 overflow-hidden rounded-[18px]">
                 <!-- Radial glow -->
-                <div class="absolute top-[40%] right-[10%] -translate-y-1/2 w-[350px] h-[350px] bg-[#B56DFF]/15 rounded-full blur-[90px] group-hover:bg-[#B56DFF]/25 transition-all duration-700 pointer-events-none"></div>
-                <div class="absolute bottom-[-10%] left-[-10%] w-[200px] h-[200px] bg-[#B56DFF]/10 rounded-full blur-[70px] pointer-events-none"></div>
+                <div class="absolute top-[40%] right-[10%] -translate-y-1/2 w-[150px] h-[150px] md:w-[350px] md:h-[350px] bg-[#B56DFF]/15 rounded-full blur-[40px] md:blur-[90px] group-hover:bg-[#B56DFF]/25 transition-all duration-700 pointer-events-none"></div>
+                <div class="absolute bottom-[-10%] left-[-10%] w-[100px] h-[100px] md:w-[200px] md:h-[200px] bg-[#B56DFF]/10 rounded-full blur-[30px] md:blur-[70px] pointer-events-none"></div>
                 <!-- Grid -->
                 <div class="absolute inset-0 bg-grid-pattern bg-grid-pattern-moving opacity-40 group-hover:opacity-70 transition-opacity duration-1000 pointer-events-none"></div>
             </div>
@@ -714,14 +714,13 @@
                 
                 <!-- Right Side (Logo & Art) -->
                 <div class="hidden md:flex w-full md:w-1/2 relative items-center justify-center min-h-[300px] p-6 shrink-0">
-                    <!-- Decorative blurred blobs -->
-                    <div class="absolute top-[10%] left-[20%] w-[100px] h-[100px] bg-[#B56DFF]/20 rounded-full blur-[40px] pointer-events-none"></div>
-                    <div class="absolute bottom-[20%] right-[10%] w-[150px] h-[150px] bg-[#9333ea]/20 rounded-full blur-[50px] pointer-events-none"></div>
+                    <div class="absolute top-[10%] left-[20%] w-[50px] h-[50px] md:w-[100px] md:h-[100px] bg-[#B56DFF]/20 rounded-full blur-[20px] md:blur-[40px] pointer-events-none"></div>
+                    <div class="absolute bottom-[20%] right-[10%] w-[80px] h-[80px] md:w-[150px] md:h-[150px] bg-[#9333ea]/20 rounded-full blur-[30px] md:blur-[50px] pointer-events-none"></div>
                     
-                    <!-- Faint orbital rings -->
-                    <div class="absolute w-[220px] h-[220px] border border-[#B56DFF]/15 rounded-full animate-[spin_40s_linear_infinite] pointer-events-none group-hover:border-[#B56DFF]/30 transition-colors duration-700"></div>
-                    <div class="absolute w-[160px] h-[160px] border border-[#B56DFF]/20 rounded-full animate-[spin_30s_linear_infinite_reverse] pointer-events-none"></div>
-                    <div class="absolute w-[300px] h-[300px] border border-dashed border-[#B56DFF]/10 rounded-full animate-[spin_50s_linear_infinite] pointer-events-none"></div>
+                    <!-- Decorative rings -->
+                    <div class="absolute w-[120px] h-[120px] md:w-[220px] md:h-[220px] border border-[#B56DFF]/15 rounded-full animate-[spin_40s_linear_infinite] pointer-events-none group-hover:border-[#B56DFF]/30 transition-colors duration-700"></div>
+                    <div class="absolute w-[80px] h-[80px] md:w-[160px] md:h-[160px] border border-[#B56DFF]/20 rounded-full animate-[spin_30s_linear_infinite_reverse] pointer-events-none"></div>
+                    <div class="absolute w-[160px] h-[160px] md:w-[300px] md:h-[300px] border border-dashed border-[#B56DFF]/10 rounded-full animate-[spin_50s_linear_infinite] pointer-events-none"></div>
                     
                     <!-- Particles -->
                     <div class="absolute top-[25%] left-[25%] w-1.5 h-1.5 bg-[#B56DFF] rounded-full opacity-60 blur-[1px] animate-[float_6s_ease-in-out_infinite] pointer-events-none"></div>
@@ -729,7 +728,7 @@
                     <div class="absolute top-[60%] left-[15%] w-1 h-1 bg-[#FFFFFF] rounded-full opacity-50 blur-[0.5px] animate-[float_7s_ease-in-out_infinite] pointer-events-none" style="animation-delay: 2s;"></div>
                     
                     <!-- Logo -->
-                    <img src="/LogoIssueSwipeLight.png" alt="IssueSwipe Logo" class="relative z-10 w-[400px] lg:w-[500px] scale-110 lg:scale-125 h-auto object-contain drop-shadow-[0_0_30px_rgba(181,109,255,0.2)] animate-float-premium group-hover:drop-shadow-[0_0_50px_rgba(181,109,255,0.4)] transition-all duration-700">
+                    <img src="/LogoIssueSwipeLight.png" alt="IssueSwipe Logo" class="relative z-10 w-[200px] md:w-[350px] lg:w-[500px] scale-110 lg:scale-125 h-auto object-contain drop-shadow-[0_0_30px_rgba(181,109,255,0.2)] animate-float-premium group-hover:drop-shadow-[0_0_50px_rgba(181,109,255,0.4)] transition-all duration-700">
                 </div>
             </div>
         </div>
@@ -1022,6 +1021,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <ul class="space-y-2">
         <li><a href="https://github.com/Omnikon-Org" target="_blank">GitHub</a></li>
         <li><a href="https://discord.gg/yWtjK2Tb8T" target="_blank">Discord</a></li>
+        <li><a href="https://www.instagram.com/omnikonorg/" target="_blank">Instagram</a></li>
         <li><a href="#" target="_blank">LinkedIn</a></li>
       </ul>
     </div>
@@ -1048,4 +1048,5 @@ document.addEventListener("DOMContentLoaded", () => {
 <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
 
+<script src="/assets/arcade-sounds.js"></script>
 </body></html>
