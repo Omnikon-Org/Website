@@ -87,7 +87,9 @@ module.exports = {
                 "display-lg": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
                 "headline-md": ["32px", { "lineHeight": "1.2", "fontWeight": "600" }]
             },
-  plugins: [
+          }
+    },
+    plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/container-queries')
   ],
